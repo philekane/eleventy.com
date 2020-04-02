@@ -24,4 +24,4 @@ collections:
         name: "body",
         widget: "markdown"
       }
-media-folder: "/assets/img"
+media_folder: "/assets/img"
