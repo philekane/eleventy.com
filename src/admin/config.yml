@@ -23,25 +23,25 @@ collections:
         label: "Post Body",
         name: "body",
         widget: "markdown"
-      },
+      }
   - label: "Pages"
     name: "pages"
     file: "index.html"
-    fields: 
+    fields:
       {
         - { label: "Layout", name: "layout", widget: "hidden", default: "/layouts/homepage.njk" }
         - { label: "Title", name: "title", widget: "string" }
         - { label: "About Text", name: "about", widget: "text" }
-      },
+      }
   - label: "Site Settings"
     name: "settings"
     file: "_data/settings.json"
-     fields: 
+    fields:
       {
         - { label: "Site Name", name: "siteName", widget: "string" }
         - { label: "Logo", name: "logo", widget: "image", required: false }
         - { label: "About Text", name: "about", widget: "text" }
-      }    
+      }
 
 media_folder: "_site/assets/img"
 public_folder: "img"
