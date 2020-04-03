@@ -38,7 +38,6 @@ collections:
     create: true
     folder: "src/_data"
     file: "settings"
-    widget: "object"
     fields:
         - { label: "Phone", name: "phone", widget: "string" }
         - { label: "Email", name: "email", widget: "string" }
