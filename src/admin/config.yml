@@ -30,8 +30,8 @@ collections:
     fields: 
       {
         - { label: "Layout", name: "layout", widget: "hidden", default: "/layouts/homepage.njk" }
-        - { label: "Title", name: "title", widget: "string", }
-        - { label: "About Text", name: "about", widget: "text", }
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "About Text", name: "about", widget: "text" }
       }
   - label: "Site Settings"
     name: "settings"
