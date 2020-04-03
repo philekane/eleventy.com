@@ -39,9 +39,9 @@ collections:
     folder: "src/_data"
     file: "src/_data/settings.json"
     fields:
-        - { label: "Site Name", name: "siteName", widget: "string" }
-        - { label: "Logo", name: "logo", widget: "image", required: false }
-        - { label: "About Text", name: "about", widget: "text" }
+        - { label: "Phone", name: "phone", widget: "string" }
+        - { label: "Email", name: "email", widget: "string" }
+        - { label: "Address", name: "address", widget: "text" }
 
 media_folder: "_site/assets/img"
 public_folder: "img"
