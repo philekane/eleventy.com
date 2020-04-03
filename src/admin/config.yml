@@ -24,15 +24,17 @@ collections:
         name: "body",
         widget: "markdown"
       }
-  - label: "Pages"
-    name: "pages"
-    file: "index.html"
+  - label: "Services"
+    name: "services"
+    folder: "services"
     fields:
-        - { label: "Layout", name: "layout", widget: "hidden", default: "/layouts/homepage.njk" }
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "About Text", name: "about", widget: "text" }
+        - { label: "Title", name: "layout", widget: "hidden", default: "/layouts/homepage.njk" }
+        - { label: "Icon", name: "faIcon", widget: "string" }
+        - { label: "Description", name: "description", widget: "text" }
+        - { label: "Service Body", name: "Service", widget: "markdown" }
   - label: "Site Settings"
     name: "settings"
+    folder: "_data"
     file: "_data/settings.json"
     fields:
         - { label: "Site Name", name: "siteName", widget: "string" }
