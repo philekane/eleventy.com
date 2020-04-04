@@ -29,7 +29,7 @@ collections:
     create: true
     folder: "src/services"
     fields:
-        - { label: "Title", name: "layout", widget: "hidden", default: "/layouts/homepage.njk" }
+        - { label: "Title", name: "title", widget: "string" }
         - { label: "Icon", name: "faIcon", widget: "string" }
         - { label: "Description", name: "description", widget: "text" }
         - { label: "Service Body", name: "Service", widget: "markdown" }
