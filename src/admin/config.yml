@@ -35,7 +35,6 @@ collections:
         - { label: "Service Body", name: "Service", widget: "markdown" }
   - label: "Site Settings"
     name: "settings"
-    create: true
     folder: "src/_data"
     file: "settings.json"
     widget: "list"
