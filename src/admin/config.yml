@@ -36,6 +36,7 @@ collections:
   - label: "Site Settings"
     name: "settings"
     folder: "src/_data"
+    create: true
     file: "settings.json"
     widget: "code"
     fields:
