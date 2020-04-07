@@ -57,15 +57,15 @@ collections:
                   widget: "number",
                   min: 1,
                   max: 10,
-                },
-              - { label: "Default Author", name: "author", widget: "string" },
+                }
+              - { label: "Default Author", name: "author", widget: "string" }
               - {
                   label: "Default Thumbnail",
                   name: "thumb",
                   widget: "image",
                   class: "thumb",
                   required: false,
-              },
+              }
           - label: "Social Settings"
             name: "socials"
             widget: "object"
@@ -76,7 +76,7 @@ collections:
                   widget: "string",
                   required: false,
                   default: "facebookk"
-                },
+                }
               - { label: "Url", name: "socialUrl", widget: "string", required: false }
 
 media_folder: "_site/assets/img"
