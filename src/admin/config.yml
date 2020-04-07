@@ -58,6 +58,7 @@ collections:
                   min: 1,
                   max: 10,
                 }
+              - { label: "Phone", name: "phone", widget: "string" }
               - { label: 'Default Author', name: author, widget: string }
               - {
                   label: 'Default Thumbnail',
