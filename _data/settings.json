@@ -1,13 +1,13 @@
 {
   "site_title": "Global Title",
   "socials": {
-    "socialName": "facebokk0",
-    "socialUrl": "https://facebook.com"
+    "socialName": "facebokk",
+    "socialUrl": "https://facbook.com"
   },
   "generalSettings": {
-    "phone": "12052521231",
-    "email": "marcus99d@gmail.com",
-    "address": "228ss streets"
+    "phone": "120525212312",
+    "email": "marcus9d@gmail.com",
+    "address": "228 main street"
   },
   "social": {
     "social": "facebookk",
@@ -19,7 +19,7 @@
     "phone": "12068540555",
     "email": "pkane-marcus@nowayz.com",
     "address": "1316 Wall street",
-    "front_limit": 5,
+    "front_limit": 4,
     "author": "Me Myself and I"
   },
   "address": "13169 wall stts",
