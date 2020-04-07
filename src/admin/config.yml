@@ -33,11 +33,16 @@ collections:
         - { label: "Icon", name: "faIcon", widget: "string" }
         - { label: "Description", name: "description", widget: "text" }
         - { label: "Service Body", name: "Service", widget: "markdown" }
-  - label: "Site Settings"
-    name: "settings"
-    folder: "src/_data"
-    file: "settings.json"
-    widget: "list"
+  - name: "settings"
+    label: "Settings"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+    - name: 'general'
+      label: 'Site Settings'
+      file: '_data/settings.json'
+      description: 'General Site Settings'
     fields:
       - { label: "Phone", name: "phone", widget: "string" }
       - { label: "Email", name: "email", widget: "string" }
