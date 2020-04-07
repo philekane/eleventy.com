@@ -46,7 +46,7 @@ collections:
           - { label: "Site Name", name: "siteName", widget: "string" }
           - label: "General Settings"
             name: "generalSettings"
-            widget: "list"
+            widget: "object"
             fields:
               - { label: "Phone", name: "phone", widget: "string" }
               - { label: "Email", name: "email", widget: "string" }
