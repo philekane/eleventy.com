@@ -13,5 +13,9 @@
   "social": {
     "social": "facebookk",
     "url": "http://facebookk.com"
+  },
+  "socials": {
+    "socialName": "facebookk",
+    "socialUrl": "https://facebookk.com"
   }
 }
