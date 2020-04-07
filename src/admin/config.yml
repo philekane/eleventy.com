@@ -49,6 +49,7 @@ collections:
             name: posts
             widget: 'object'
             fields:
+              - { label: "Phone", name: "phone", widget: "string" }
               - {
                   label: 'Number of posts on frontpage',
                   name: front_limit,
@@ -65,5 +66,7 @@ collections:
                   required: false,
                 }
 
+    
+     
 media_folder: "_site/assets/img"
 public_folder: "img"
