@@ -73,12 +73,12 @@ collections:
             fields:
               - {
                   label: "Social Name",
-                  name: social,
-                  widget: string,
+                  name: "socialName",
+                  widget: "string",
                   required: false,
                   default: "facebookk"
                 }
-              - { label: "Url", name: url, widget: string, required: false }
+              - { label: "Url", name: "socialUrl", widget: "string", required: false }
 
 media_folder: "_site/assets/img"
 public_folder: "img"

@@ -4,12 +4,12 @@
     "address": "1316 Wall St, Everett, WA 98021",
     "socials": [
         {
-            "name": "facebook",
-            "url": "https://facebook.com"
+            "socialName": "facebook",
+            "socialUrl": "https://facebook.com"
         },
         {
-            "name": "twitter",
-            "url": "https://twitter.com"
+            "socialName": "twitter",
+            "socialUrl": "https://twitter.com"
         }
     ]
 }
