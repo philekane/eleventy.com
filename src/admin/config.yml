@@ -37,7 +37,7 @@ collections:
     name: "settings"
     folder: "src/_data"
     file: "settings.json"
-    widget: "code"
+    widget: "list"
     fields:
       - { label: "Phone", name: "phone", widget: "string" }
       - { label: "Email", name: "email", widget: "string" }
