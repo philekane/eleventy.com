@@ -42,7 +42,6 @@ collections:
       - name: "General"
         label: "Site Settings"
         file: "_data/settings.json"
-        widget: list
         fields:
           - { label: "Phone", name: phone, widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
