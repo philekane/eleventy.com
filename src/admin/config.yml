@@ -39,7 +39,7 @@ collections:
     editor:
       preview: false
     files:
-      - name: "settings"
+      - name: "General"
         label: "Site Settings"
         file: "_data/settings.json"
         widget: object
