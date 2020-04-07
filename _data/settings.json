@@ -1,5 +1,20 @@
 {
   "site_title": "Global Title",
+  "socials": {
+    "socialName": "facebokk0",
+    "socialUrl": "https://facebook.com"
+  },
+  "generalSettings": {
+    "phone": "12052521234",
+    "email": "marcus9@gmail.com",
+    "address": "228s street"
+  },
+  "social": {
+    "social": "facebookk",
+    "url": "http://facebookk.com"
+  },
+  "phone": "206-555-0559",
+  "siteName": "site name",
   "posts": {
     "phone": "12068540555",
     "email": "pkane-marcus@nowayz.com",
@@ -7,15 +22,6 @@
     "front_limit": 2,
     "author": "Me Myself and I"
   },
-  "phone": "206-555-0559",
-  "email": "wo9w@tessst.com",
   "address": "13169 wall stts",
-  "social": {
-    "social": "facebookk",
-    "url": "http://facebookk.com"
-  },
-  "socials": {
-    "socialName": "facebokk0",
-    "socialUrl": "https://facebook.com"
-  }
+  "email": "wo9w@tessst.com"
 }
