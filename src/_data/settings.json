@@ -1,0 +1,15 @@
+{
+    "phone": "206-979-3580",
+    "email": "pkane-11nty@spindry.com",
+    "address": "1316 Wall St, Everett, WA 98021",
+    "socials": [
+        {
+            "socialName": "facebook",
+            "socialUrl": "https://facebook.com"
+        },
+        {
+            "socialName": "twitter",
+            "socialUrl": "https://twitter.com"
+        }
+    ]
+}
