@@ -4,18 +4,18 @@
     "phone": "12068540555",
     "email": "pkane-marcus@nowayz.com",
     "address": "1316 Wall street",
-    "front_limit": 5,
+    "front_limit": 2,
     "author": "Me Myself and I"
   },
-  "phone": "206-555-0555",
-  "email": "wow@test.com",
-  "address": "1316 wall st",
+  "phone": "206-555-0556",
+  "email": "wow@tesst.com",
+  "address": "1316 wall stt",
   "social": {
     "social": "facebookk",
     "url": "http://facebookk.com"
   },
   "socials": {
-    "socialName": "faceboookk",
-    "socialUrl": "https://facebookk.com"
+    "socialName": "facebokk",
+    "socialUrl": "https://facebokk.com"
   }
 }
