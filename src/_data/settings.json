@@ -16,5 +16,8 @@
             "socialName": "twitter",
             "socialUrl": "https://twitter.com"
         }
+    ],
+    "posts": [
+        "front_limit: 1
     ]
 }
