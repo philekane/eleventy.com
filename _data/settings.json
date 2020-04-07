@@ -6,5 +6,12 @@
     "address": "1316 Wall street",
     "front_limit": 5,
     "author": "Me Myself and I"
+  },
+  "phone": "206-555-0555",
+  "email": "wow@test.com",
+  "address": "1316 wall st",
+  "social": {
+    "social": "facebook",
+    "url": "http://facebook.com"
   }
 }
