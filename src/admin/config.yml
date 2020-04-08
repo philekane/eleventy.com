@@ -35,7 +35,6 @@ collections:
         - { label: "Service Body", name: "Service", widget: "markdown" }
   - name: "settings"
     label: "Settings"
-    create: true
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
@@ -43,6 +42,7 @@ collections:
       - name: "General"
         label: "Site Settings"
         file: "_data/settings.json"
+        create: true
         fields:
           - { label: Site Name, name: siteName, widget: string }
           - label: General Settings
