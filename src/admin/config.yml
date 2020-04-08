@@ -33,8 +33,8 @@ collections:
         - { label: "Icon", name: "faIcon", widget: "string" }
         - { label: "Description", name: "description", widget: "text" }
         - { label: "Service Body", name: "Service", widget: "markdown" }
-  - name: "settings"
-    label: "Settings"
+  - name: "generalSettings"
+    label: "General Settings"
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
