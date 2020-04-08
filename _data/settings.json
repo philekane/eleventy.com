@@ -9,6 +9,11 @@
     "socialName": "facebokk",
     "socialUrl": "https://facbook.com"
   },
+  "siteSettings": {
+    "phone": "555-555-5555",
+    "email": "ph;lkj@gwize.com",
+    "address": "1111 main"
+  },
   "generalSettings": {
     "phone": "120525212311",
     "email": "marcuss9d@gmail.com",
