@@ -4,7 +4,8 @@
     "email": "tester@test.com",
     "address": "1316 wall street"
   },
-  "members": {
+  "members": [
+    {
       "name": "Phil Kane",
       "position": "Web dev",
       "bio": "bio",
@@ -17,5 +18,6 @@
         "main": "img/phil-kane-3.jpg",
         "alt": "img/onceuponatime_back.jpg"
       }
-   }
+    }
+  ]
 }

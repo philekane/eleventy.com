@@ -17,7 +17,7 @@ collections:
           fields:
             - label: Members
               name: members
-              widget: object
+              widget: list
               allow_add: true
               fields:
                 - { label: "Name", name: "name", widget: "string" }
