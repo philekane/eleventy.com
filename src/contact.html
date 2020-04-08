@@ -23,12 +23,10 @@ googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43546.86165317
                 </div>
                 <div class="single-info">
                     <h5>Social</h5>
-                    <p>
-                    {% for social in settings.socials %}
-                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}">
+                    <p><a href="{{ settings.facebookUrl }}" class="fa fa-facebook">
                        </a>
-                    {% endfor %}
-                    </p>
+                    <a href="{{ settings.twitterUrl }}" class="fa fa-twitter">
+                       </a></p>
                 </div>
             </div>
             <div class="col-md-7">
