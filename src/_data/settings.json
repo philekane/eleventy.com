@@ -7,12 +7,10 @@
   },
   "socialSettings":[
     {
-        "socialName": "facebook",
-        "socialUrl": "https://facebook.com"
+        "facebookUrl": "https://facebook.com"
     },
     {
-        "socialName": "twitter",
-        "socialUrl": "https://twitter.com"
+        "twitterUrl": "https://twitter.com"
     }
 ],
   "members": [
