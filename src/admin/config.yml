@@ -44,9 +44,9 @@ collections:
         file: "_data/settings.json"
         fields:
           - { label: Site Name, name: siteName, widget: string }
-          - label: General Settings,
-            name: generalSettings,
-            widget: object,
+          - label: General Settings
+            name: generalSettings
+            widget: object
             fields:
               - { label: Phone, name: phone, widget: string }
               - { label: Email, name: email, widget: string }
