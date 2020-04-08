@@ -13,7 +13,7 @@ collections:
       files:
         - label: 'Members'
           name: 'members'
-          file: 'data/teamMembers.json'
+          file: 'src/_data/settings.json'
           fields:
             - label: Members
               name: members
