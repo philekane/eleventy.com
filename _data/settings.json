@@ -1,5 +1,10 @@
 {
   "site_title": "Global Title",
+  "settings": {
+    "phone": "555-555-5555",
+    "email": "p8888@noway.com",
+    "address": "2020 main st"
+  },
   "socials": {
     "socialName": "facebokk",
     "socialUrl": "https://facbook.com"
