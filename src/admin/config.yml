@@ -42,6 +42,7 @@ collections:
       - name: "General"
         label: "Site Settings"
         file: "_data/settings.json"
+        create: true
         fields:
           - { label: Site Name, name: siteName, widget: string }
           - label: General Settings
