@@ -58,6 +58,6 @@ collections:
               widget: object
               fields:
                 - { label: "facebook Url", name: "facebookUrl", widget: "string", required: false}
-                - { label: "twitter Url", name: "twitterUrl", widget: "string"p, required: false }
+                - { label: "twitter Url", name: "twitterUrl", widget: "string", required: false }
 media_folder: "_site/assets/img"
 public_folder: "img"
