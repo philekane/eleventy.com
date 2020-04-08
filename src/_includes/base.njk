@@ -36,7 +36,7 @@
                             <div class="right-nav">
 
                                 <div class="header-social">
-                                    {% for social in settings.socials %}
+                                    {% for social in settings.socialSettings %}
                                         <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}"></a>
                                     {% endfor %}
 
@@ -161,8 +161,8 @@
                             <div class="col-md-6 col-lg-3 footer_widget">
                                 <div class="inner">
                                     <h4>Address</h4>
-                                    <h5>{{ settings.siteName }}</h5>
-                                    <p>{{ settings.address }}<br>P: {{ settings.phone }}</p>
+                                    <h5>{{ settings.companyName }}</h5>
+                                    <p>{{ settings.siteSettings.address }}<br>P: {{ settings.siteSettings.phone }}</p>
                                     <h4>Newsletter</h4>
                                     <form action="#" class="nw_form">
                                         <input placeholder="Enter your email" type="email">

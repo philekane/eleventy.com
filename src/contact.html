@@ -11,11 +11,13 @@ googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43546.86165317
             <div class="col-md-5 contact-info">
                 <div class="single-info">
                     <h5>Phone</h5>
-                    <p>{{ settings.members.name }}</p>
+                     {% for setting in settings.members %}
+                    <p>{{ setting.name }}</p>
+                    {% endfor %}
                 </div>
                 <div class="single-info">
                     <h5>Email</h5>
-                    <p>{{ settings.email }}</p>
+                    <p>{{ settings.siteSettings.email }}</p>
                 </div>
                 <div class="single-info">
                     <h5>Address</h5>
@@ -23,10 +25,11 @@ googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43546.86165317
                 </div>
                 <div class="single-info">
                     <h5>Social</h5>
-                    <p><a href="{{ settings.socialSettings.facebookUrl }}" class="fa fa-facebook">
-                       </a>
-                    <a href="{{ settings.socialSettings.twitterUrl }}" class="fa fa-twitter">
-                       </a></p>
+                    <p>
+                     {% for social in settings.socialSettings %}
+                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}"></a>
+                     {% endfor %}
+                    </p>
                 </div>
             </div>
             <div class="col-md-7">
