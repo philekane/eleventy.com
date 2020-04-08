@@ -14,6 +14,10 @@
     "url": "http://facebookk.com"
   },
   "phone": "206-555-0559",
+  "socialSettings": {
+    "facebookUrl": "https://face.com",
+    "twitterUrl": "https://twit.com"
+  },
   "siteName": "site name",
   "posts": {
     "phone": "12068540555",
