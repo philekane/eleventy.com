@@ -2,24 +2,22 @@
   "siteSettings": {
     "phone": "1(206)-425-5252",
     "email": "tester@test.com",
-    "address": "1316 wall st"
+    "address": "1316 wall street"
   },
-  "members": 
-    {
-      "name": "Phil Kane",
-      "position": "Web dev",
-      "bio": "bio",
-      "background": "writer",
-      "social": [
-        {
-          "name": "facebook",
-          "link": "https://facebook.com"
-        }
-      ],
-      "image": {
-        "main": "img/phil-kane-3.jpg",
-        "alt": "img/onceuponatime_back.jpg"
+  "members": {
+    "name": "Phil Kane",
+    "position": "Web dev",
+    "bio": "bio",
+    "background": "writer",
+    "social": [
+      {
+        "name": "facebook",
+        "link": "https://facebook.com"
       }
+    ],
+    "image": {
+      "main": "img/phil-kane-3.jpg",
+      "alt": "img/onceuponatime_back.jpg"
     }
-  
+  }
 }
