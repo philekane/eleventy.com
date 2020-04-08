@@ -37,7 +37,7 @@ collections:
     label: "Settings"
     delete: false # Prevent users from deleting documents in this collection
     editor:
-      preview: false
+      preview: true
     files:
       - label: "Site Settings"
         name: "General"
