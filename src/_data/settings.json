@@ -2,56 +2,56 @@
   "siteSettings": {
     "phone": "1(206)-425-5252",
     "email": "tester@test.com",
-    "address": "1316 wall street"
+    "address": "1316 wall st"
   },
-    "members": [
-      {
-        "name": "Lorem ipsum #1",
-        "image": {
-          "main": "/assets/images/blog/name-01.jpg",
-          "alt": "/assets/images/blog/name-01-alt.jpg"
-        },
-        "position": "Lorem ipsum",
-        "bio": "Lorem ipsum",
-        "background": "Lorem ipsum",
-        "social": [
-          {
-            "name": "LinkedIn",
-            "link": "https://www.linkedin.com"
-          },
-          {
-            "name": "GitHub",
-            "link": "https://github.com"
-          },
-          {
-            "name": "Facebook",
-            "link": "https://www.facebook.com"
-          }
-        ]
+  "members": [
+    {
+      "name": "Lorem ipsum #1",
+      "image": {
+        "main": "/assets/images/blog/name-01.jpg",
+        "alt": "/assets/images/blog/name-01-alt.jpg"
       },
-      {
-        "name": "Lorem ipsum #2",
-        "image": {
-          "main": "/assets/images/blog/name-01.jpg",
-          "alt": "/assets/images/blog/name-01-alt.jpg"
+      "position": "Lorem ipsum",
+      "bio": "Lorem ipsum",
+      "background": "Lorem ipsum",
+      "social": [
+        {
+          "name": "LinkedIn",
+          "link": "https://www.linkedin.com"
         },
-        "position": "Lorem ipsum",
-        "bio": "Lorem ipsum",
-        "background": "Lorem ipsum",
-        "social": [
-          {
-            "name": "LinkedIn",
-            "link": "https://www.linkedin.com"
-          },
-          {
-            "name": "GitHub",
-            "link": "https://github.com"
-          },
-          {
-            "name": "Facebook",
-            "link": "https://www.facebook.com"
-          }
-        ]
-      }
-    ]
-  }
+        {
+          "name": "GitHub",
+          "link": "https://github.com"
+        },
+        {
+          "name": "Facebook",
+          "link": "https://www.facebook.com"
+        }
+      ]
+    },
+    {
+      "name": "Lorem ipsum #2",
+      "image": {
+        "main": "/assets/images/blog/name-01.jpg",
+        "alt": "/assets/images/blog/name-01-alt.jpg"
+      },
+      "position": "Lorem ipsum",
+      "bio": "Lorem ipsum",
+      "background": "Lorem ipsum",
+      "social": [
+        {
+          "name": "LinkedIn",
+          "link": "https://www.linkedin.com"
+        },
+        {
+          "name": "GitHub",
+          "link": "https://github.com"
+        },
+        {
+          "name": "Facebook",
+          "link": "https://www.facebook.com"
+        }
+      ]
+    }
+  ]
+}
