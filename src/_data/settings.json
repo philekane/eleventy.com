@@ -1,10 +1,10 @@
 {
-    "siteName": "Real Hazards",
+    "siteName": "Real Hazard",
     "generalSettings": {
-            "phone": "1(206)-425-5252" ,
-            "email": "tester@test.com" ,
-            "address": "1316 wall street"
-    },
+                "phone": "1(206)-425-5252",
+                "email": "tester@test.com",
+                "address": "1316 wall street"
+            },
     "socials":[
             {
                 "socialName": "facebook",
@@ -19,5 +19,4 @@
         {
         "front_limit": 1
         }
-    
 }
