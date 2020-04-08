@@ -1,6 +1,8 @@
 {
-    "facebookUrl": "https://facebook.com",
-    "twitterUrl": "https://twitter.com",
+    "socialSettings": {
+        "facebookUrl": "https://facebook.com",
+        "twitterUrl": "https://twitter.com"
+    },
     "siteName": "Real Hazard",
     "siteSettings": {
                 "phone": "1(206)-425-5252",
