@@ -43,6 +43,7 @@ collections:
         name: "siteSettings"
         file: "_data/settings.json"
         fields:
+          - { label: Site Name, name: siteName, widget: string }
           - label: General Settings
             name: siteSettings
             widget: object
