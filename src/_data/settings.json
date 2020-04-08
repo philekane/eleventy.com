@@ -4,22 +4,18 @@
     "email": "tester@test.com",
     "address": "1316 wall st"
   },
-  "members": 
-    {
+  "members": {
       "name": "Phil Kane",
       "position": "Web dev",
       "bio": "bio",
       "background": "writer",
-      "social": [
-        {
+      "social": {
           "name": "facebook",
           "link": "https://facebook.com"
-        }
-      ],
+      },
       "image": {
         "main": "img/phil-kane-3.jpg",
         "alt": "img/onceuponatime_back.jpg"
       }
-    }
-  
+  }
 }
