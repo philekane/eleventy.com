@@ -44,18 +44,18 @@ collections:
         file: "_data/settings.json"
         fields:
           - { label: Site Name, name: siteName, widget: string }
-      - label: General Settings
-        name: generalSettings
-        widget: object
-        fields:
-          - { label: Phone, name: phone, widget: string }
-          - { label: Email, name: email, widget: string }
-          - { label: Address, name: address, widget: string }
-      - label: Social Settings
-        name: socialSettings
-        widget: object
-        fields:
-          - { label: facebook Url, name: facebookUrl, widget: string, required: false}
-          - { label: twitter Url, name: twitterUrl, widget: string, required: false }
+          - label: General Settings
+            name: generalSettings
+            widget: object
+            fields:
+              - { label: Phone, name: phone, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Address, name: address, widget: string }
+          - label: Social Settings
+            name: socialSettings
+            widget: object
+            fields:
+              - { label: facebook Url, name: facebookUrl, widget: string, required: false}
+              - { label: twitter Url, name: twitterUrl, widget: string, required: false }
 media_folder: "_site/assets/img"
 public_folder: "img"
