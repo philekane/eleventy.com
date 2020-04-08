@@ -10,9 +10,9 @@
     "socialUrl": "https://facbook.com"
   },
   "siteSettings": {
-    "phone": "555-555-5555",
+    "phone": "555-555-5556",
     "email": "ph;lkj@gwize.com",
-    "address": "1111 main"
+    "address": "1111 mains"
   },
   "generalSettings": {
     "phone": "120525212311",
@@ -25,8 +25,8 @@
   },
   "phone": "206-555-0559",
   "socialSettings": {
-    "facebookUrl": "https://facee.com",
-    "twitterUrl": "https://twitt.com"
+    "facebookUrl": "https://face.com",
+    "twitterUrl": "https://twit.com"
   },
   "siteName": "site name",
   "posts": {
