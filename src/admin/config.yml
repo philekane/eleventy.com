@@ -40,7 +40,7 @@ collections:
       preview: false
     files:
       - label: "Site Settings"
-        name: "General"
+        name: "settings"
         file: "_data/settings.json"
         fields:
           - { label: Site Name, name: siteName, widget: string }
