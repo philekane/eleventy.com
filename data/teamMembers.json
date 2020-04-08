@@ -1,0 +1,20 @@
+{
+  "members": [
+    {
+      "name": "Phil Kane",
+      "position": "Web dev",
+      "bio": "bio",
+      "background": "writer",
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://facebook.com"
+        }
+      ],
+      "image": {
+        "main": "img/phil-kane-3.jpg",
+        "alt": "img/onceuponatime_back.jpg"
+      }
+    }
+  ]
+}
