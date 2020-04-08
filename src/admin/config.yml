@@ -42,14 +42,13 @@ collections:
       - name: "General"
         label: "Site Settings"
         file: "_data/settings.json"
-        create: true
         fields:
           - { label: Site Name, name: siteName, widget: string }
           - label: General Settings
             name: generalSettings
             widget: object
             fields:
-              - { label: Phone, name: phone, widget: string }
+              - { label: Phone, name: phone, widget: object }
               - { label: Email, name: email, widget: string }
               - { label: Address, name: address, widget: string }
           - label: Social Settings
