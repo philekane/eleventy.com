@@ -34,8 +34,8 @@ collections:
                       name: "social"
                       widget: "list"
                       fields:
-                        - { label: "Name", name: "name", widget: "string" }
-                        - { label: "Link", name: "link", widget: "string" }
+                        - { label: "Name", name: "name", widget: "string", required: false }
+                        - { label: "Link", name: "link", widget: "string", required: false }
     - name: "generalSettings"
       label: "General Settings"
       delete: false # Prevent users from deleting documents in this collection
