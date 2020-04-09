@@ -22,18 +22,18 @@
   "members": [
     {
       "name": "Phil Kane",
-      "position": "Web dev",
-      "bio": "bio",
-      "background": "writer",
+      "position": "Web developer",
+      "bio": "biographical",
+      "background": "songwriter",
       "social": [
         {
           "name": "facebook",
-          "link": "https://facebook.com"
+          "link": "https://facebok.com"
         }
       ],
       "image": {
         "main": "img/phil-kane-3.jpg",
-        "alt": "fred"
+        "alt": "Phil"
       }
     }
   ]
