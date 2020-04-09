@@ -1,6 +1,10 @@
 {
   "navigationMenu": [
     {
+      "pageName": "Home",
+      "pageUrl": "/"
+    },
+    {
       "pageName": "About",
       "pageUrl": "/about"
     },
@@ -9,8 +13,8 @@
       "pageUrl": "/contact"
     },
     {
-      "pageName": "Home",
-      "pageUrl": "/"
+      "pageName": "Services",
+      "pageUrl": "/services"
     },
     {
       "pageName": "Pricing",
