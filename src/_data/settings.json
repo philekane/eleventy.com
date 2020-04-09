@@ -33,7 +33,10 @@
       ],
       "image": {
         "main": "img/phil-kane-3.jpg",
-        "alt": "img/onceuponatime_back.jpg"
+        "alt": "img/onceuponatime_back.jpg",
+        "position": "dev",
+        "bio": "writer",
+        "background": "none"
       }
     }
   ]
