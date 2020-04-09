@@ -7,6 +7,18 @@
     {
       "pageName": "Contact",
       "pageUrl": "/contact"
+    },
+    {
+      "pageName": "Home",
+      "pageUrl": "/"
+    },
+    {
+      "pageName": "Pricing",
+      "pageUrl": "/pricing"
+    },
+    {
+      "pageName": "Testimonials",
+      "pageUrl": "/testimonials"
     }
   ],
   "siteSettings": {
