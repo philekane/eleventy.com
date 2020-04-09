@@ -29,7 +29,7 @@ collections:
                   widget: "object"
                   fields:
                     - { label: "Photo", name: "main", widget: "image" }
-                    - { label: "Photo Alt", name: "alt", widget: "string" }                  
+                    - { label: "Photo Alt", name: "alt", widget: "string" }
                 - label: "Social"
                   name: "social"
                   widget: "list"
