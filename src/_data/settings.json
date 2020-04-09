@@ -1,9 +1,17 @@
 {
+  "navigationMenu": [
+    {
+      "pageName": "Contact",
+      "pageUrl": "/contact"
+    }
+  ],
   "siteSettings": {
     "companyName": "Real Hazards, Inc",
     "phone": "1(206)-425-5252",
     "email": "tester@test.com",
-    "address": "1316 wall st"
+    "address": "1316 wall st",
+    "logo": "",
+    "logoAlt": ""
   },
   "socialSettings": [
     {

@@ -44,6 +44,9 @@
                             </div>
                             <nav id="menu" class="d-none d-lg-block">
                                 <ul>
+                                 {% for menu in settings.navigationMenu %}
+                                   <li> <a href="{{ menu.pageUrl }}" >{{ menu.pageName }}</a></li>
+                                 {% endfor %}
                                     <li class="current-menu-item">
                                         <a href="/">Home</a>
                                     </li>
