@@ -6,6 +6,8 @@ collections:
     - label: "Services"
       name: "services"
       create: true
+      editor:
+          preview: false
       folder: "src/services"
       fields:
           - { label: "Title", name: "title", widget: "string" }
