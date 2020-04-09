@@ -33,12 +33,12 @@ collections:
                 - { label: "Position", name: "position", widget: "string" }
                 - { label: "Bio", name: "bio", widget: "string" }
                 - { label: "Background", name: "background", widget: "string" }
-            - label: "Image"
-              name: "image"
-              widget: "object"
-              fields:
-                - { label: "Photo", name: "main", widget: "image" }
-                - { label: "Photo Alt", name: "alt", widget: "string" }
+                - label: "Image"
+                  name: "image"
+                  widget: "object"
+                  fields:
+                    - { label: "Photo", name: "main", widget: "image" }
+                    - { label: "Photo Alt", name: "alt", widget: "string" }
             - label: "Social"
               name: "social"
               widget: "list"
