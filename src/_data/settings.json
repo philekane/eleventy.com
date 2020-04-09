@@ -3,6 +3,10 @@
     {
       "pageName": "Contact",
       "pageUrl": "/contact"
+    },
+    {
+      "pageName": "About",
+      "pageUrl": "/about"
     }
   ],
   "siteSettings": {
