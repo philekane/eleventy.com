@@ -1,12 +1,12 @@
 {
   "navigationMenu": [
     {
-      "pageName": "Contact",
-      "pageUrl": "/contact"
-    },
-    {
       "pageName": "About",
       "pageUrl": "/about"
+    },
+    {
+      "pageName": "Contact",
+      "pageUrl": "/contact"
     }
   ],
   "siteSettings": {
