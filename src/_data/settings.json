@@ -39,15 +39,5 @@
         "background": "none"
       }
     }
-  ],
-  "image": {
-    "main": "img/phil-kane-3.jpg",
-    "alt": "Phil"
-  },
-  "social": [
-    {
-      "name": "facebook",
-      "link": "https://facebookk.com"
-    }
   ]
 }

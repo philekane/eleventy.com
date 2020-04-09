@@ -3,6 +3,15 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 collections:
+    - label: "Services"
+      name: "services"
+      create: true
+      folder: "src/services"
+      fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Icon", name: "faIcon", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Service Body", name: "Service", widget: "markdown" }
     - name: "team"
       label: "Team Members"
       label_singular: "Team Member"
