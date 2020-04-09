@@ -11,9 +11,7 @@ googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43546.86165317
             <div class="col-md-5 contact-info">
                 <div class="single-info">
                     <h5>Phone</h5>
-                     {% for setting in settings.members %}
-                    <p>{{ setting.name }}</p>
-                    {% endfor %}
+                     <p>{{ settings.siteSettings.phone }}</p>
                 </div>
                 <div class="single-info">
                     <h5>Email</h5>
