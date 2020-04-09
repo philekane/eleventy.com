@@ -8,11 +8,15 @@
   "socialSettings": [
     {
       "socialName": "facebook",
-      "socialUrl": "https://facebook.com"
+      "socialUrl": "https://facebok.com"
     },
     {
       "socialName": "twitter",
       "socialUrl": "https://twitter.com"
+    },
+    {
+      "socialName": "linkedin",
+      "socialUrl": "https://linkedin.com"
     }
   ],
   "members": [
