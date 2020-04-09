@@ -13,6 +13,10 @@
     {
       "socialName": "twitter",
       "socialUrl": "https://twitter.com"
+    },
+    {
+      "socialName": "linkedin",
+      "socialUrl": "https://linkedin.com"
     }
   ],
   "members": [
