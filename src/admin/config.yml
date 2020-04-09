@@ -55,9 +55,9 @@ collections:
                 - { label: "Address", name: "address", widget: "string" }
             - label: Social Settings
               name: socialSettings
-              widget: object
+              widget: list
               fields:
-                - { label: "facebook Url", name: "facebookUrl", widget: "string", required: false}
-                - { label: "twitter Url", name: "twitterUrl", widget: "string", required: false }
+                - { label: "Name", name: "socialName", widget: "string" }
+                - { label: "Link", name: "socialUrl", widget: "string" }
 media_folder: "_site/assets/img"
 public_folder: "img"

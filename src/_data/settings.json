@@ -5,14 +5,16 @@
     "email": "tester@test.com",
     "address": "1316 wall st"
   },
-  "socialSettings":[
+  "socialSettings": [
     {
-        "facebookUrl": "https://facebook.com"
+      "socialName": "facebook",
+      "socialUrl": "https://facebook.com"
     },
     {
-        "twitterUrl": "https://twitter.com"
+      "socialName": "twitter",
+      "socialUrl": "https://twitter.com"
     }
-],
+  ],
   "members": [
     {
       "name": "Phil Kane",
