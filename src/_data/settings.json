@@ -35,6 +35,22 @@
         "main": "img/phil-kane-3.jpg",
         "alt": "Phil"
       }
+    },
+    {
+      "name": "PhalKan",
+      "position": "Songwriter",
+      "bio": "songs",
+      "background": "background",
+      "image": {
+        "main": "img/onceuponatime_back.jpg",
+        "alt": "PhalKan"
+      },
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://facebook.com"
+        }
+      ]
     }
   ]
 }
