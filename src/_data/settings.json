@@ -39,5 +39,9 @@
         "background": "none"
       }
     }
-  ]
+  ],
+  "image": {
+    "main": "img/phil-kane-3.jpg",
+    "alt": "me"
+  }
 }
