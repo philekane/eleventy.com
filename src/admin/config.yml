@@ -3,6 +3,16 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 collections:
+   - name: "brands"
+      label: "Brands"
+      delete: false # Prevent users from deleting documents in this collection
+      editor:
+        preview: false
+      folder: "src/brands"
+      fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Url", name: "url", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
     - name: "components"
       label: "Components"
       delete: false # Prevent users from deleting documents in this collection
