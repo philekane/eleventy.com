@@ -3,6 +3,22 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 collections:
+    - name: "components"
+      label: "Components"
+      delete: false # Prevent users from deleting documents in this collection
+      editor:
+        preview: false
+      files:
+        - label: "Faqs"
+          name: "faqs"
+          file: "src/_data/faqs.json"
+          fields:
+            - label: "Faq"
+              name: "faq"
+              widget: list
+              fields:
+                - { label: "Question", name: "question", widget: "string" }
+                - { label: "Answer", name: "answer", widget: "string" }
     - label: "Services"
       name: "services"
       create: true
@@ -61,7 +77,6 @@ collections:
               name: "navigationMenu"
               widget: list
               fields:
-                - { label: "Show", name: "show", widget: "boolean" }
                 - { label: "Page Name", name: "pageName", widget: "string" }
                 - { label: "Link", name: "pageUrl", widget: "string" }
             - label: General Settings
