@@ -100,5 +100,7 @@
 
    
     {% include "layouts/brands.njk" %}
-    {% include "layouts/faqs.njk" %}
+    {% if faqs.show == true %}
+       {% include "layouts/faqs.njk" %}
+    {% endif %}
 {% endblock content %}
