@@ -13,6 +13,7 @@ collections:
           name: "faqs"
           file: "src/_data/faqs.json"
           fields:
+            - { label: "Show", name: "show", widget: "boolean" }
             - label: "Faq"
               name: "faq"
               widget: list
