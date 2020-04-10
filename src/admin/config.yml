@@ -61,6 +61,7 @@ collections:
               name: "navigationMenu"
               widget: list
               fields:
+                - { label: "Show", name: "show", widget: "boolean" }
                 - { label: "Page Name", name: "pageName", widget: "string" }
                 - { label: "Link", name: "pageUrl", widget: "string" }
             - label: General Settings

@@ -69,80 +69,7 @@
             {% endblock content %}
 
             {% block postContent %}{% endblock postContent %}
-<style>
-/*
-Custom elements are inline by default
-*/
-toggle-section {
-    display: block;
-}
-
-/*
-Only applies if script runs and 
-`role="region"` is added
-*/
-
-    .controls {
-        text-align: right;
-        margin-bottom: 1em;
-    }
-
-    .controls li {
-        display: inline;
-    }
-
-    button {
-        background: #000;
-        color: #fff;
-        border: 0;
-        font-size: 0.85rem;
-        border-radius: 0.25rem;
-    }
-
-    toggle-section[role="region"] {
-        border-width: 2px 0;
-        border-style: solid;
-    }
-
-    toggle-section[role="region"] + toggle-section {
-        border-top: 0;
-
-    }
-    toggle-section[open="true"] {
-        background-color: #fff;
-    }
-
-</style>
-            <div class="faq-area sp bg2">
-                <div class="container">
-
-                    <div class="section-title">
-                        <h2>Frequently Asked Questions</h2>
-                        <p>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-md-6">
-                            <div class="faq">
-                            {% for faq in settings.faqs %}
-                                <toggle-section open="true">
-                                    <h2 id="section-{{ loop.index }}">{{ faq.question }}</h2>
-                                    <p>{{ faq.answer }} </p>
-                                </toggle-section>
-                            {% endfor %}
-                               
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="faq-img text-center">
-                                <img src="assets/img/fag-img.png" alt="faq">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <footer>
+<footer>
                 <div class="footer-top">
                     <div class="container">
                         <div class="row">
@@ -269,6 +196,5 @@ Only applies if script runs and
         <script src="/assets/js/vendor/loopcounter.js"></script>
         <script src="/assets/js/vendor/slicknav.min.js"></script>
         <script src="/assets/js/active.js"></script>
-        <script src="/assets/js/collapsible.js"></script>
-        <!-- Include the script that builds the page and powers Netlify CMS -->
+         <!-- Include the script that builds the page and powers Netlify CMS -->
     </html>
