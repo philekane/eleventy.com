@@ -114,4 +114,4 @@ collections:
                 - { label: "Name", name: "socialName", widget: "string" }
                 - { label: "Link", name: "socialUrl", widget: "string" }
 media_folder: "_site/assets/img"
-public_folder: "assets/img"
+public_folder: "/assets/img"
