@@ -12,14 +12,9 @@ collections:
       create: true
       identifier_field: name
       fields:
-          - { label: 'Show', name: 'show', widget: 'boolean' }
-          - label: "Brand Image"
-            name: "brandImage"
-            widget: "object"
-            fields:
-              - { label: "Image", name: "image", widget: "image" }
-          - { label: "Name", name: "name", widget: "string" }
-          - { label: "Url", name: "url", widget: "string" }
+        - { label: "Image", name: "image", widget: "image" }
+        - { label: "Name", name: "name", widget: "string" }
+        - { label: "Url", name: "url", widget: "string" }
     - name: "components"
       label: "Components"
       delete: false # Prevent users from deleting documents in this collection
