@@ -9,8 +9,7 @@ collections:
       editor:
         preview: false
       folder: "src/brands"
-      widget: object
-        allow_add: true
+      allow_add: true
       fields:
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Url", name: "url", widget: "string" }
