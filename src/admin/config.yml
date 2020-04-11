@@ -11,9 +11,15 @@ collections:
       folder: "src/brands"
       create: true
       fields:
+          - { label: 'Show', name: 'show', widget: 'boolean' }
+          - label: "Image"
+            name: "image"
+            widget: "object"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Url", name: "url", widget: "string" }
-          - { label: "Image", name: "image", widget: "image" }
+          
     - name: "components"
       label: "Components"
       delete: false # Prevent users from deleting documents in this collection
@@ -108,4 +114,4 @@ collections:
                 - { label: "Name", name: "socialName", widget: "string" }
                 - { label: "Link", name: "socialUrl", widget: "string" }
 media_folder: "_site/assets/img"
-public_folder: "assets/img"
+public_folder: "_site"
