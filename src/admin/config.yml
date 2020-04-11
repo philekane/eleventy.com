@@ -8,8 +8,6 @@ collections:
       delete: false # Prevent users from deleting documents in this collection
       editor:
         preview: false
-      fields:
-            - { label: "Show", name: "show", widget: "boolean" }
       folder: "src/brands"
       fields:
           - { label: "Name", name: "name", widget: "string" }
