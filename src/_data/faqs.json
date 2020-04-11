@@ -1,6 +1,15 @@
 {
   "show": true,
+  "number": "2",
+  "showImage": true,
+  "description": "fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.",
+  "image": "assets/img/fag-img.png",
+  "imageAlt": "faq",
   "faq": [
+    {
+      "question": "Low Cost Advertising Available or Not?",
+      "answer": "No, low cost advertising is available."
+    },
     {
       "question": "Low Cost Advertising Available or Not?",
       "answer": "Yes low cost advertising is available."
@@ -8,6 +17,11 @@
     {
       "question": "Does Using Banner Stands Increase Trade Show Traffic?",
       "answer": "No but it sure looks nice"
+    },
+    {
+      "question": "What is  A Good Headline For Your Advertisement?",
+      "answer": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip. Exa commodo consequat.Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip."
     }
+   
   ]
 }

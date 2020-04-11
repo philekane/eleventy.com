@@ -1,74 +1,47 @@
-<style>
-/*
-Custom elements are inline by default
-*/
-toggle-section {
-    display: block;
-}
+{% extends "base.njk" %}
 
-/*
-Only applies if script runs and 
-`role="region"` is added
-*/
+{% block pageHeader %}{% endblock pageHeader %}
 
-    .controls {
-        text-align: right;
-        margin-bottom: 1em;
-    }
+{% block content %}
 
-    .controls li {
-        display: inline;
-    }
+    <div class="faq-area-2 sp">
 
-    button {
-        background: #000;
-        color: #fff;
-        border: 0;
-        font-size: 0.85rem;
-        border-radius: 0.25rem;
-    }
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>{{ faqs.description }}</p>
+            </div>
+            <div class="row">
 
-    toggle-section[role="region"] {
-        border-width: 2px 0;
-        border-style: solid;
-    }
+                <div class="col-md-8">
+                    {% for faq in faqs.faq %}
+                        <a name="{{ loop.index }}" ></a>
+                        <div class="single-faq">
+                            <h2>
+                                <span>{{ loop.index }}</span>{{ faq.question }}</h2>
+                            <p>{{ faq.answer }}
+                            </p>
+                        </div>
+                    {% endfor %}
 
-    toggle-section[role="region"] + toggle-section {
-        border-top: 0;
-
-    }
-    toggle-section[open="true"] {
-        background-color: #fff;
-    }
-
-</style>
-  <div class="faq-area sp bg2">
-                <div class="container">
-
-                    <div class="section-title">
-                        <h2>Frequently Asked Questions</h2>
-                        <p>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</p>
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-md-6">
-                            <div class="faq">
+                </div>
+                <div class="col-md-4">
+                    <div class="faq-sidebar-wrap">
+                        <h3>Index</h3>
+                        <ul class="faq-sidebar">
                             {% for faq in faqs.faq %}
-                                <toggle-section open="true">
-                                    <h2 id="section-{{ loop.index }}">{{ faq.question }}</h2>
-                                    <p>{{ faq.answer }} </p>
-                                </toggle-section>
+                                <li>
+                                    <a href="#{{ loop.index }}">
+                                        <span>{{ loop.index }}.</span>
+                                        {{ faq.question }}
+                                    </a>
+                                </li>
                             {% endfor %}
-                               
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="faq-img text-center">
-                                <img src="assets/img/fag-img.png" alt="faq">
-                            </div>
-                        </div>
+
+                        </ul>
                     </div>
                 </div>
             </div>
-<script src="/assets/js/collapsible.js"></script>
+        </div>
+    </div>
+{% endblock content %}

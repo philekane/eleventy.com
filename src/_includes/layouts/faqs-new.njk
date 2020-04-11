@@ -1,0 +1,109 @@
+<style>
+    /*
+Custom elements are inline by default
+*/
+    toggle-section {
+        display: block;
+    }
+
+    /*
+Only applies if script runs and 
+`role="region"` is added
+*/
+
+    .controls {
+        text-align: right;
+        margin-bottom: 1em;
+    }
+
+    .controls li {
+        display: inline;
+    }
+
+    button {
+        background: #000;
+        color: #fff;
+        border: 0;
+        font-size: 0.85rem;
+        border-radius: 0.25rem;
+    }
+
+    toggle-section[role="region"] {
+        border-width: 2px 0;
+        border-style: solid;
+    }
+
+    toggle-section[role="region"] + toggle-section {
+        border-top: 0;
+
+    }
+    toggle-section[open="true"] {
+        background-color: #fff;
+    }
+    /*
+  AUTO GRID
+  Set the minimum item size with `--auto-grid-min-size` and you'll
+  get a fully responsive grid with no media queries.
+*/
+
+    .auto-grid > * {
+        max-width: 25rem;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1rem;
+    }
+
+    .auto-grid > * + * {
+        margin-top: 1rem;
+    }
+
+    @supports(display: grid) {
+        .auto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 26rem), 1fr));
+            grid-gap: 1rem;
+        }
+
+        .auto-grid > * {
+            max-width: unset;
+            margin: unset;
+        }
+    }
+    .wrapper {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 1rem;
+        margin-bottom: 5rem;
+    }
+
+    .alignImage {
+        margin: 0 auto;
+    }
+</style>
+<div class="brand-area">
+    <div class="container  spb">
+        <div class="row">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>{{ faqs.description }}</p>
+
+                    <div>
+                        {% for faq in faqs.faq %}
+                            <toggle-section open="true">
+                                <h2 id="section-{{ loop.index }}">{{ faq.question }}</h2>
+                                <p>{{ faq.answer }}
+                                </p>
+                            </toggle-section>
+                        {% endfor %}
+                    </div>
+                    {% if faqs.showImage == true %}
+                        <div class="alignImage">
+                            <img src="{{ faqs.image }}" alt="{{ faqs.imageAlt }}">
+                        </div>
+                    {% endif %}
+              
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/assets/js/collapsible.js"></script>
