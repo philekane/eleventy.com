@@ -3,6 +3,19 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 collections:
+    - name: "testimonials"
+      label: "Testimonials"
+      delete: true # Prevent users from deleting documents in this collection
+      editor:
+        preview: false
+      folder: "src/testimonials"
+      create: true
+      identifier_field: name
+      fields:
+        - { label: "Name", name: "name", widget: "string" }
+        - { label: "Quote", name: "quote", widget: "markdown" }
+        - { label: "Job Title", name: "jobTitle", widget: "string" }
+        - { label: "Head Shot", name: "headShot", widget: "image" }
     - name: "brands"
       label: "Brands"
       delete: true # Prevent users from deleting documents in this collection
