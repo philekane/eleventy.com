@@ -3,7 +3,7 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 collections:
-   - name: "brands"
+    - name: "brands"
       label: "Brands"
       delete: false # Prevent users from deleting documents in this collection
       editor:
