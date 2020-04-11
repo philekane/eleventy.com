@@ -4,5 +4,5 @@ url: /
 image: img/onceuponatime_back.jpg
 show: true
 brandImage:
-  image: _site/onceuponatime_back.jpg
+  image: /assets/img/onceuponatime_back.jpg
 ---
