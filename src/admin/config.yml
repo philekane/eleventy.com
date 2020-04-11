@@ -4,7 +4,7 @@ backend:
 
 collections:
     - name: "pages"
-      Label: "Pages"
+      label: "Pages"
       delete: false
       editor:
         preview: false
