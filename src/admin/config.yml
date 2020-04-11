@@ -12,7 +12,7 @@ collections:
       files:
           - label: "Contact Page"
             name: "contact"
-            file: "src/_data/contact.html"
+            file: "src/contact.html"
             fields:
               - { label: "Title", name: "name", widget: "string" }
               - { label: "Description", name: "quote", widget: "markdown" }
