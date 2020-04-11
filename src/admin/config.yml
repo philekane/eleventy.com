@@ -20,12 +20,14 @@ collections:
               - { label: "Show Map", name: "showMap", widget: "boolean" }
               - { label: "Google Map Link", name: "googleMap", widget: "string" }    
           - label: "Home Page"
-            name: "testimonials"
+            name: "index"
             file: "src/index.html"
             fields:
-              - { label: "Show Testimonial", name: "show", widget: "boolean" }             
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "markdown" }
+              - { label: "Testimonial", name: "testimonial", widget: "list" }
+              fields:
+                - { label: "Show Testimonial", name: "show", widget: "boolean" }             
+                - { label: "Title", name: "title", widget: "string" }
+                - { label: "Description", name: "description", widget: "markdown" }
     - name: "testimonials"
       label: "Testimonials"
       delete: true # Prevent users from deleting documents in this collection
