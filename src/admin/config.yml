@@ -12,11 +12,11 @@ collections:
       create: true
       fields:
           - { label: 'Show', name: 'show', widget: 'boolean' }
-          - label: "Image"
-            name: "image"
-            widget: "object"
-            fields:
-              - { label: "Image", name: "image", widget: "image" }
+            - label: "Image"
+              name: "image"
+              widget: "object"
+              fields:
+                - { label: "Image", name: "image", widget: "image" }
           - { label: "Name", name: "name", widget: "string" }
           - { label: "Url", name: "url", widget: "string" }
           
