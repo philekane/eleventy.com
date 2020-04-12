@@ -31,9 +31,8 @@ collections:
                   - { label: "Headline", name: "headline", widget: "string" }             
                   - { label: "Blurb", name: "blurb", widget: "string" }
                   - { label: "Background Image", name: "background", widget: "image" }
-                  - link:
-                    - { label: "Text", name: "text", widget: "string" }
-                    - { label: "Url", name: "url", widget: "string" }
+                  - { label: "Link Text", name: "linkText", widget: "string" }
+                  - { label: "Link Url", name: "linkUrl", widget: "string" }
               - name: "clientTestimonials"
                 label: "Client Testimonials"
                 widget: object
