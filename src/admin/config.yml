@@ -24,7 +24,7 @@ collections:
             file: "src/index.html"
             fields:
               - { label: "Show Testimonial", name: "show", widget: "boolean" }             
-              - { label: "Title", name: "testimonials.title", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "markdown" }
     - name: "testimonials"
       label: "Testimonials"
