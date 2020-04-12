@@ -41,7 +41,7 @@ body p span{
 
                                 <div class="header-social">
                                     {% for social in settings.socialSettings %}
-                                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}"></a>
+                                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}" aria-hidden="true"></a>
                                     {% endfor %}
 
                                 </div>
