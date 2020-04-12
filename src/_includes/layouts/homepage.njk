@@ -47,8 +47,8 @@
     <div class="service-area spb">
         <div class="container">
             <div class="section-title" data-margin="0 0 40px">
-                <h2>{{ services.title}}</h2>
-                <p>{{ services.description }}</p>
+                <h2>{{ homepageServices.title}}</h2>
+                <p>{{ homepageServices.description }}</p>
             </div>
             <div class="row">
                 {% for service in collections.services %}
@@ -64,7 +64,7 @@
                             <div class="content">
                                 <p>{{ service.data.description }}</p>
                             </div>
-                            <a href="{{ service.url }}" class="button">{{ services.linkText }}</a>
+                            <a href="{{ service.url }}" class="button">{{ homepageServices.linkText }}</a>
                         </div>
                     </div>
                 {% endfor %}
