@@ -23,7 +23,7 @@ collections:
             name: "index"
             file: "src/index.html"
               label: Testimonial
-              name: testimonials 
+              name: testimonials
               widget: "list" 
                 fields:
                   - { label: "Show Testimonial", name: "show", widget: "boolean" }             
