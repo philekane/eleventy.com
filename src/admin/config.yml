@@ -20,7 +20,7 @@ collections:
               - { label: "Show Map", name: "showMap", widget: "boolean" }
               - { label: "Google Map Link", name: "googleMap", widget: "string" }    
           - label: "Home Page"
-            name: "index"
+            name: "testimonials"
             file: "src/index.html"
             fields:
               - { label: "Show Testimonial", name: "show", widget: "boolean" }             
