@@ -22,7 +22,6 @@ collections:
           - label: "Home Page"
             name: "index"
             file: "src/index.html"
-            fields:
               - { label: "Testimonial", name: "testimonial", widget: "list" }
               fields:
                 - { label: "Show Testimonial", name: "show", widget: "boolean" }             
