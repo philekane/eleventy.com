@@ -30,6 +30,14 @@ collections:
                   - { label: "Show Testimonial", name: "show", widget: "boolean" }             
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "markdown" }
+              - name: "homepageServices"
+                label: "Home Page Services"
+                widget: object
+                fields:
+                  - { label: "Show Services", name: "show", widget: "boolean" }             
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "markdown" }
+                  - { label: "Link Text", name: "linktext", widget: "string" }
     - name: "testimonials"
       label: "Testimonials"
       delete: true # Prevent users from deleting documents in this collection
