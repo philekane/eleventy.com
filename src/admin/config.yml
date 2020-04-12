@@ -25,6 +25,7 @@ collections:
             fields:
               - name: "clientTestimonials"
                 label: "Client Testimonials"
+                widget: object
                 fields:
                   - { label: "Show Testimonial", name: "show", widget: "boolean" }             
                   - { label: "Title", name: "title", widget: "string" }
