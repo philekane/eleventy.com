@@ -23,6 +23,16 @@ collections:
             name: "index"
             file: "src/index.html"
             fields:
+              - name: "banners"
+                label: "Banners"
+                widget: list
+                allow_add: true
+                fields:
+                  - { label: "Headline", name: "headline", widget: "string" }             
+                  - { label: "Blurb", name: "blurb", widget: "string" }
+                  - link:
+                    - { label: Text, name= "text", widget: "string"}
+                    - { label: Url, name= url, widget: string}
               - name: "clientTestimonials"
                 label: "Client Testimonials"
                 widget: object
