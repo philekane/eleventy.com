@@ -41,7 +41,7 @@ body p span{
 
                                 <div class="header-social">
                                     {% for social in settings.socialSettings %}
-                                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}" aria-hidden="true"></a>
+                                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}" aria-hidden="true" title="{{ social.socialName }}"></a>
                                     {% endfor %}
 
                                 </div>
@@ -157,7 +157,7 @@ body p span{
                                     <p>{{ settings.siteSettings.address }}<br>P: {{ settings.siteSettings.phone }}</p>
                                     <h4>Newsletter</h4>
                                     <form action="#" class="nw_form">
-                                        <input placeholder="Enter your email" type="email">
+                                         <input placeholder="Enter your email" type="email" aria-label="email">
                                         <button>
                                             <i class="fa fa-paper-plane"></i>
                                         </button>

@@ -26,7 +26,7 @@ googleMap: https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21448.536387198
                     <h5>Social</h5>
                     <p>
                      {% for social in settings.socialSettings %}
-                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}" aria-hidden="true">{{ social.socialName }}</a>
+                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}" aria-hidden="true" title="{{ social.socialName }}"></a>
                      {% endfor %}
                     </p>
                 </div>
