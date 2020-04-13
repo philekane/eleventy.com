@@ -3,7 +3,7 @@
 {% block pageHeader %}{% endblock pageHeader %}
 
 {% block content %}
-
+ {% if showSlider == true %}
     <div class="hero-slider">
         {% for banner in banners %}
             <div class="single-slide" style="background-image: url({{ banner.background }})">
@@ -25,6 +25,7 @@
             </div>
         {% endfor %}
     </div>
+    {% endif %}
     <div class="about-area sp">
         <div class="container">
             <div class="row">

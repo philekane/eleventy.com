@@ -23,6 +23,10 @@ collections:
             name: "index"
             file: "src/index.html"
             fields:
+              - name: "slider"
+                label: "Slider"
+                fields:
+                  - { label: "Show Homepage Slider", name: "showSlider", widget: "boolean" }             
               - name: "banners"
                 label: "Banners"
                 widget: list
