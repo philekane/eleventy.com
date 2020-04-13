@@ -50,7 +50,7 @@ collections:
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Link Text", name: "linkText", widget: "string" }
                   - { label: "Link Url", name: "linkUrl", widget: "string" }
-                - name: "clientTestimonials"
+              - name: "clientTestimonials"
                 label: "Client Testimonials"
                 widget: object
                 fields:
