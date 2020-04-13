@@ -29,7 +29,7 @@ collections:
                 fields:
                   - { label: "Show Homepage Slider", name: "showSlider", widget: "boolean" }             
               - name: "banners"
-                label: "Banners"
+                label: "Banners For Homepage Slider"
                 widget: list
                 allow_add: true
                 fields:
