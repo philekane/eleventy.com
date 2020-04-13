@@ -25,6 +25,7 @@ collections:
             fields:
               - name: "slider"
                 label: "Slider"
+                widget: object
                 fields:
                   - { label: "Show Homepage Slider", name: "showSlider", widget: "boolean" }             
               - name: "banners"
