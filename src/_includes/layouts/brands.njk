@@ -5,8 +5,8 @@
                     <div class="col-md-3 col-6 single-brand">
                         <div class="inner">
                             <a href="{{ brand.data.url }}">
-                                <img src="{{ brand.data.image }}" alt="{{ brand.data.name }}">
-                            </a>
+                              {% insertImage "{{ brand.data.image }}", "{{ brand.data.name }}" %}
+                                </a>
                         </div>
                     </div>
                 {% endfor %}

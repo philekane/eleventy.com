@@ -1,7 +1,26 @@
+const CleanCSS = require("clean-css");
 module.exports = function(eleventyConfig){
 
-   
+    eleventyConfig.addFilter("cssmin", function(code) {
+        return new CleanCSS({}).minify(code).styles;
+      });
+
     eleventyConfig.addPassthroughCopy("assets");
+
+    // Responsive image shortcode
+  eleventyConfig.addShortcode("insertImage", function(filename, alttext) {
+    return `
+<picture>
+  <source sizes="auto" media="(max-width:641px)" data-srcset="/assets/img/${filename}.webp" type="image/webp">
+  <source sizes="auto" media="(max-width:641px)" data-srcset="/assets/img/${filename}-641.webp 641w" type="image/webp">
+  <source sizes="auto" media="(max-width:641px)" data-srcset="/assets/img/${filename}-641.jpeg 641w" type="image/jpeg">
+  <source sizes="auto" media="(max-width:873px)" data-srcset="/assets/img/${filename}-873.webp 873w" type="image/webp">
+  <source sizes="auto" media="(max-width:873px)" data-srcset="/assets/img/${filename}-873.jpeg 873w" type="image/jpeg">
+  <!-- And more image sizes and formats-->
+  <img sizes="auto" src="/assets/img/${filename}.jpg" data-srcset="/assets/img/${filename}" alt="${alttext}">
+</picture>
+    `;
+  });
 
     return{
         passthroughFileCopy: true,
