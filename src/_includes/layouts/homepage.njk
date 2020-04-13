@@ -26,26 +26,21 @@
         {% endfor %}
     </div>
     {% endif %}
+    {% if about.show == true %}
     <div class="about-area sp">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="about-content">
-                        <h3>{{ about.title}}</h3>
-                        <p>{{ about.description }}</p>
-                        <a href="{{ about.link.url }}" class="button">{{ about.link.text }}</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="about-img">
-                        <img src="{{ about.image}}" alt="{{ about.title }}">
-                    </div>
-                </div>
+            {% if about.position == "right" %}
+               {% include "layouts/about-right.njk" %}            
+            {% else %}
+                {% include "layouts/about-left.njk" %}
+            {% endif %}
             </div>
         </div>
     </div>
+    {% endif %}
     {% if homepageServices.show == true %}
-    <div class="service-area spb">
+    <div class="service-area sp">
         <div class="container">
             <div class="section-title" data-margin="0 0 40px">
                 <h2>{{ homepageServices.title}}</h2>
@@ -74,7 +69,7 @@
     </div>
     {% endif %}
      {% if clientTestimonials.show == true %}
-    <div class="testimonial-area spb">
+    <div class="testimonial-area sp">
         <div class="container">
             <div class="section-title">
                 <h2>{{ clientTestimonials.title }}</h2>

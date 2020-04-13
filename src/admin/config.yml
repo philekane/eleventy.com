@@ -38,7 +38,19 @@ collections:
                   - { label: "Background Image", name: "background", widget: "image" }
                   - { label: "Link Text", name: "linkText", widget: "string" }
                   - { label: "Link Url", name: "linkUrl", widget: "string" }
-              - name: "clientTestimonials"
+              - name: "about"
+                label: "About On Homepage"
+                widget: object
+                fields:
+                  - { label: "Show", name: "show", widget: "boolean" }             
+                  - { label: "Position", name: "postion", widget: "select", options: ["left", right] }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "markdown" }
+                  - { label: "Show Image", name: "show", widget: "boolean" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Link Text", name: "linkText", widget: "string" }
+                  - { label: "Link Url", name: "linkUrl", widget: "string" }
+                - name: "clientTestimonials"
                 label: "Client Testimonials"
                 widget: object
                 fields:
