@@ -2,12 +2,7 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-collections:
-    - label: "Footer Component"
-      name: "footer"
-      file: "assets/sass/color.sass"
-      fields:
-        - { label: "Footer Color", name: "$footerColor", widget: "string" }
+collections:       
     - name: "pages"
       label: "Pages"
       delete: false
@@ -101,6 +96,11 @@ collections:
       editor:
         preview: false
       files:
+        - label: "Footer Component"
+          name: "footer"
+          file: "assets/sass/color.sass"
+          fields:
+            - { label: "Footer Color", name: "$footerColor", widget: "string" }
         - label: "Faqs"
           name: "faqs"
           file: "src/_data/faqs.json"
