@@ -27,20 +27,31 @@
     </div>
     {% endif %}
     {% if about.show == true %}
-    <div class="about-area sp">
+    <div class="about-area spt">
         <div class="container">
             <div class="row">
             {% if about.position == "right" %}
-               {% include "layouts/about-right.njk" %}            
-            {% else %}
+               {% include "layouts/about-right.njk" %}
+            {% endif %}            
+            {%  if about.position == "left" %}
                 {% include "layouts/about-left.njk" %}
             {% endif %}
+            {%  if about.position == "noImage" %}
+               <div class="col-md-8 mx-auto">
+                    <div class="about-content">
+                        <h3>{{ about.title}}</h3>
+                        <p>{{ about.description }}</p>
+                        <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
+                    </div>
+                </div>
+            {% endif %}
+                
             </div>
         </div>
     </div>
     {% endif %}
     {% if homepageServices.show == true %}
-    <div class="service-area sp">
+    <div class="service-area spt">
         <div class="container">
             <div class="section-title" data-margin="0 0 40px">
                 <h2>{{ homepageServices.title}}</h2>
@@ -69,7 +80,7 @@
     </div>
     {% endif %}
      {% if clientTestimonials.show == true %}
-    <div class="testimonial-area sp">
+    <div class="testimonial-area spt">
         <div class="container">
             <div class="section-title">
                 <h2>{{ clientTestimonials.title }}</h2>

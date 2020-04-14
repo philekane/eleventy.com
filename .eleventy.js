@@ -1,9 +1,14 @@
 const CleanCSS = require("clean-css");
 module.exports = function(eleventyConfig){
 
+    eleventyConfig.addPassthroughCopy("css");
+
     eleventyConfig.addFilter("cssmin", function(code) {
         return new CleanCSS({}).minify(code).styles;
       });
+
+    eleventyConfig.addShortcode("copyrightYear", () => `&copy; ${new Date().getFullYear()}`);
+   
 
     eleventyConfig.addPassthroughCopy("assets");
 
@@ -21,6 +26,7 @@ module.exports = function(eleventyConfig){
 </picture>
     `;
   });
+
 
     return{
         passthroughFileCopy: true,

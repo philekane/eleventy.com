@@ -1,0 +1,120 @@
+<footer>
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 footer_widget">
+                    <div class="inner">
+                        <h4>About</h4>
+                        <p>{{ about.description }}</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 footer_widget">
+                    <div class="inner">
+                        <h4>Company</h4>
+                        <ul>
+                            <li>
+                                <a href="/about">Company Overview</a>
+                            </li>
+                            <li>
+                                <a href="#">Meet The Team</a>
+                            </li>
+                            <li>
+                                <a href="#">Our Awesome Partners</a>
+                            </li>
+                            <li>
+                                <a href="/services">Our Services</a>
+                            </li>
+                            <li>
+                                <a href="/faqs">Frequently Asked Questions</a>
+                            </li>
+                            <li>
+                                <a href="/contact">Contact Us</a>
+                            </li>
+                            <li>
+                                <a href="/terms">Terms of Use</a>
+                            </li>
+                             <li>
+                                <a href="/privacy">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 footer_widget">
+                    <div class="inner">
+                        <h4>Recent Posts</h4>
+                        <div class="media">
+                            <a href="#">
+                                <img src="/assets/img/recent1.jpg" class="d-flex mr-3" alt="">
+                            </a>
+                            <div class="media-body">
+                                <h5>
+                                    <a href="#">Curling irons are as individual as the women</a>
+                                </h5>
+                                <span>June 22, 2017</span>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <a href="#">
+                                <img src="/assets/img/recent2.jpg" class="d-flex mr-3" alt="">
+                            </a>
+                            <div class="media-body">
+                                <h5>
+                                    <a href="#">Curling irons are as individual as the women</a>
+                                </h5>
+                                <span>June 22, 2017</span>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <a href="#">
+                                <img src="/assets/img/recent3.jpg" class="d-flex mr-3" alt="">
+                            </a>
+                            <div class="media-body">
+                                <h5>
+                                    <a href="#">Curling irons are as individual as the women</a>
+                                </h5>
+                                <span>June 22, 2017</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 footer_widget">
+                    <div class="inner">
+                        <h4>Address</h4>
+                        <h5>{{ settings.siteSettings.companyName }}</h5>
+                        <p>{{ settings.siteSettings.address }}<br>P: {{ settings.siteSettings.phone }}</p>
+                        <h4>Newsletter</h4>
+                        <form action="#" class="nw_form">
+                            <input placeholder="Enter your email" type="email" aria-label="email">
+                            <button role="button" type="submit" >
+                                <i class="fa fa-paper-plane" aria-hidden="true" title="submit"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="copyright-txt">
+                      <p> {% copyrightYear %} {{ settings.siteSettings.companyName }}. All Rights Reserved.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-right">
+                    <div class="footer-nav">
+
+                        <!--class="current-menu-item"-->
+                        {% for menu in settings.navigationMenu %}
+
+                            <a href="{{ menu.pageUrl }}" >{{ menu.pageName }}</a>
+
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

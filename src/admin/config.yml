@@ -3,6 +3,11 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 collections:
+   -  label: "Home Page"
+      name: "index"
+      file: "assets/sass/color.sass"
+      fields:
+        - { label: "Footer Color", name: "$footerColor", widget: "string" }
     - name: "pages"
       label: "Pages"
       delete: false
@@ -43,7 +48,7 @@ collections:
                 widget: object
                 fields:
                   - { label: "Show", name: "show", widget: "boolean" }             
-                  - { label: "Position", name: "postion", widget: "select", options: ["left", right] }
+                  - { label: "Position", name: "postion", widget: "select", options: ["left", "right", "noImage"] }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "markdown" }
                   - { label: "Show Image", name: "show", widget: "boolean" }

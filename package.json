@@ -11,7 +11,13 @@
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
-    "acorn": "^7.1.1"
+    "acorn": "^7.1.1",
+    "autoprefixer": "^9.7.6",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
   },
   "dependencies": {
     "clean-css": "^4.2.3"
