@@ -1,16 +1,17 @@
+
 <footer>
     <div class="footer-top">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-3 footer_widget">
                     <div class="inner">
-                        <h4>About</h4>
+                        <h3>About</h3>
                         <p>{{ about.description }}</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 footer_widget">
                     <div class="inner">
-                        <h4>Company</h4>
+                        <h3>Company</h3>
                         <ul>
                             <li>
                                 <a href="/about">Company Overview</a>
@@ -41,37 +42,37 @@
                 </div>
                 <div class="col-md-6 col-lg-3 footer_widget">
                     <div class="inner">
-                        <h4>Recent Posts</h4>
+                        <h3>Recent Posts</h3>
                         <div class="media">
                             <a href="#">
-                                <img src="/assets/img/recent1.jpg" class="d-flex mr-3" alt="">
+                                <img src="/assets/img/recent1.jpg" class="d-flex mr-3" alt="post 1">
                             </a>
                             <div class="media-body">
-                                <h5>
+                                <h4>
                                     <a href="#">Curling irons are as individual as the women</a>
-                                </h5>
+                                </h4>
                                 <span>June 22, 2017</span>
                             </div>
                         </div>
                         <div class="media">
                             <a href="#">
-                                <img src="/assets/img/recent2.jpg" class="d-flex mr-3" alt="">
+                                <img src="/assets/img/recent2.jpg" class="d-flex mr-3" alt="post 2">
                             </a>
                             <div class="media-body">
-                                <h5>
+                                <h4>
                                     <a href="#">Curling irons are as individual as the women</a>
-                                </h5>
+                                </h4>
                                 <span>June 22, 2017</span>
                             </div>
                         </div>
                         <div class="media">
                             <a href="#">
-                                <img src="/assets/img/recent3.jpg" class="d-flex mr-3" alt="">
+                                <img src="/assets/img/recent3.jpg" class="d-flex mr-3" alt="post 3">
                             </a>
                             <div class="media-body">
-                                <h5>
+                                <h4>
                                     <a href="#">Curling irons are as individual as the women</a>
-                                </h5>
+                                </h4>
                                 <span>June 22, 2017</span>
                             </div>
                         </div>
@@ -79,13 +80,13 @@
                 </div>
                 <div class="col-md-6 col-lg-3 footer_widget">
                     <div class="inner">
-                        <h4>Address</h4>
-                        <h5>{{ settings.siteSettings.companyName }}</h5>
+                        <h3>Address</h3>
+                        <h4>{{ settings.siteSettings.companyName }}</h4>
                         <p>{{ settings.siteSettings.address }}<br>P: {{ settings.siteSettings.phone }}</p>
                         <h4>Newsletter</h4>
                         <form action="#" class="nw_form">
                             <input placeholder="Enter your email" type="email" aria-label="email">
-                            <button role="button" type="submit" >
+                            <button aria-label="Sign up for for newsletter" role="button" type="submit" >
                                 <i class="fa fa-paper-plane" aria-hidden="true" title="submit"></i>
                             </button>
                         </form>

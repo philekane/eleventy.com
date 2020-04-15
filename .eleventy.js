@@ -8,6 +8,7 @@ module.exports = function(eleventyConfig){
       });
 
     eleventyConfig.addShortcode("copyrightYear", () => `&copy; ${new Date().getFullYear()}`);
+    eleventyConfig.addShortcode("currentDate", () => `${new Date().toLocaleDateString()}`);
    
 
     eleventyConfig.addPassthroughCopy("assets");

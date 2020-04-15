@@ -13,7 +13,7 @@
                             <div class="col-lg-6">
                                 <div class="slide-content">
                                     <h2>{{ banner.headline }}</h2>
-                                    <p>{{ banner.blurb}}</p>
+                                    <h3>{{ banner.blurb}}</h3>
                                     <div class="slide-btn">
                                         <a href="{{ banner.linkUrl }}" class="button">{{ banner.linkText }}</a>
                                     </div>
@@ -39,7 +39,7 @@
             {%  if about.position == "noImage" %}
                <div class="col-md-8 mx-auto">
                     <div class="about-content">
-                        <h3>{{ about.title}}</h3>
+                        <h2>{{ about.title}}</h2>
                         <p>{{ about.description }}</p>
                         <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
                     </div>
@@ -55,7 +55,7 @@
         <div class="container">
             <div class="section-title" data-margin="0 0 40px">
                 <h2>{{ homepageServices.title}}</h2>
-                <p>{{ homepageServices.description }}</p>
+                <h3>{{ homepageServices.description }}</h3>
             </div>
             <div class="row">
                 {% for service in collections.services %}
@@ -79,12 +79,116 @@
         </div>
     </div>
     {% endif %}
+    <div class="portfolio-area sp">
+    <div class="container">
+        <div class="section-title">
+            <h2>Latest Work</h2>
+            <h3>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</h3>
+        </div>
+        <div class="row">
+            <div class="single-portfolio col-md-4">
+                <div class="inner">
+                    <div class="portfolio-img">
+                        <img src="assets/img/portfolio1.jpg" alt="portfolio-image">
+                        <div class="hover-content">
+                            <div>
+                                <a href="#" class="button">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <a href="#"><h3>The Back Chiropractor</h3></a>
+                        <span>Ceramics, Design</span>
+                    </div>
+                </div>
+            </div>
+            <div class="single-portfolio col-md-4">
+                <div class="inner">
+                    <div class="portfolio-img">
+                        <img src="assets/img/portfolio2.jpg" alt="portfolio-image">
+                        <div class="hover-content">
+                            <div>
+                                <a href="#" class="button">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <a href="#"><h3>The Back Chiropractor</h3></a>
+                        <span>Ceramics, Design</span>
+                    </div>
+                </div>
+            </div>
+            <div class="single-portfolio col-md-4">
+                <div class="inner">
+                    <div class="portfolio-img">
+                        <img src="assets/img/portfolio3.jpg" alt="portfolio-image">
+                        <div class="hover-content">
+                            <div>
+                                <a href="#" class="button">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <a href="#"><h3>The Back Chiropractor</h3></a>
+                        <span>Ceramics, Design</span>
+                    </div>
+                </div>
+            </div>
+            <div class="single-portfolio col-md-4">
+                <div class="inner">
+                    <div class="portfolio-img">
+                        <img src="assets/img/portfolio4.jpg" alt="portfolio-image">
+                        <div class="hover-content">
+                            <div>
+                                <a href="#" class="button">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <a href="#"><h3>The Back Chiropractor</h3></a>
+                        <span>Ceramics, Design</span>
+                    </div>
+                </div>
+            </div>
+            <div class="single-portfolio col-md-4">
+                <div class="inner">
+                    <div class="portfolio-img">
+                        <img src="assets/img/portfolio5.jpg" alt="portfolio-image">
+                        <div class="hover-content">
+                            <div>
+                                <a href="#" class="button">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <a href="#"><h3>The Back Chiropractor</h3></a>
+                        <span>Ceramics, Design</span>
+                    </div>
+                </div>
+            </div>
+            <div class="single-portfolio col-md-4">
+                <div class="inner">
+                    <div class="portfolio-img">
+                        <img src="assets/img/portfolio6.jpg" alt="portfolio-image">
+                        <div class="hover-content">
+                            <div>
+                                <a href="#" class="button">View Case Study</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <a href="#"><h3>The Back Chiropractor</h3></a>
+                        <span>Ceramics, Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
      {% if clientTestimonials.show == true %}
     <div class="testimonial-area spt">
         <div class="container">
             <div class="section-title">
                 <h2>{{ clientTestimonials.title }}</h2>
-                <p>{{ clientTestimonials.description }}</p>
+                <h3>{{ clientTestimonials.description }}</h33>
             </div>
             <div class="testimonial-slider bordered">
                 {% for testimonial in collections.testimonials %}
@@ -93,7 +197,7 @@
                             <p>{{ testimonial.data.quote }}</p>
                             <div class="client-info">
                                 <div class="client-img">
-                                    <img src="{{ testimonial.data.headShot }}" alt="client">
+                                    <img src="{{ testimonial.data.headShot }}" alt="{{ testimonial.data.name }}">
                                 </div>
                                 <div class="client-data">
                                     <h4>{{ testimonial.data.name }}</h4>

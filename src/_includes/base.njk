@@ -5,6 +5,8 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="date" content="{% currentDate %}">
+        <meta name="author" content="{{ settings.siteSettings.companyName }}">
         <meta property="og:title" content="{{ meta.title}}" />
         <meta property="og:description" content="{{ meta.description }}" />
         <meta property="og:image" content="{{ meta.image}}" />
@@ -25,11 +27,12 @@
 
     </head>
 <style>
-body p span{
+body p, span{
     color:#000;
 }
 </style>
     <body>
+
         <div class="preloader">
             <span class="preloader-spin"></span>
         </div>
@@ -38,16 +41,16 @@ body p span{
                 <div class="container">
                     <div class="row">
                         <div class="col-6 col-sm-3 logo-column">
-                            <a href="index.html" class="logo">
-                                <img src="/assets/img/logo.png" alt="logo">
-                            </a>
+                            <h1><a href="index.html" class="logo">
+                                <img src="/assets/img/logo.png" alt="Company Logo">
+                            </a></h1>
                         </div>
                         <div class="col-6 col-sm-9 nav-column clearfix">
                             <div class="right-nav">
 
                                 <div class="header-social">
                                     {% for social in settings.socialSettings %}
-                                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}" aria-hidden="true" title="{{ social.socialName }}"></a>
+                                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}" aria-hidden="true" aria-label="{{ social.socialName }}"></a>
                                     {% endfor %}
 
                                 </div>

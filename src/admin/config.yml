@@ -98,9 +98,9 @@ collections:
       files:
         - label: "Footer Component"
           name: "footer"
-          file: "assets/sass/footer.json"
+          file: "assets/sass/sass_test.sass"
           fields:
-            - { label: "Footer Color", name: "color", widget: "string" }
+            - { label: "Footer Color", name: "footerColor", widget: "string" }
         - label: "Faqs"
           name: "faqs"
           file: "src/_data/faqs.json"
