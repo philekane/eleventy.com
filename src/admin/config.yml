@@ -123,17 +123,34 @@ collections:
           - { label: "Icon", name: "faIcon", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Service Body", name: "Service", widget: "markdown" }    
-    - label: "Projects"
-      name: "portfolio"
-      widget: list
-      create: true
-      identifier_field: name
-      editor:
+    - label: "Portfolio"
+      name: "ourportfolio"
+      widget: object
+      - label: "Portfolio"
+        name: "portfolio"
+        widget: list
+        create: true
+        identifier_field: name
+        editor:
         preview: false
-      folder: "src/portfolio"
-      fields:
-        - { label: "Title", name: "title", widget: "string" }
-        - { label: "Description", name: "description", widget: "string" }
+        folder: "src/portfolio"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "string" }				
+      - label: "Portfolio"
+        name: "ourportfolio"
+        editor:
+          preview: false
+        files:
+          - label: "Project Types"
+            name: "projectTypes"
+            file: "src/_data/portfolio.json"
+            fields:
+              - label: "Project Types"
+                name: "projectTypes"
+                widget: list
+                fields:
+                  - { label: "Name", name: "name", widget: "string" }
     - name: "team"
       label: "Team Members"
       label_singular: "Team Member"
