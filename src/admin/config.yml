@@ -125,7 +125,6 @@ collections:
           - { label: "Service Body", name: "Service", widget: "markdown" }
     - label: "Portfolio"
       name: "portfolio"
-      name: "portfolio"
       editor:
           preview: false
       files:
