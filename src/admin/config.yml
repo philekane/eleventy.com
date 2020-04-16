@@ -125,7 +125,6 @@ collections:
           - { label: "Service Body", name: "Service", widget: "markdown" }    
     - label: "Portfolio"
       name: "ourportfolio"
-      widget: object
         - label: "Portfolio"
           name: "portfolio"
           widget: list
