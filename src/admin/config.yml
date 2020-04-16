@@ -149,8 +149,8 @@ collections:
                     preview: false
                   folder: "src/portfolio"
                   fields:
-                      - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Description", name: "description", widget: "string" }
+                    - { label: "Title", name: "title", widget: "string" }
+                    - { label: "Description", name: "description", widget: "string" }
     - name: "team"
       label: "Team Members"
       label_singular: "Team Member"
