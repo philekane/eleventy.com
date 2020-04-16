@@ -2,6 +2,7 @@ const CleanCSS = require("clean-css");
 module.exports = function(eleventyConfig){
 
     eleventyConfig.addPassthroughCopy("css");
+    eleventyConfig.addPassthroughCopy("assets");
 
     eleventyConfig.addFilter("cssmin", function(code) {
         return new CleanCSS({}).minify(code).styles;
@@ -11,7 +12,7 @@ module.exports = function(eleventyConfig){
     eleventyConfig.addShortcode("currentDate", () => `${new Date().toLocaleDateString()}`);
    
 
-    eleventyConfig.addPassthroughCopy("assets");
+    
 
     // Responsive image shortcode
   eleventyConfig.addShortcode("insertImage", function(filename, alttext) {
