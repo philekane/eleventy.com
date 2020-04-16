@@ -123,6 +123,16 @@ collections:
           - { label: "Icon", name: "faIcon", widget: "string" }
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Service Body", name: "Service", widget: "markdown" }
+    - label: "Portfolio"
+      name: "portfolio"
+      create: true
+      editor:
+          preview: false
+      folder: "src/portfolio"
+      fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Description", name: "description", widget: "text" }
     - name: "team"
       label: "Team Members"
       label_singular: "Team Member"

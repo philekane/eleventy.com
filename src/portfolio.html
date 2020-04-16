@@ -19,8 +19,8 @@ linkText: "View Case Study"
 
         <div class="row portfolio-isotope">
         {% for portfolio in collections.portfolio %}
-         <div class="single-portfolio col-md-4  {% for genre in portfolio.data.genre %}
-                     {{ genre }}{% endfor %}">
+         <div class="single-portfolio col-md-4  {% for projectType in portfolio.data.projectTypes %}
+                     {{ projectType }}{% endfor %}">
                 <div class="inner">
                     <div class="portfolio-img">
                         <img src="{{ portfolio.data.image }}" alt="{{ portfolio.data.title }}">
@@ -32,8 +32,8 @@ linkText: "View Case Study"
                     </div>
                     <div class="portfolio-content">
                         <a href="#"><h3>{{ portfolio.data.title }}</h3></a>
-                        <span> {% for genre in portfolio.data.genre %}
-                        {{ genre }}
+                        <span> {% for projectType in portfolio.data.projectTypes %}
+                        {{ projectType }}
                         {% endfor %}</span>
                     </div>
                 </div>
