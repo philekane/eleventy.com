@@ -125,11 +125,12 @@ collections:
           - { label: "Service Body", name: "Service", widget: "markdown" }
     - label: "Portfolio"
       name: "portfolio"
+      name: "portfolio"
+      editor:
+          preview: false
       files:
         - label: "Portfolio"
           name: "portfolio"
-          editor:
-              preview: false
           file: "src/_data/portfolio.json"
           fields:
             - label: Project Types
