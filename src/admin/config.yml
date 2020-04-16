@@ -130,13 +130,9 @@ collections:
       files:
         - label: Project Types
           name: projectTypes
-          editor:
-            preview: false
           file: "src/_data/portfolio.json"
-          widget: list
-          allow_add: true
           fields:
-            - { label: "Name", name: "name", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
         - label: "Projects"
           name: "projects"
           widget: object
