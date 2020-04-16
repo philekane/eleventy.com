@@ -3,206 +3,105 @@
 {% block pageHeader %}{% endblock pageHeader %}
 
 {% block content %}
- {% if slider.showSlider == true %}
-    <div class="hero-slider">
-        {% for banner in banners %}
-            <div class="single-slide" style="background-image: url({{ banner.background }})">
-                <div class="inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="slide-content">
-                                    <h2>{{ banner.headline }}</h2>
-                                    <h3>{{ banner.blurb}}</h3>
-                                    <div class="slide-btn">
-                                        <a href="{{ banner.linkUrl }}" class="button">{{ banner.linkText }}</a>
+    {% if slider.showSlider == true %}
+        <div class="hero-slider">
+            {% for banner in banners %}
+                <div class="single-slide" style="background-image: url({{ banner.background }})">
+                    <div class="inner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="slide-content">
+                                        <h2>{{ banner.headline }}</h2>
+                                        <h3>{{ banner.blurb}}</h3>
+                                        <div class="slide-btn">
+                                            <a href="{{ banner.linkUrl }}" class="button">{{ banner.linkText }}</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
-    </div>
+            {% endfor %}
+        </div>
     {% endif %}
     {% if about.show == true %}
-    <div class="about-area spt">
-        <div class="container">
-            <div class="row">
-            {% if about.position == "right" %}
-               {% include "layouts/about-right.njk" %}
-            {% endif %}            
-            {%  if about.position == "left" %}
-                {% include "layouts/about-left.njk" %}
-            {% endif %}
-            {%  if about.position == "noImage" %}
-               <div class="col-md-8 mx-auto">
-                    <div class="about-content">
-                        <h2>{{ about.title}}</h2>
-                        <p>{{ about.description }}</p>
-                        <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
-                    </div>
+        <div class="about-area spt">
+            <div class="container">
+                <div class="row">
+                    {% if about.position == "right" %}
+                        {% include "layouts/about-right.njk" %}
+                    {% endif %}
+                    {% if about.position == "left" %}
+                        {% include "layouts/about-left.njk" %}
+                    {% endif %}
+                    {% if about.position == "noImage" %}
+                        <div class="col-md-8 mx-auto">
+                            <div class="about-content">
+                                <h2>{{ about.title}}</h2>
+                                <p>{{ about.description }}</p>
+                                <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
+                            </div>
+                        </div>
+                    {% endif %}
+
                 </div>
-            {% endif %}
-                
             </div>
         </div>
-    </div>
     {% endif %}
     {% if homepageServices.show == true %}
-    <div class="service-area spt">
-        <div class="container">
-            <div class="section-title" data-margin="0 0 40px">
-                <h2>{{ homepageServices.title}}</h2>
-                <h3>{{ homepageServices.description }}</h3>
-            </div>
-            <div class="row">
-                {% for service in collections.services %}
+        <div class="service-area spt">
+            <div class="container">
+                <div class="section-title" data-margin="0 0 40px">
+                    <h2>{{ homepageServices.title}}</h2>
+                    <h3>{{ homepageServices.description }}</h3>
+                </div>
+                <div class="row">
+                    {% for service in collections.services %}
 
-                    <div class="col-md-4 single-service-2">
-                        <div class="inner">
-                            <div class="title">
-                                <div class="icon">
-                                    <i class="fa fa-{{ service.data.faIcon }}"></i>
+                        <div class="col-md-4 single-service-2">
+                            <div class="inner">
+                                <div class="title">
+                                    <div class="icon">
+                                        <i class="fa fa-{{ service.data.faIcon }}"></i>
+                                    </div>
+                                    <h4>{{ service.data.title }}</h4>
                                 </div>
-                                <h4>{{ service.data.title }}</h4>
+                                <div class="content">
+                                    <p>{{ service.data.description }}</p>
+                                </div>
+                                <a href="{{ service.url }}" class="button">{{ homepageServices.linkText }}</a>
                             </div>
-                            <div class="content">
-                                <p>{{ service.data.description }}</p>
-                            </div>
-                            <a href="{{ service.url }}" class="button">{{ homepageServices.linkText }}</a>
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
-    </div>
     {% endif %}
-    <div class="portfolio-area sp">
-    <div class="container">
-        <div class="section-title">
-            <h2>Latest Work</h2>
-            <h3>Malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae.</h3>
-        </div>
-        <div class="row">
-            <div class="single-portfolio col-md-4">
-                <div class="inner">
-                    <div class="portfolio-img">
-                        <img src="assets/img/portfolio1.jpg" alt="portfolio-image">
-                        <div class="hover-content">
-                            <div>
-                                <a href="#" class="button">View Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <a href="#"><h3>The Back Chiropractor</h3></a>
-                        <span>Ceramics, Design</span>
-                    </div>
-                </div>
-            </div>
-            <div class="single-portfolio col-md-4">
-                <div class="inner">
-                    <div class="portfolio-img">
-                        <img src="assets/img/portfolio2.jpg" alt="portfolio-image">
-                        <div class="hover-content">
-                            <div>
-                                <a href="#" class="button">View Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <a href="#"><h3>The Back Chiropractor</h3></a>
-                        <span>Ceramics, Design</span>
-                    </div>
-                </div>
-            </div>
-            <div class="single-portfolio col-md-4">
-                <div class="inner">
-                    <div class="portfolio-img">
-                        <img src="assets/img/portfolio3.jpg" alt="portfolio-image">
-                        <div class="hover-content">
-                            <div>
-                                <a href="#" class="button">View Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <a href="#"><h3>The Back Chiropractor</h3></a>
-                        <span>Ceramics, Design</span>
-                    </div>
-                </div>
-            </div>
-            <div class="single-portfolio col-md-4">
-                <div class="inner">
-                    <div class="portfolio-img">
-                        <img src="assets/img/portfolio4.jpg" alt="portfolio-image">
-                        <div class="hover-content">
-                            <div>
-                                <a href="#" class="button">View Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <a href="#"><h3>The Back Chiropractor</h3></a>
-                        <span>Ceramics, Design</span>
-                    </div>
-                </div>
-            </div>
-            <div class="single-portfolio col-md-4">
-                <div class="inner">
-                    <div class="portfolio-img">
-                        <img src="assets/img/portfolio5.jpg" alt="portfolio-image">
-                        <div class="hover-content">
-                            <div>
-                                <a href="#" class="button">View Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <a href="#"><h3>The Back Chiropractor</h3></a>
-                        <span>Ceramics, Design</span>
-                    </div>
-                </div>
-            </div>
-            <div class="single-portfolio col-md-4">
-                <div class="inner">
-                    <div class="portfolio-img">
-                        <img src="assets/img/portfolio6.jpg" alt="portfolio-image">
-                        <div class="hover-content">
-                            <div>
-                                <a href="#" class="button">View Case Study</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <a href="#"><h3>The Back Chiropractor</h3></a>
-                        <span>Ceramics, Design</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-     {% if clientTestimonials.show == true %}
-    <div class="testimonial-area spt">
+
+    <div class="portfolio-area spt">
         <div class="container">
             <div class="section-title">
-                <h2>{{ clientTestimonials.title }}</h2>
-                <h3>{{ clientTestimonials.description }}</h33>
+                <a href="/portfolio"><h2>{{ homepagePortfolio.title }}</h2></a>
+                <h3>{{ homepagePortfolio.description }}</h3>
             </div>
-            <div class="testimonial-slider bordered">
-                {% for testimonial in collections.testimonials %}
-                    <div class="single-slide">
+            <div class="row">
+                {% for portfolio in collections.portfolio %}
+                    <div class="single-portfolio col-md-4">
                         <div class="inner">
-                            <p>{{ testimonial.data.quote }}</p>
-                            <div class="client-info">
-                                <div class="client-img">
-                                    <img src="{{ testimonial.data.headShot }}" alt="{{ testimonial.data.name }}">
+                            <div class="portfolio-img">
+                                <img src="{{ portfolio.data.image }}" alt="{{ portfolio.data.title }}">
+                                <div class="hover-content">
+                                    <div>
+                                        <a href="{{ portfolio.url }}" class="button">{{ homepagePortfolio.linkText }}</a>
+                                    </div>
                                 </div>
-                                <div class="client-data">
-                                    <h4>{{ testimonial.data.name }}</h4>
-                                    <span>{{ testimonial.data.jobTitle }}</span>
-                                </div>
+                            </div>
+                            <div class="portfolio-content">
+                                                                 <h3>{{ portfolio.data.title }}</h3>
+                               
+                                <span>{{ portfolio.data.genre}}</span>
                             </div>
                         </div>
                     </div>
@@ -210,11 +109,37 @@
             </div>
         </div>
     </div>
-    {% endif %}
+        {% if clientTestimonials.show == true %}
+                <div class="testimonial-area spt">
+                    <div class="container">
+                        <div class="section-title">
+                            <h2>{{ clientTestimonials.title }}</h2>
+                            <h3>{{ clientTestimonials.description }}</h33>
+                        </div>
+                        <div class="testimonial-slider bordered">
+                            {% for testimonial in collections.testimonials %}
+                                <div class="single-slide">
+                                    <div class="inner">
+                                        <p>{{ testimonial.data.quote }}</p>
+                                        <div class="client-info">
+                                            <div class="client-img">
+                                                <img src="{{ testimonial.data.headShot }}" alt="{{ testimonial.data.name }}">
+                                            </div>
+                                            <div class="client-data">
+                                                <h4>{{ testimonial.data.name }}</h4>
+                                                <span>{{ testimonial.data.jobTitle }}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
 
-   
-    {% include "layouts/brands.njk" %}
-    {% if faqs.show == true %}
-       {% include "layouts/faqscomponent.njk" %}
-    {% endif %}
-{% endblock content %}
+            {% include "layouts/brands.njk" %}
+            {% if faqs.show == true %}
+                {% include "layouts/faqscomponent.njk" %}
+            {% endif %}
+        {% endblock content %}

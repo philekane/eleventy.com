@@ -6,4 +6,4 @@ Service: This is the service body for music.
 ---
 
 {{ Service }}
- {% insertImage "green-leaf-1920.jpg", "test" %}
+ 
