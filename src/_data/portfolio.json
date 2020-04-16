@@ -1,19 +1,16 @@
 {
-    "projectTypes": [
-        {
-            "name": "Ceramics"
-        },
-        {
-            "name": "Branding"
-        },
-        {
-            "name": "Design"
-        },
-        {
-            "name": "Photography"
-        },
-        {
-            "name": "Seo"
-        }
-    ]
+  "projectTypes": [
+    {
+      "name": "Ceramics"
+    },
+    {
+      "name": "Branding"
+    },
+    {
+      "name": "Design"
+    },
+    {
+      "name": "Seo"
+    }
+  ]
 }
