@@ -139,14 +139,17 @@ collections:
                 - { label: "Name", name: "name", widget: "string" }
             - label: "Projects"
               name: "projects"
-              create: true
-              identifier_field: name
-              editor:
-                preview: false
-              folder: "src/portfolio"
-              fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Description", name: "description", widget: "string" }
+              widget: object
+              - label: "Portfolio"
+                name: "portfolio"
+                create: true
+                identifier_field: name
+                editor:
+                  preview: false
+                folder: "src/portfolio"
+                fields:
+                    - { label: "Title", name: "title", widget: "string" }
+                    - { label: "Description", name: "description", widget: "string" }
     - name: "team"
       label: "Team Members"
       label_singular: "Team Member"
