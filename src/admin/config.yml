@@ -138,7 +138,7 @@ collections:
               fields:
                 - { label: "Name", name: "name", widget: "string" }
             - label: "Projects"
-              name: "projects"
+              name: "portfolio"
               folder: "src/portfolio"
               fields:
                   - { label: "Title", name: "title", widget: "string" }
