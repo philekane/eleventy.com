@@ -1,9 +1,9 @@
 ---
-image: "/assets/img/portfolio1.jpg"
-title: "Cedar Street Native Plant Nursery"
-description: "This is work we did for the Nursery."
+title: Cedar Street Native Plant Nursery
+image: /assets/img/cropped-logo.png
+description: This is work we did for Cedar Street Nursery.
 projectTypes:
--  Ceramics
--  Design
+  - Ceramics
+  - Design
 ---
 {{ description }}
