@@ -132,6 +132,8 @@ collections:
           fields:
             - label: Project Types
               name: projectTypes
+              editor:
+                preview: false
               widget: list
               allow_add: true
               fields:
