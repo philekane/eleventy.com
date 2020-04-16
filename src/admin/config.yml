@@ -128,18 +128,19 @@ collections:
       files:
         - label: "Portfolio"
           name: "portfolio"
+          editor:
+              preview: false
           file: "src/_data/portfolio.json"
           fields:
             - label: Project Types
               name: projectTypes
-              editor:
-                preview: false
               widget: list
               allow_add: true
               fields:
                 - { label: "Name", name: "name", widget: "string" }
             - label: "Projects"
               name: "projects"
+              widget: object
               create: true
               editor:
                   preview: false
