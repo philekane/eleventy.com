@@ -124,15 +124,15 @@ collections:
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Service Body", name: "Service", widget: "markdown" }
     - label: "Portfolio"
-          name: "portfolio"
-          file: "src/_data/portfolio.json"
+      name: "portfolio"
+      file: "src/_data/portfolio.json"
+      fields:
+        - label: Project Types
+          name: projectTypes
+          widget: list
+          allow_add: true
           fields:
-            - label: Project Types
-              name: projectTypes
-              widget: list
-              allow_add: true
-              fields:
-                - { label: "Name", name: "name", widget: "string" }
+            - { label: "Name", name: "name", widget: "string" }
         - label: "Projects"
           name: "projects"
           create: true
