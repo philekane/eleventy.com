@@ -128,11 +128,14 @@ collections:
       editor:
           preview: false
       files:
-        - label: Project Types
-          name: projectTypes
+        - label: "Project Types"
+          name: "projectTypes"
           file: "src/_data/portfolio.json"
           fields:
-            - { label: "Name", name: "name", widget: "string" }
+            - label: "Project Types"
+              name: "projectTypes"
+              widget: list
+              - { label: "Name", name: "name", widget: "string" }
     - name: "team"
       label: "Team Members"
       label_singular: "Team Member"
