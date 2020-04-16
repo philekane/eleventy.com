@@ -1,0 +1,45 @@
+---
+layout: "base.njk"
+title: "Portfolio"
+description: "Some of our work"
+backgroundImage: "/assets/img/page-title.jpg"
+linkText: "View Case Study"
+---
+  <div class="portfolio-area sp">
+    <div class="container">
+        <div class="row">
+            <ul class="isotope-menu">
+             <li data-filter="*" class="active">Show All</li>
+            {% for category in portfolio.projectTypes %}
+               <li data-filter=".{{ category.name }}">{{ category.name }}</li>
+            {% endfor %}
+                
+            </ul>
+        </div>
+
+        <div class="row portfolio-isotope">
+        {% for portfolio in collections.portfolio %}
+         <div class="single-portfolio col-md-4  {% for genre in portfolio.data.genre %}
+                     {{ genre }}{% endfor %}">
+                <div class="inner">
+                    <div class="portfolio-img">
+                        <img src="{{ portfolio.data.image }}" alt="{{ portfolio.data.title }}">
+                        <div class="hover-content">
+                            <div>
+                                <a href="{{ portfolio.url }}" class="button">{{ linkText }}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <a href="#"><h3>{{ portfolio.data.title }}</h3></a>
+                        <span> {% for genre in portfolio.data.genre %}
+                        {{ genre }}
+                        {% endfor %}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+           
+        </div>
+    </div>
+</div>  
