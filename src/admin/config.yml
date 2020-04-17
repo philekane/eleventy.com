@@ -123,6 +123,20 @@ collections:
         - { label: "Icon", name: "faIcon", widget: "string" }
         - { label: "Description", name: "description", widget: "text" }
         - { label: "Service Body", name: "Service", widget: "markdown" }
+    - label: "Project Types"
+      name: "projectTypes"
+      editor:
+        preview: false
+      files:
+        - label: "Project Types"
+          name: "projectTypes"
+          file: "src/_data/portfolio.json"
+          fields:
+            - label: "Project Types"
+              name: "projectTypes"
+              widget: list
+              fields:
+                - { label: "Name", name: "name", widget: "string" }
     - label: "Portfolio"
       name: "portfolio"
       widget: list
