@@ -13,6 +13,12 @@ meta:
 ---
     <div class="contact-area sp">
     <div class="container">
+    <div class="row justify-content-med-center">
+            <div class="col-md-10 spb">
+                <h3>{{ title }}</h3>
+                <h4>{{ description }}</h4>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-5 contact-info">
                 <div class="single-info">
@@ -31,7 +37,7 @@ meta:
                     <h5>Social</h5>
                     <p>
                      {% for social in settings.socialSettings %}
-                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}" aria-hidden="true" title="{{ social.socialName }}"></a>
+                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}" aria-hidden="true" aria-label="{{ social.socialName }}"></a>
                      {% endfor %}
                     </p>
                 </div>
@@ -40,16 +46,16 @@ meta:
                 <form action="#" name="contact-page" netlify class="contact-form">
                     <div class="row">
                         <div class="col-lg-6">
-                            <input type="text" name="name" placeholder="Name">
+                            <input type="text" name="name" placeholder="Name" aria-label="name">
                         </div>
                         <div class="col-lg-6">
-                            <input type="email" name="email" placeholder="Email">
+                            <input type="email" name="email" placeholder="Email" aria-label="email">
                         </div>
                         <div class="col-lg-12">
-                            <input type="text" name="subject" placeholder="Subject">
+                            <input type="text" name="subject" placeholder="Subject" aria-label="subject">
                         </div>
                         <div class="col-lg-12">
-                            <textarea name="message" placeholder="Message"></textarea>
+                            <textarea name="message" placeholder="Message" aria-label="message"></textarea>
                         </div>
                         <div class="col-lg-12">
                             <input class="button" type="submit" value="Send Message">

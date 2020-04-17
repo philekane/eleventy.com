@@ -6,7 +6,7 @@ const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 
 function cssTask() {
-  return src('./assets/sass/*.sass')
+  return src('./assets/css/style.css')
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' })).on('error', sass.logError)
     .pipe(postcss([autoprefixer(), cssnano()]))

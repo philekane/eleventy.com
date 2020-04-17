@@ -43,7 +43,7 @@ collections:
                 widget: object
                 fields:
                   - { label: "Show", name: "show", widget: "boolean" }             
-                  - { label: "Position", name: "postion", widget: "select", options: ["left", "right", "noImage"] }
+                  - { label: "Position", name: "imagePosition", widget: "select", options: ["left", "right", "noImage"] }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "markdown" }
                   - { label: "Show Image", name: "show", widget: "boolean" }
@@ -205,7 +205,7 @@ collections:
                 - { label: "Company Description", name: "companyDescription", widget: "markdown" }
                 - { label: "Phone", name: "phone", widget: "string" }
                 - { label: "Logo", name: "logo", widget: "image", required: false }
-                - { label: "Logo Alt", name: "logoAlt", widget: "string", required: false }
+                - { label: "Logo Alt", name: "logoAlt", widget: "string" }
                 - { label: "Email", name: "email", widget: "string" }
                 - { label: "Address", name: "address", widget: "string" }
             - label: Social Settings

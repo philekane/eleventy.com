@@ -4,5 +4,5 @@ name: Brand 6
 url: /
 show: true
 brandImage:
-  image: /assets/img/phil-kane-3.jpg
+  image: assets/img/phil-kane-3.png
 ---
