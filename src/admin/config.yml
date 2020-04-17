@@ -136,37 +136,37 @@ collections:
         - { label: "Description", name: "description", widget: "string" }    
     - name: "team"
       label: "Team Members"
-      label_singular: "Team Member"
-      editor:
-          preview: false
-      delete: false
-      preview_path: "team"
-      files:
-        - label: "Members"
-          name: "members"
-          file: "src/_data/settings.json"
-          fields:
-            - label: Members
-              name: members
-              widget: list
-              allow_add: true
+        - label_singular: "Team Member"
+          editor:
+              preview: false
+          delete: false
+          preview_path: "team"
+          files:
+            - label: "Members"
+              name: "members"
+              file: "src/_data/settings.json"
               fields:
-                - { label: "Name", name: "name", widget: "string" }
-                - { label: "Position", name: "position", widget: "string" }
-                - { label: "Bio", name: "bio", widget: "string" }
-                - { label: "Background", name: "background", widget: "string" }
-                - label: "Image"
-                  name: "image"
-                  widget: "object"
+                - label: Members
+                  name: members
+                  widget: list
+                  allow_add: true
                   fields:
-                    - { label: "Photo", name: "main", widget: "image" }
-                    - { label: "Photo Alt", name: "alt", widget: "string" }
-                - label: "Social"
-                  name: "social"
-                  widget: "list"
-                  fields:
-                    - { label: "Name", name: "name", widget: "string", required: false }
-                    - { label: "Link", name: "link", widget: "string", required: false }
+                    - { label: "Name", name: "name", widget: "string" }
+                    - { label: "Position", name: "position", widget: "string" }
+                    - { label: "Bio", name: "bio", widget: "string" }
+                    - { label: "Background", name: "background", widget: "string" }
+                    - label: "Image"
+                      name: "image"
+                      widget: "object"
+                      fields:
+                        - { label: "Photo", name: "main", widget: "image" }
+                        - { label: "Photo Alt", name: "alt", widget: "string" }
+                    - label: "Social"
+                      name: "social"
+                      widget: "list"
+                      fields:
+                        - { label: "Name", name: "name", widget: "string", required: false }
+                        - { label: "Link", name: "link", widget: "string", required: false }
     - name: "generalSettings"
       label: "General Settings"
       delete: false # Prevent users from deleting documents in this collection
