@@ -129,7 +129,7 @@ collections:
       create: true
       identifier_field: name
       editor:
-      preview: false
+        preview: false
       folder: "src/portfolio"
       fields:
         - { label: "Title", name: "title", widget: "string" }
