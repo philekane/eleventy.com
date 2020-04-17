@@ -134,20 +134,20 @@ collections:
       fields:
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Description", name: "description", widget: "string" }
-        - label: "Portfolio"
-          name: "portfolioFiles"
-          editor:
-            preview: false
-          files:
+    - label: "Portfolio"
+      name: "portfolioFiles"
+      editor:
+        preview: false
+      files:
+        - label: "Project Types"
+          name: "projectTypes"
+          file: "src/_data/portfolio.json"
+          fields:
             - label: "Project Types"
               name: "projectTypes"
-              file: "src/_data/portfolio.json"
+              widget: list
               fields:
-                - label: "Project Types"
-                  name: "projectTypes"
-                  widget: list
-                  fields:
-                    - { label: "Name", name: "name", widget: "string" }
+                - { label: "Name", name: "name", widget: "string" }
     - name: "team"
       label: "Team Members"
       label_singular: "Team Member"
