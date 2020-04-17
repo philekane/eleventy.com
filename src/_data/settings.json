@@ -1,5 +1,5 @@
 {
- "navigationMenu": [
+  "navigationMenu": [
     {
       "pageName": "Home",
       "pageUrl": "/"
@@ -15,6 +15,10 @@
     {
       "pageName": "Services",
       "pageUrl": "/services"
+    },
+    {
+      "pageName": "Portfolio",
+      "pageUrl": "/portfolio"
     },
     {
       "pageName": "Pricing",
