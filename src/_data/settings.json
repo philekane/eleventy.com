@@ -27,6 +27,10 @@
     {
       "pageName": "Testimonials",
       "pageUrl": "/testimonials"
+    },
+    {
+      "pageName": "FAQ",
+      "pageUrl": "/faqs"
     }
   ],
   "siteSettings": {
