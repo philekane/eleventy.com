@@ -119,10 +119,10 @@ collections:
           preview: false
       folder: "src/services"
       fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Icon", name: "faIcon", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Service Body", name: "Service", widget: "markdown" }
+        - { label: "Title", name: "title", widget: "string" }
+        - { label: "Icon", name: "faIcon", widget: "string" }
+        - { label: "Description", name: "description", widget: "text" }
+        - { label: "Service Body", name: "Service", widget: "markdown" }
         - label: "Portfolio"
           name: "portfolio"
           widget: list
