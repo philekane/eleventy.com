@@ -35,7 +35,8 @@
     "email": "tester@test.com",
     "address": "1316 wall st",
     "logo": "",
-    "logoAlt": ""
+    "logoAlt": "",
+    "companyDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua thirst. But wait there's morer."
   },
   "socialSettings": [
     {

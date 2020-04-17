@@ -141,7 +141,7 @@ collections:
       name: "portfolio"
       widget: list
       create: true
-      identifier_field: name
+      identifier_field: title
       editor:
         preview: false
       folder: "src/portfolio"
@@ -202,6 +202,7 @@ collections:
               widget: object
               fields:
                 - { label: "Company Name", name: "companyName", widget: "string" }
+                - { label: "Company Description", name: "companyDescription", widget: "markdown" }
                 - { label: "Phone", name: "phone", widget: "string" }
                 - { label: "Logo", name: "logo", widget: "image", required: false }
                 - { label: "Logo Alt", name: "logoAlt", widget: "string", required: false }
