@@ -141,16 +141,16 @@ collections:
         - { label: "Description", name: "description", widget: "text" }
         - { label: "Service Body", name: "Service", widget: "markdown" }
     - label: "Project Types"
-      name: "projectTypes"
+      name: "projectTypes1"
       editor:
         preview: false
       files:
         - label: "Project Types"
-          name: "projecttypes"
+          name: "projectTypes2"
           file: "src/_data/portfolio.json"
           fields:
             - label: "Project Types"
-              name: "projectTypes"
+              name: "projectTypes3"
               widget: list
               fields:
                 - { label: "Name", name: "name", widget: "string" }
