@@ -150,7 +150,7 @@ collections:
           file: "src/_data/portfolio.json"
           fields:
             - label: "Project Types"
-              name: "projectTypess"
+              name: "projectTypes"
               widget: list
               fields:
                 - { label: "Name", name: "name", widget: "string" }
