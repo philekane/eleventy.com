@@ -21,7 +21,7 @@ collections:
             widget: "datetime",
             dateFormat: "DD.MM.YYYY",
             timeFormat: "HH:mm",
-            format: "LLL"
+            format: "YYYY-MM-DD"
           }
         - label: "Cover Image"
           name: "image"
@@ -29,7 +29,7 @@ collections:
           required: false
           tagname: ""
         - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
-      meta:
+        meta:
         - { label: "SEO Description", name: "description", widget: "text" }
     - name: "pages"
       label: "Pages"
