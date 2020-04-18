@@ -459,7 +459,7 @@ form.search-form button
                 border-radius: 50%
                 overflow: hidden
             .client-data
-                padding-left: 78px
+                padding-left: .5em
                 h4
                     font-size: 16px
                     margin: 4px 0 0
@@ -944,7 +944,7 @@ footer h3
                 height: 85px
                 text-align: center
                 +flex_center
-                background-color: #363950
+                background-color: #363950 
                 position: absolute
                 right: 35px
                 top: 25px
@@ -973,6 +973,10 @@ footer h3
         a.button
             background-color: #222
             border-color: #222 !important
+        a.button:hover
+            background-color: #fff
+            border-color: #fff !important
+            @extend .c3
 
 .single-pricing-2
     @extend .single-pricing

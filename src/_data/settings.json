@@ -38,15 +38,9 @@
     "phone": "1(206)-425-5252",
     "email": "tester@test.com",
     "address": "1316 wall st",
-<<<<<<< HEAD
     "logo": "/assets/img/logo.png",
     "logoAlt": "Company Logo",
     "companyDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua thirst. But wait there's morer."
-=======
-    "logo": "",
-    "logoAlt": "",
-    "companyDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua thirst. \n\nBut wait there's morer."
->>>>>>> a1176ee419c551010002124ca5395ac397e1e3bf
   },
   "socialSettings": [
     {

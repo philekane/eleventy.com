@@ -1,17 +1,28 @@
 {% extends "layouts/simple.njk" %}
 
 {% block postContent %}
-        <div class="testimonial-area spb">
+<style>
+.grid{
+    display:flex;
+   
+}
+.client-data{
+    margin-left:.1em;
+ }
+</style>
+        <div class="testimonial-area spt">
             <div class="container">
                 <div class="testimonial-slider bordered">
                     {% for testimonial in collections.testimonials %}
                         <div class="single-slide">
                             <div class="inner">
                                 <p>{{ testimonial.data.quote }}</p>
-                                <div class="client-info">
+                                <div class="client-info grid">
+                                {% if testimonial.data.headShot %}
                                     <div class="client-img">
                                         <img src="{{ testimonial.data.headShot }}" alt="{{ testimonial.data.name }}">
                                     </div>
+                                {% endif %}
                                     <div class="client-data">
                                         <h4>{{ testimonial.data.name }}</h4>
                                         <span>{{ testimonial.data.jobTitle }}</span>

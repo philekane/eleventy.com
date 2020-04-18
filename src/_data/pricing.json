@@ -1,0 +1,92 @@
+{
+    "priceOptions": [
+        {
+            "title": "Free",
+            "price": "$28",
+            "duration": "2 months",
+            "features": [
+                {
+                    "name": "5GB Storage"
+                },
+                {
+                    "name": "1GB RAM"
+                },
+                {
+                    "name": "400GB Bandwidth"
+                },
+                {
+                    "name": "10 Email Address"
+                },
+                {
+                    "name": "Forum Support"
+                }
+            ]
+        },
+        {
+            "title": "Free",
+            "price": "$38",
+            "duration": "2 months",
+            "features": [
+                {
+                    "name": "10GB Storage"
+                },
+                {
+                    "name": "2GB RAM"
+                },
+                {
+                    "name": "600GB Bandwidth"
+                },
+                {
+                    "name": "15 Email Address"
+                },
+                {
+                    "name": "Forum Support"
+                }
+            ]
+        },
+        {
+            "title": "Free",
+            "price": "$48",
+            "duration": "2 months",
+            "features": [
+                {
+                    "name": "25GB Storage"
+                },
+                {
+                    "name": "3GB RAM"
+                },
+                {
+                    "name": "800GB Bandwidth"
+                },
+                {
+                    "name": "20 Email Address"
+                },
+                {
+                    "name": "Forum Support"
+                }
+            ]
+        },
+        {
+            "title": "Free",
+            "price": "$68",
+            "duration": "2 months",
+            "features": [
+                {
+                    "name": "25GB Storage"
+                },
+                {
+                    "name": "3GB RAM"
+                },
+                {
+                    "name": "800GB Bandwidth"
+                },
+                {
+                    "name": "20 Email Address"
+                },
+                {
+                    "name": "Forum Support"
+                }
+            ]
+        }
+    ]
+}
