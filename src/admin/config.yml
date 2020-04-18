@@ -78,6 +78,7 @@ collections:
               name: "priceOptions"
               widget: list
               fields:
+                - { label: "Option", name: "option", widget: "string" }
                 - { label: "Title", name: "title", widget: "string" }
                 - { label: "Price", name: "price", widget: "string" }
                 - { label: "Duration", name: "duration", hint: "How many months", widget: "string" }

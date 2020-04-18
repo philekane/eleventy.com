@@ -1,9 +1,10 @@
 {
     "priceOptions": [
         {
+            "option": "option 1",
             "title": "Free",
-            "price": "$28",
-            "duration": "2 months",
+            "price": "$0",
+            "duration": "",
             "features": [
                 {
                     "name": "5GB Storage"
@@ -23,9 +24,10 @@
             ]
         },
         {
-            "title": "Free",
+            "option": "option 2",
+            "title": "Pro",
             "price": "$38",
-            "duration": "2 months",
+            "duration": "Free for 1 month",
             "features": [
                 {
                     "name": "10GB Storage"
@@ -45,9 +47,10 @@
             ]
         },
         {
-            "title": "Free",
+            "option": "option 3",
+            "title": "Interprise",
             "price": "$48",
-            "duration": "2 months",
+            "duration": "Free for 2 months",
             "features": [
                 {
                     "name": "25GB Storage"
@@ -67,9 +70,10 @@
             ]
         },
         {
-            "title": "Free",
+            "option": "option 4",
+            "title": "Corporate",
             "price": "$68",
-            "duration": "2 months",
+            "duration": "Month",
             "features": [
                 {
                     "name": "25GB Storage"
