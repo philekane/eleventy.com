@@ -3,34 +3,34 @@ backend:
   branch: master # Branch to update (optional; defaults to master)
 
 collections:
-    - name: 'posts' # Used in routes, ie.: /admin/collections/:slug/edit
-      label: 'Posts' # Used in the UI
-      label_singular: 'Post' # Used in the UI, ie: "New Post"
+    - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
+      label: "Posts" # Used in the UI
+      label_singular: "Post" # Used in the UI, ie: "New Post"
       description: >
         The description is a great place for tone setting, high level information, and editing
         guidelines that are specific to a collection.
-      folder: 'src/posts'
-      slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-      summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
+      folder: "src/posts"
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+      summary: "{{title}} -- {{year}}/{{month}}/{{day}}"
       create: true # Allow users to create new documents in this collection
       fields: # The fields each document in this collection have
-        - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+        - { label: "Title", name: "title", widget: "string", tagname: "h1" }
         - {
-            label: 'Publish Date',
-            name: 'date',
-            widget: 'datetime',
-            dateFormat: 'YYYY-MM-DD',
-            timeFormat: 'HH:mm',
-            format: 'YYYY-MM-DD HH:mm',
+            label: "Publish Date"
+            name: "date"
+            widget: "datetime"
+            dateFormat: "DD.MM.YYYY" # e.g. 24.12.2021
+            timeFormat: "HH:mm" # e.g. 21:07
+            format: "LLL"
           }
-        - label: 'Cover Image'
-          name: 'image'
-          widget: 'image'
+        - label: "Cover Image"
+          name: "image"
+          widget: "image"
           required: false
-          tagname: ''
-        - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
-      meta:
-        - { label: 'SEO Description', name: 'description', widget: 'text' }
+          tagname: ""
+            - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
+          meta:
+            - { label: "SEO Description", name: "description", widget: "text" }
     - name: "pages"
       label: "Pages"
       delete: false
@@ -176,7 +176,7 @@ collections:
         - label: "Project Types"
           name: "projectTypes2"
           create: true
-          label_singular: 'projectType'
+          label_singular: "projectType"
           file: "src/_data/portfolio.json"
           fields:
             - label: "Project Types"
