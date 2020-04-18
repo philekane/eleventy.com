@@ -165,7 +165,7 @@ collections:
       fields:
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Description", name: "description", widget: "string" } 
-        - { label: "Project Type", name: "projectType", widget: "relation", collections: "projectTypes", searchFields: ["projectTypes.name"], valueField: "projectTypes.name" }   
+        - { label: "Project Type", name: "projectType", widget: "relation", collection: "projectTypes", searchFields: ["projectTypes.name"], valueField: "projectTypes.name" }   
     - name: "team"
       label: "Team Members"
       label_singular: "Team Member"
