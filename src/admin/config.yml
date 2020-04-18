@@ -16,11 +16,11 @@ collections:
       fields: # The fields each document in this collection have
         - { label: "Title", name: "title", widget: "string", tagname: "h1" }
         - {
-            label: "Publish Date"
-            name: "date"
-            widget: "datetime"
-            dateFormat: "DD.MM.YYYY" # e.g. 24.12.2021
-            timeFormat: "HH:mm" # e.g. 21:07
+            label: "Publish Date",
+            name: "date",
+            widget: "datetime",
+            dateFormat: "DD.MM.YYYY", # e.g. 24.12.2021
+            timeFormat: "HH:mm", # e.g. 21:07
             format: "LLL"
           }
         - label: "Cover Image"
