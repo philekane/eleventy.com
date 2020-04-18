@@ -9,7 +9,7 @@ collections:
       description: >
         The description is a great place for tone setting, high level information, and editing
         guidelines that are specific to a collection.
-      folder: 'posts'
+      folder: 'src/posts'
       slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
       summary: '{{title}} -- {{year}}/{{month}}/{{day}}'
       create: true # Allow users to create new documents in this collection
