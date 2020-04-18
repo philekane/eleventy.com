@@ -28,9 +28,9 @@ collections:
           widget: "image"
           required: false
           tagname: ""
-            - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
-          meta:
-            - { label: "SEO Description", name: "description", widget: "text" }
+        - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
+      meta:
+        - { label: "SEO Description", name: "description", widget: "text" }
     - name: "pages"
       label: "Pages"
       delete: false
