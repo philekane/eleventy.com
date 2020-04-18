@@ -164,7 +164,8 @@ collections:
       folder: "src/portfolio"
       fields:
         - { label: "Title", name: "title", widget: "string" }
-        - { label: "Description", name: "description", widget: "string" }    
+        - { label: "Description", name: "description", widget: "string" } 
+        - { label: "Project Type", name: "projectType", widget: "relation", collections: "projectTypes", searchFields: ["name"], valueField: "name.first", displayFields: ["name"] }   
     - name: "team"
       label: "Team Members"
       label_singular: "Team Member"
