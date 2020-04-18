@@ -1,26 +1,37 @@
 {% extends "layouts/simple.njk" %}
 
-{% block postContent %}
- 
- <div class="row">
-            {% for priceOption in pricing.priceOptions %}
-            <div class="col-md-6 col-lg-4 single-pricing"  >
+{% block content %}
+ <div class="pricing-area">
+    <div class="container sp">
+        <div class="section-title">
+            <h2>{{ title }}</h2>
+            <p>{{ description }}</p>
+        </div>
+    <div class="row">
+        {% for priceOption in pricing.priceOptions %}
+        {% if loop.length == 3 %}
+            <div class="col-md-6 col-lg-4 single-pricing {% if loop.index == 2 %}active{% endif %}"  >
+        {% else %}
+         <div class="col-md-6 col-lg-3 single-pricing-2 {% if loop.index == 2 %}active{% endif %}"  >
+       
+        {% endif %}
                 <div class="inner">
-                   <div class="title">
+                    <div class="title">
                         <h2>{{ priceOption.title }}</h2>
                         <div class="price">
                             <span>{{ priceOption.price }}</span>
                             <span>{{ priceOption.duration }}</span>
                         </div>
-                   </div>
-                   <ul>
-                   {% for feature in priceOption.features %}
-                        <li>{{ feature.name }}</li>
-                   {% endfor %}
-                   </ul>
-                   <a href="#" class="button">{{ linkText }}</a>
+                    </div>
+                    <ul>
+                        {% for feature in priceOption.features %}
+                            <li>{{ feature.name }}</li>
+                        {% endfor %}
+                    </ul>
+                    <a href="#" class="button">{{ linkText }}</a>
                 </div>
             </div>
-            {% endfor %}
-        </div>
-    
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
