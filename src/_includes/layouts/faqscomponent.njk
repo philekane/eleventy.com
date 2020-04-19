@@ -1,13 +1,4 @@
-<!-- capture the CSS content as a Nunjucks variable -->
-{% set css %}
-  {% include "faq.css" %}
-{% endset %}
-<!-- feed it through our cssmin filter to minify -->
-
-<style>
-  {{ css | cssmin | safe }}
-</style>
-
+<link rel="stylesheet" href="/assets/css/faq.css">
   <div class="faq-area sp bg2">
                 <div class="container">
 
