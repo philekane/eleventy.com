@@ -137,8 +137,9 @@
                     </div>
                 </div>
             {% endif %}
-
-            {% include "layouts/brands.njk" %}
+            {% if brands.show == true %}
+                {% include "layouts/brands.njk" %}
+            {% endif %}
             {% if faqs.show == true %}
                 {% include "layouts/faqscomponent.njk" %}
             {% endif %}

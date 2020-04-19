@@ -1,0 +1,5 @@
+{
+    "layout": "layouts/simple.njk",
+    "tags": "posts",
+    "backgroundImage": "/assets/img/page-title.jpg"
+}
