@@ -16,7 +16,7 @@
         <title>{{ settings.siteSettings.companyName }} - {{ meta.title }}</title>
 
         <!-- Required CSS files -->
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
+        <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">-->
         <link rel="stylesheet" href="/assets/css/owl.carousel.css">
         <link rel="stylesheet" href="/assets/css/barfiller.css">
         <link rel="stylesheet" href="/assets/css/animate.css">
@@ -54,7 +54,7 @@ body p, span{
 
                                 <div class="header-social">
                                     {% for social in settings.socialSettings %}
-                                        <a href="{{ social.socialUrl }}" class="fa fa-{{ social.socialName }}" aria-hidden="true" aria-label="{{ social.socialName }}"></a>
+                                        <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}" aria-hidden="true" aria-label="{{ social.socialName }}"></a>
                                     {% endfor %}
 
                                 </div>
