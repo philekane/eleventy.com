@@ -71,7 +71,7 @@
                                 <div class="content">
                                     <p>{{ service.data.description }}</p>
                                 </div>
-                                <a href="{{ service.url }}" class="button">{{ homepageServices.linkText }}</a>
+                                <a href="{{ service.url }}" class="button" aria-label="{{ service.url }}">{{ homepageServices.linkText }}</a>
                             </div>
                         </div>
                     {% endfor %}

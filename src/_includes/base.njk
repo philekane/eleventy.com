@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -8,10 +7,10 @@
         <meta name="date" content="{% currentDate %}">
         <meta name="author" content="{{ settings.siteSettings.companyName }}">
         <meta name="description" content="{{ meta.description }}">
-        <meta property="og:title" content="{{ meta.title }}" />
-        <meta property="og:description" content="{{ meta.description }}" />
-        <meta property="og:image" content="{{ meta.image}}" />
-        <meta property="og:url" content="{{ meta.url}}" />
+        <meta property="og:title" content="{{ meta.title }}"/>
+        <meta property="og:description" content="{{ meta.description }}"/>
+        <meta property="og:image" content="{{ meta.image}}"/>
+        <meta property="og:url" content="{{ meta.url}}"/>
 
         <title>{{ settings.siteSettings.companyName }} - {{ meta.title }}</title>
 
@@ -23,36 +22,36 @@
         <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
         <!--<link rel="stylesheet" href="/assets/css/bootstrap.min.css">-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-            <link rel="stylesheet" href="/assets/css/slicknav.css">
+        <link rel="stylesheet" href="/assets/css/slicknav.css">
         <!--<link rel="stylesheet" href="/assets/css/main.css">-->
         <link rel="stylesheet" href="/assets/css/style.css">
-        
 
     </head>
 
     <body>
-   
 
         <div class="preloader">
             <span class="preloader-spin"></span>
         </div>
         <div class="site">
-            <header >
+            <header>
                 <div class="container">
                     <div class="row">
-                    {% if settings.siteSettings.logo %}
-                        <div class="col-6 col-sm-3 logo-column">
-                            <h1><a href="index.html" class="logo">
-                                <img src="{{ settings.siteSettings.logo }}" alt="{{ settings.siteSettings.logoAlt }}">
-                            </a></h1>
-                        </div>
-                    {% endif %}
+                        {% if settings.siteSettings.logo %}
+                            <div class="col-6 col-sm-3 logo-column">
+                                <h1>
+                                    <a href="index.html" class="logo">
+                                        <img src="{{ settings.siteSettings.logo }}" alt="{{ settings.siteSettings.logoAlt }}">
+                                    </a>
+                                </h1>
+                            </div>
+                        {% endif %}
                         <div class="col-6 col-sm-9 nav-column clearfix">
                             <div class="right-nav">
 
                                 <div class="header-social">
                                     {% for social in settings.socialSettings %}
-                                        <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}" aria-hidden="true" aria-label="{{ social.socialName }}"></a>
+                                        <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}"  aria-label="{{ social.socialName }}"></a>
                                     {% endfor %}
 
                                 </div>
@@ -71,6 +70,7 @@
                     </div>
                 </div>
             </header>
+             <main>
             {% block pageHeader %}
                 <div class="page-title sp" style="background-image: url({{ backgroundImage }})">
                     <div class="container text-center">
@@ -79,11 +79,13 @@
                     </div>
                 </div>
             {% endblock pageHeader%}
+          
             {% block content %}
                 {{ content | safe }}
             {% endblock content %}
 
             {% block postContent %}{% endblock postContent %}
+          </main>
             {% include "layouts/footer.njk" %}
         </div>
 
@@ -99,5 +101,5 @@
         <script src="/assets/js/vendor/loopcounter.js"></script>
         <script src="/assets/js/vendor/slicknav.min.js"></script>
         <script src="/assets/js/active.js"></script>
-         <!-- Include the script that builds the page and powers Netlify CMS -->
+        <!-- Include the script that builds the page and powers Netlify CMS -->
     </html>

@@ -11,7 +11,7 @@ meta:
   image: assets/img/realhazardLogo.jpg
   url: https://www.philekane.com
 ---
-    <div class="contact-area sp">
+    <div class="contact-area sp content">
     <div class="container">
     <div class="row justify-content-med-center">
             <div class="col-md-10 spb">
@@ -37,7 +37,7 @@ meta:
                     <h5>Social</h5>
                     <p>
                      {% for social in settings.socialSettings %}
-                        <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}" aria-hidden="true" aria-label="{{ social.socialName }}"></a>
+                        <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}"  aria-label="{{ social.socialName }}"></a>
                      {% endfor %}
                     </p>
                 </div>
@@ -68,6 +68,6 @@ meta:
 </div>
 {% if showMap == true %}
     <div class="google-map">
-        <iframe src="{{ googleMap }}"></iframe>
+        <iframe src="{{ googleMap }}" title="map"></iframe>
     </div>  
 {% endif %}

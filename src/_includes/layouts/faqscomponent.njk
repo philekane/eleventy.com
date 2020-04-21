@@ -16,10 +16,12 @@
                             <div class="faq">
                             {% for faq in faqs.faq %}
                                 {% if loop.index <= faqs.number %}
-                                    <toggle-section open="true">
+                                <content>
+                                    <toggle-section open="true" >
                                         <h2 id="section-{{ loop.index }}">{{ faq.question }}</h2>
                                         <p>{{ faq.answer }} </p>
                                     </toggle-section>
+                                </content>
                                 {% endif %}
                             {% endfor %}
                             </div>
