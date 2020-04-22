@@ -1,9 +1,9 @@
 ---
-layout: "layouts/simple.njk"
+layout: "layouts/about.njk"
 title: "About Uss"
 description: "Description Description"
 backgroundImage: "/assets/img/red-stone.jpg"
-imagePositionn: left 
+imagePosition: left 
 meta: 
   title: "About Page"
   description: page showing the company

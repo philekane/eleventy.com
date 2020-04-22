@@ -1,4 +1,4 @@
-{% extends "layouts/simple.njk" %}
+{% extends "base.njk" %}
 
 {% block pageHeader %}{% endblock pageHeader %}
 
@@ -6,11 +6,15 @@
 
     <div class="about-area spt bg2">
         <div class="container">
-
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>{{ about.title }}</p>
+              </div>
             <div class="row">
+            
                 <div class="col-md-6">
                     <div class="about-content">
-                        <h2>{{ about.title}}</h2>
+                        <h2>{{ index.about.title}}</h2>
                         <p>{{ about.description }}</p>
                         <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
                     </div>
@@ -20,6 +24,21 @@
                         <img src="{{ about.image}}" alt="{{ about.title }}">
                     </div>
                 </div>
+                {% if about.imagePosition == "right" %}
+                    {% include "layouts/about-right.njk" %}
+                {% endif %}
+                {% if about.imagePosition == "left" %}
+                    {% include "layouts/about-left.njk" %}
+                {% endif %}
+                {% if about.imagePosition == "noImage" %}
+                    <div class="col-md-8 mx-auto">
+                        <div class="about-content">
+                            <h2>{{ about.title}}</h2>
+                            <p>{{ about.description }}</p>
+                            <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
+                        </div>
+                    </div>
+                {% endif %}
 
             </div>
         </div>
