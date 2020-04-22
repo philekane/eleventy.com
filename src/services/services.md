@@ -2,7 +2,7 @@
 layout: "layouts/services.njk"
 title: "Services"
 description: "Description Description"
-backgroundImage: "/assets/img/page-title.jpg"
+backgroundImage: "/assets/img/flowers.jpg"
 linkText: "Check It Out"
 meta:
   title: "Our Services Page"

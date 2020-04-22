@@ -2,7 +2,7 @@
 layout: "layouts/simple.njk"
 title: "About Us"
 description: "Description Description"
-backgroundImage: "/assets/img/page-title.jpg"
+backgroundImage: "/assets/img/flowers.jpg"
 meta: 
   title: "About Page"
   description: page showing the company

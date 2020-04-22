@@ -2,7 +2,7 @@
 layout: "layouts/testimonials.njk"
 title: "Testimonials"
 description: "In our clients own words"
-backgroundImage: "/assets/img/page-title.jpg"
+backgroundImage: "/assets/img/flowers.jpg"
 linkText: "Check It Out"
 meta:
   title: "Our Testimonials Page"
