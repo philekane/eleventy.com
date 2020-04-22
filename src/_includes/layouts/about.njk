@@ -3,23 +3,42 @@
 {% block pageHeader %}{% endblock pageHeader %}
 
 {% block content %}
-
     <div class="about-area sp bg2">
-        <div class="container">       
-            <div class="row">              
-                {% if about.imagePosition == "right" %}
-                    {% include "layouts/about-right.njk" %}
+        <div class="container">
+            <div class="row">
+                {% if imagePosition == "right" %}
+                    <div class="col-md-6">
+                        <div class="about-content">
+                            <h2>{{ title}}</h2>
+                            <p>{{ description }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <img src="{{image}}" alt="{{ title }}">
+                        </div>
+                    </div>
                 {% endif %}
-                {% if about.imagePosition == "left" %}
-                    {% include "layouts/about-left.njk" %}
+                {% if imagePosition == "left" %}
+                    <div class="col-md-6">
+                        <div class="about-img">
+                            <img src="{{ image}}" alt="{{ title }}">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="about-content">
+                            <h2>{{ title}}</h2>
+                            <p>{{ description }}</p>
+                        </div>
+                    </div>
                 {% endif %}
-                {% if about.imagePosition == "noImage" %}
+                {% if imagePosition == "noImage" %}
                     <div class="col-md-8 mx-auto">
                         <div class="about-content">
-                            <h2>{{ about.title}}</h2>
-                            <p>{{ about.description }}</p>
-                            {% if about.linkText %}
-                                <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
+                            <h2>{{ title}}</h2>
+                            <p>{{ description }}</p>
+                            {% if linkText %}
+                                <a href="{{ linkUrl }}" class="button">{{ linkText }}</a>
                             {% endif %}
                         </div>
                     </div>

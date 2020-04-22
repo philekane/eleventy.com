@@ -11,5 +11,3 @@ meta:
   url: "https://www.philekane.com"  
 eleventyExcludeFromCollections: true
 ---
-
-### Look at all the services we offer!

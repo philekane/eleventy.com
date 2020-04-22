@@ -12,5 +12,3 @@ meta:
 eleventyExcludeFromCollections: true
 ---
 
-### Look what our clients are saying!
-
