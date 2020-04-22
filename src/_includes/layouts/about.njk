@@ -4,26 +4,9 @@
 
 {% block content %}
 
-    <div class="about-area spt bg2">
-        <div class="container">
-            <div class="section-title">
-                <h2>Frequently Asked Questions</h2>
-                <p>{{ about.title }}</p>
-              </div>
-            <div class="row">
-            
-                <div class="col-md-6">
-                    <div class="about-content">
-                        <h2>{{ index.about.title}}</h2>
-                        <p>{{ about.description }}</p>
-                        <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="about-img">
-                        <img src="{{ about.image}}" alt="{{ about.title }}">
-                    </div>
-                </div>
+    <div class="about-area sp bg2">
+        <div class="container">       
+            <div class="row">              
                 {% if about.imagePosition == "right" %}
                     {% include "layouts/about-right.njk" %}
                 {% endif %}
@@ -35,7 +18,9 @@
                         <div class="about-content">
                             <h2>{{ about.title}}</h2>
                             <p>{{ about.description }}</p>
-                            <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
+                            {% if about.linkText %}
+                                <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
+                            {% endif %}
                         </div>
                     </div>
                 {% endif %}

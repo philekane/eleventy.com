@@ -7,6 +7,8 @@
     <div class="about-content">
         <h2>{{ about.title}}</h2>
         <p>{{ about.description }}</p>
-        <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
+         {% if about.linkText %}
+            <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
+        {% endif %}
     </div>
 </div>
