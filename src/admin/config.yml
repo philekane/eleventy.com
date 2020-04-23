@@ -46,14 +46,14 @@ collections:
               - { label: "Description", name: "description", widget: "markdown" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Image Position", name: "imagePosition", widget: "select", options: ["left", "right", "noImage"] }
-            - name: "meta"
-              label: "Meta"
-              widget: "object"
-              fields:
-                - { label: "Title", name: "title", widget: "string" }
-                - { label: "Description", name: "description", widget: "markdown" }
-                - { label: "Image", name: "image", widget: "image" }
-                - { label: "Url", name: "url", widget: "string" }
+              - name: "meta"
+                label: "Meta"
+                widget: "object"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "markdown" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Url", name: "url", widget: "string" }
           - label: "Contact Page"
             name: "contact"
             file: "src/contact.html"
