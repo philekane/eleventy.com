@@ -79,12 +79,21 @@ collections:
             name: "index"
             file: "src/index.html"
             fields:
+              - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
+              - name: "meta"
+                  label: "Meta"
+                  widget: object
+                  allow_add: false
+                  fields:
+                    - { label: "Title", name: "title", widget: "string" }
+                    - { label: "Description", name: "description", widget: "markdown", hint: "Think SEO" }
+                    - { label: "Image", name: "image", widget: "image" }
+                    - { label: "Url", name: "url", widget: "string" }
               - name: "slider"
                 label: "Slider"
                 widget: object
                 fields:
                   - { label: "Show Homepage Slider", name: "showSlider", widget: "boolean" }             
-                  - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
               - name: "banners"
                 label: "Banners For Homepage Slider"
                 widget: list
