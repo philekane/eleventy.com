@@ -1,0 +1,4 @@
+Sitemap: https://client-site-template.netlify.app
+
+User-agent: *
+Disallow:

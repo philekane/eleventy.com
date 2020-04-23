@@ -9,7 +9,7 @@
         <meta name="description" content="{{ meta.description }}">
         <meta property="og:title" content="{{ meta.title }}"/>
         <meta property="og:description" content="{{ meta.description }}"/>
-        <meta property="og:image" content="{{ meta.image}}"/>
+        <meta property="og:image" content="{{ settings.siteSettings.companyUrl  ~ meta.image}}"/>
         <meta property="og:url" content="{{ meta.url}}"/>
 
         <title>{{ settings.siteSettings.companyName }} - {{ meta.title }}</title>
@@ -76,7 +76,10 @@
                 <!-- style="height:20rem;background-repeat: no-repeat;background-image: url({{ backgroundImage }})">-->
                     
                 </div>
-               
+                <div class="container text-center spt" >
+                        <h2>{{ title }}</h2>
+                        <p>{{ description }}</p>
+                    </div>
             {% endblock pageHeader%}
           
             {% block content %}
