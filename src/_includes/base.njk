@@ -60,7 +60,7 @@
                                 <ul>
                                     <!--class="current-menu-item"-->
                                     {% for menu in settings.navigationMenu %}
-                                        <li>
+                                        <li {% if page.url == menu.pageUrl~"/" %} class="current-menu-item"{% endif %}>
                                             <a href="{{ menu.pageUrl }}" >{{ menu.pageName }}</a>
                                         </li>
                                     {% endfor %}
@@ -70,24 +70,26 @@
                     </div>
                 </div>
             </header>
-             <main>
-            {% block pageHeader %}
-                <div class="page-title spt" style="height:20rem;background-repeat: no-repeat;background-image: url({{ backgroundImage }})">
-                <!-- style="height:20rem;background-repeat: no-repeat;background-image: url({{ backgroundImage }})">-->
-                    
-                </div>
-                <div class="container text-center spt" >
+            <main>
+                {% block pageHeader %}
+                    <div class="page-title spt" style="height:20rem;background-repeat: no-repeat;background-image: url({{ backgroundImage }})">
+                        <!-- style="height:20rem;background-repeat: no-repeat;background-image: url({{ backgroundImage }})">-->
+
+                    </div>
+                 {% if length %}##not putting the text title and description over the image
+                     <div class="container text-center spt" >
                         <h2>{{ title }}</h2>
                         <p>{{ description }}</p>
                     </div>
-            {% endblock pageHeader%}
-          
-            {% block content %}
-                {{ content | safe }}
-            {% endblock content %}
+                {% endif %}
+                {% endblock pageHeader%}
 
-            {% block postContent %}{% endblock postContent %}
-          </main>
+                {% block content %}
+                    {{ content | safe }}
+                {% endblock content %}
+
+                {% block postContent %}{% endblock postContent %}
+            </main>
             {% include "layouts/footer.njk" %}
         </div>
 
