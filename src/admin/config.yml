@@ -49,7 +49,6 @@ collections:
               - name: "meta"
                 label: "Meta"
                 widget: object
-                create: false               
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "markdown" }
