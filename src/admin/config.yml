@@ -48,8 +48,7 @@ collections:
               - { label: "Image Position", name: "imagePosition", widget: "select", options: ["left", "right", "noImage"] }
               - name: "meta"
                 label: "Meta"
-                widget: "object"
-                create: false
+                widget: "object"               
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "markdown" }
