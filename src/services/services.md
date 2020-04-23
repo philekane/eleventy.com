@@ -4,6 +4,7 @@ title: "Services"
 description: "Description Description"
 backgroundImage: "/assets/img/flowers.jpg"
 linkText: "Check It Out"
+changeFreq: monthly
 meta:
   title: "Our Services Page"
   description: "Services we provide"

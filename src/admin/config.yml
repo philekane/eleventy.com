@@ -46,7 +46,7 @@ collections:
               - { label: "Description", name: "description", widget: "markdown" }
               - { label: "Image", name: "image", widget: "image" }
               - { label: "Image Position", name: "imagePosition", widget: "select", options: ["left", "right", "noImage"] }
-              - { label: "Change Frequency", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"] }
+              - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
               - name: "meta"
                 label: "Meta"
                 widget: object
@@ -65,6 +65,7 @@ collections:
               - { label: "Background Image", name: "backgroundImage", widget: "image" }
               - { label: "Show Map", name: "showMap", widget: "boolean" }
               - { label: "Google Map Link", name: "googleMap", widget: "string" }
+              - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
               - name: "meta"
                 label: "Meta"
                 widget: object
@@ -83,6 +84,7 @@ collections:
                 widget: object
                 fields:
                   - { label: "Show Homepage Slider", name: "showSlider", widget: "boolean" }             
+                  - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
               - name: "banners"
                 label: "Banners For Homepage Slider"
                 widget: list
@@ -137,6 +139,7 @@ collections:
                 - { label: "Title", name: "title", widget: "string" }
                 - { label: "Price", name: "price", widget: "string" }
                 - { label: "Duration", name: "duration", hint: "How many months", widget: "string" }
+                - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
     - name: "testimonials"
       label: "Testimonials"
       delete: true # Prevent users from deleting documents in this collection
@@ -150,6 +153,7 @@ collections:
         - { label: "Quote", name: "quote", widget: "markdown" }
         - { label: "Job Title", name: "jobTitle", widget: "string" }
         - { label: "Head Shot", name: "headShot", widget: "image", required: false }
+        - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
     - name: "brands"
       label: "Brands"
       delete: true # Prevent users from deleting documents in this collection
@@ -162,6 +166,7 @@ collections:
         - { label: "Image", name: "image", widget: "image" }
         - { label: "Name", name: "name", widget: "string" }
         - { label: "Url", name: "url", widget: "string" }
+        - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
     - name: "components"
       label: "Components"
       delete: false # Prevent users from deleting documents in this collection
@@ -195,6 +200,7 @@ collections:
         - { label: "Icon", name: "faIcon", widget: "string" }
         - { label: "Description", name: "description", widget: "text" }
         - { label: "Service Body", name: "Service", widget: "markdown" }
+        - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
     - label: "Project Types"
       name: "projectTypes1"
       editor:
@@ -223,6 +229,7 @@ collections:
         - { label: "Title", name: "title", widget: "string" }
         - { label: "Description", name: "description", widget: "string" } 
         - { label: "Project Type", name: "projectType", widget: "relation", collection: "services", searchFields: ["title"], valueField: "title" }
+        - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
     - name: "team"
       label: "Team Members"
       label_singular: "Team Member"
@@ -244,6 +251,7 @@ collections:
                 - { label: "Position", name: "position", widget: "string" }
                 - { label: "Bio", name: "bio", widget: "string" }
                 - { label: "Background", name: "background", widget: "string" }
+                - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
                 - label: "Image"
                   name: "image"
                   widget: "object"
