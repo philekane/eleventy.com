@@ -31,6 +31,10 @@
     {
       "pageName": "FAQ",
       "pageUrl": "/faqs"
+    },
+    {
+      "pageName": "Blog",
+      "pageUrl": "/blog"
     }
   ],
   "siteSettings": {

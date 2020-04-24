@@ -28,6 +28,9 @@ module.exports = function(eleventyConfig){
 </picture>
     `;
   });
+  eleventyConfig.addFilter("machineDate", dateObj => {
+    return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
+  });
 
 
     return{

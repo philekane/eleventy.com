@@ -8,7 +8,7 @@ changeFreq: monthly
 meta:
   title: "Our Testimonials Page"
   description: "In our clients own words"
-  image: "assets/img/realhazardLogo.jpg"
+  image: "/assets/img/realhazardLogo.jpg"
   url: "https://www.philekane.com"  
 eleventyExcludeFromCollections: true
 ---

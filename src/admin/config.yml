@@ -29,6 +29,7 @@ collections:
           required: false
           tagname: ""
         - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
+        - { label: "Summary", name: "summary", widget: "text", pattern: ['.{-10,}', "Must have at least 20 characters"], hint: "Add about 250 characters" }
         - name: "meta"
           label: "Meta Data"
           widget: object

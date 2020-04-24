@@ -8,7 +8,7 @@ changeFreq: monthly
 meta:
   title: "Our Services Page"
   description: "Services we provide"
-  image: "assets/img/realhazardLogo.jpg"
+  image: "/assets/img/realhazardLogo.jpg"
   url: "https://www.philekane.com"  
 eleventyExcludeFromCollections: true
 ---
