@@ -1,8 +1,12 @@
 ---
-image: /assets/img/onceuponatime_back.jpg
-name: Brand 6
-url: /
-show: true
-brandImage:
-  image: assets/img/phil-kane-3.png
+name: "Brand number 6"
+url: "https://philekane.com"
+image: "/assets/img/brand6.png"
+meta:
+  title: "Brand 6"
+  description: "Description for brand 6."
+  image: "/assets/img/realhazardLogo.jpg"
+  url: "https://www.philekane.com"
 ---
+
+## name

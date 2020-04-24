@@ -4,12 +4,12 @@ title: "Testimonials"
 description: "In our clients own words"
 backgroundImage: "/assets/img/flowers.jpg"
 linkText: "Check It Out"
-changeFreq: monthly
+changeFreq: "monthly"
 meta:
   title: "Our Testimonials Page"
   description: "In our clients own words"
   image: "/assets/img/realhazardLogo.jpg"
-  url: "https://www.philekane.com"  
+  url: "https://www.philekane.com" 
 eleventyExcludeFromCollections: true
 ---
 

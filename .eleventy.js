@@ -1,4 +1,5 @@
 const CleanCSS = require("clean-css");
+const { DateTime } = require("luxon");
 module.exports = function(eleventyConfig){
 
     eleventyConfig.addPassthroughCopy("css");
@@ -10,9 +11,6 @@ module.exports = function(eleventyConfig){
 
     eleventyConfig.addShortcode("copyrightYear", () => `&copy; ${new Date().getFullYear()}`);
     eleventyConfig.addShortcode("currentDate", () => `${new Date().toLocaleDateString()}`);
-   
-
-    
 
     // Responsive image shortcode
   eleventyConfig.addShortcode("insertImage", function(filename, alttext) {
@@ -28,10 +26,15 @@ module.exports = function(eleventyConfig){
 </picture>
     `;
   });
+// eleventyConfig.addShortcode("currentDate", () => `${new Date().toLocaleDateString()}`);
+
+  // Date formatting (human readable)
+  eleventyConfig.addFilter("readableDate", (dateObj) => {
+    return DateTime.fromJSDate(dateObj).toFormat(dd LLL yyyy);
+  });
   eleventyConfig.addFilter("machineDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
-
 
     return{
         passthroughFileCopy: true,

@@ -29,7 +29,7 @@ collections:
           required: false
           tagname: ""
         - { label: "Body", name: "body", widget: "markdown", hint: "Main content goes here." }
-        - { label: "Summary", name: "summary", widget: "text", pattern: ['.{-10,}', "Must have at least 20 characters"], hint: "Add about 250 characters" }
+        - { label: "Summary", name: "summary", widget: "text", pattern: ['.{10,}', "Must have at least 20 characters"], hint: "Add about 250 characters" }
         - name: "meta"
           label: "Meta Data"
           widget: object
@@ -170,7 +170,7 @@ collections:
         - { label: "Quote", name: "quote", widget: "markdown" }
         - { label: "Job Title", name: "jobTitle", widget: "string" }
         - { label: "Head Shot", name: "headShot", widget: "image", required: false }
-        - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
+        - { label: "Frequency Page Changes", name: "never", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
     - name: "brands"
       label: "Brands"
       delete: true # Prevent users from deleting documents in this collection
