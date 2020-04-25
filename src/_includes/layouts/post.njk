@@ -1,17 +1,15 @@
 ---
-layout: base.njk
-section: post
+layout: layouts/simple.njk
 ---
-
 <article>
   <h1>{{ title }}</h1>
   <p>
     <small>
-      <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by {{ metadata.author.name }}
+      <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by {{ metadata.author }}
     </small>
   </p>
 
-  {{ layoutContent | safe }}
+  {{ content | safe }}
 
   {% if tags %}
     <p>
@@ -27,5 +25,5 @@ section: post
 </article>
 
 <nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
+  <a href="{{ '/posts/' | url }}">← Blog Post index</a>
 </nav>

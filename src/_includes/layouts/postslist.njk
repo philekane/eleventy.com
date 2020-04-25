@@ -1,7 +1,9 @@
 <section>
+fuck
+{% block content %}
 	{% for post in postslist | reverse %}
-    {{ post.data.title }}
-		<article{% if post.url == url %} data-current="current item"{% endif %}>
+	
+   		<article{% if post.url == url %} data-current="current item"{% endif %}>
 			<h3>
 				<a href="{{ post.url | url }}">
 					{% if post.data.title %}
@@ -33,4 +35,5 @@
 			{% endif %}
 		</article>
 	{% endfor %}
+{% endblock %}
 </section>

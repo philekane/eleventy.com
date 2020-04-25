@@ -1,8 +1,15 @@
 ---
+layout: layouts/post.njk
 title: "This is my second post"
 author: "Fred Kane"
 date: 2020-04-18
 image: "/assets/img/cropped-logo.png"
+summary: "This is a great second post"
+tags:
+  - tech
+  - environment
+  - politics
+  - sport
 meta:
   title: "Phil Kane's second post"
   description: "Songwriter, screenwriter and writer of source code for web applications."
