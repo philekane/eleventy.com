@@ -1,7 +1,10 @@
 ---
-layout: layouts/simple.njk
+layout: layouts/blog.njk
+backgroundImage: /assets/img/flowers.jpg
+section: post
 ---
-<article>
+
+<article class="article sp">
   <h1>{{ title }}</h1>
   <p>
     <small>
@@ -9,11 +12,11 @@ layout: layouts/simple.njk
     </small>
   </p>
 
-  {{ content | safe }}
+ {{ content | safe }}
 
-  {% if tags %}
+  {% if tag %}
     <p>
-    {% for tag in tags %}
+    {% for tag in tag %}
       {%- if tag != "post" -%}
         {% set tagUrl %}/tags/{{ tag }}/{% endset %}
         <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
@@ -21,9 +24,8 @@ layout: layouts/simple.njk
     {% endfor %}
     </p>
   {% endif %}
-
-</article>
-
 <nav>
   <a href="{{ '/posts/' | url }}">← Blog Post index</a>
 </nav>
+</article>
+

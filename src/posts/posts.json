@@ -1,3 +1,9 @@
 {
-     "tags": "posts"
+  "tags": [ 
+    "posts",
+    "tech",
+    "environment",
+    "politics",
+    "sport"
+  ]
 }
