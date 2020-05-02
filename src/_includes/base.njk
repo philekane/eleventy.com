@@ -15,15 +15,12 @@
         <title>{{ settings.siteSettings.companyName }} - {{ meta.title }}</title>
 
         <!-- Required CSS files -->
-        <!--<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">-->
-        <link rel="stylesheet" href="/assets/css/owl.carousel.css">
-        <link rel="stylesheet" href="/assets/css/barfiller.css">
-        <link rel="stylesheet" href="/assets/css/animate.css">
+        {% if ( slider.showSlider == true ) or ( clientTestimonials.show == true ) or ( page.url == "/testimonials/" ) %}        
+         <link rel="stylesheet" href="/assets/css/owl.carousel.css">
+        {% endif %}
         <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-        <!--<link rel="stylesheet" href="/assets/css/bootstrap.min.css">-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link rel="stylesheet" href="/assets/css/slicknav.css">
-        <!--<link rel="stylesheet" href="/assets/css/main.css">-->
         <link rel="stylesheet" href="/assets/css/style.css">
 
     </head>
@@ -38,7 +35,7 @@
                 <div class="container">
                     <div class="row">
                         {% if settings.siteSettings.logo %}
-                            <div class="col-6 col-sm-3 logo-column">
+                            <div class="col-6 col-sm-2 logo-column">
                                 <h1>
                                     <a href="index.html" class="logo">
                                         <img src="{{ settings.siteSettings.logo }}" alt="{{ settings.siteSettings.logoAlt }}">
@@ -46,7 +43,7 @@
                                 </h1>
                             </div>
                         {% endif %}
-                        <div class="col-6 col-sm-9 nav-column clearfix">
+                        <div class="col-6 col-sm-10 nav-column clearfix">
                             <div class="right-nav">
 
                                 <div class="header-social">
@@ -70,19 +67,36 @@
                     </div>
                 </div>
             </header>
-            <main >
-            
+            <main >               
                 {% block pageHeader %}
-                    <div class="page-title spt" style="height:20rem;background-repeat: no-repeat;background-image: url({{ backgroundImage }})">
+                    <div class="page-title item-middle spt" style="height:30rem;background-image: url({{ backgroundImage }})">
                         <!-- style="height:20rem;background-repeat: no-repeat;background-image: url({{ backgroundImage }})">-->
-
+                       {% if (page.url == "/") and (homepageBannerTextBox.show == true) %}
+                       <link rel="stylesheet" href="/assets/css/banner-text-box.css">
+                        <div class="middle-content text-center">
+                            <div class="container">
+                                <div class="tr-section" >
+                                    <div class="banner-info">
+                                        <h1 >{{ homepageBannerTextBox.title }}</h1>
+                                    </div>
+                                    <h2 >
+                                        <span >{{ homepageBannerTextBox.secondTitle }}</span>
+                                        <br>
+                                        <small>{{ homepageBannerTextBox.description }}</small>
+                                    </h2>
+                                    <a href="{{ homepageBannerTextBox.linkUrl }}" data-animation="animated fadeIn" class="btn btn-lg btn-primary mt-1">
+                                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i> {{ homepageBannerTextBox.linkText }}</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
                     </div>
-                 {% if length %}##not putting the text title and description over the image
+                    {% if length %}##not putting the text title and description over the image
                      <div class="container text-center spt" >
-                        <h2>{{ title }}</h2>
-                        <p>{{ description }}</p>
-                    </div>
-                {% endif %}
+                            <h2>{{ title }}</h2>
+                            <p>{{ description }}</p>
+                        </div>
+                    {% endif %}
                 {% endblock pageHeader%}
 
                 {% block content %}
@@ -95,17 +109,15 @@
         </div>
 
         <!--Required JS files-->
-        <!--<script src="/assets/js/jquery-2.2.4.min.js"></script>-->
         <script src="https://code.jquery.com/jquery-3.5.0.min.js"  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-        <script src="/assets/js/vendor/popper.min.js"></script>
-        <!--<script src="/assets/js/vendor/bootstrap.min.js"></script>-->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="/assets/js/vendor/owl.carousel.min.js"></script>
+        
+        {% if (slider.showSlider == true) or (clientTestimonials.show == true) or ( page.url == "/testimonials/" ) %}
+            <script src="/assets/js/vendor/owl.carousel.min.js"></script>
+        {% endif %}
         <script src="/assets/js/vendor/isotope.pkgd.min.js"></script>
-        <script src="/assets/js/vendor/jquery.barfiller.js"></script>
-        <script src="/assets/js/vendor/loopcounter.js"></script>
         <script src="/assets/js/vendor/slicknav.min.js"></script>
         <script src="/assets/js/active.js"></script>
-       
+
         <!-- Include the script that builds the page and powers Netlify CMS -->
     </html>

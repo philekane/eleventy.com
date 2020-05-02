@@ -16,6 +16,8 @@ module.exports = function(eleventyConfig){
   eleventyConfig.addShortcode("insertImage", function(filename, alttext) {
     return `
 <picture>
+<source sizes="auto" media="(max-width:641px)" srcset="/assets/img/${filename}" type="image/png">
+  
   <source sizes="auto" media="(max-width:641px)" srcset="/assets/img/${filename}.webp" type="image/webp">
   <source sizes="auto" media="(max-width:641px)" data-srcset="/assets/img/${filename}-641.webp 641w" type="image/webp">
   <source sizes="auto" media="(max-width:641px)" data-srcset="/assets/img/${filename}-641.jpeg 641w" type="image/jpeg">

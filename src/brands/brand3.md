@@ -1,7 +1,7 @@
 ---
 name: "Brand number 3"
 url: "https://business-websites-etc.com"
-image: "/assets/img/brand3.png"
+image: "assets/img/gallery-1.jpg"
 meta:
   title: "Brand 3"
   description: "Description for brand 3."

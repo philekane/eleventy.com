@@ -2,10 +2,10 @@
         <div class="container  spt">
             <div class="row ">
                 {% for brand in collections.brands %}
-                    <div class="col-md-3 col-6 single-brand">
+                    <div class="col-md-3  single-brand">
                         <div class="inner">
                             <a href="{{ brand.data.url }}">
-                              {% insertImage brand.data.image , brand.data.name  %}
+                              <img src="{{ brand.data.image }}" alt="{{ brand.data.name }}">
                                 </a>
                         </div>
                     </div>

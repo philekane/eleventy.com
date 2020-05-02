@@ -1,7 +1,7 @@
 ---
 name: "Brand number 2"
 url: "https://philekane.com"
-image: "/assets/img/brand2.png"
+image: "assets/img/gallery-1.jpg"
 meta:
   title: "Brand 2"
   description: "Description for brand 2."
