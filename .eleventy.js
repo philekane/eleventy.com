@@ -16,8 +16,6 @@ module.exports = function(eleventyConfig){
   eleventyConfig.addShortcode("insertImage", function(filename, alttext) {
     return `
 <picture>
-<source sizes="auto" media="(max-width:641px)" srcset="/assets/img/${filename}" type="image/png">
-  
   <source sizes="auto" media="(max-width:641px)" srcset="/assets/img/${filename}.webp" type="image/webp">
   <source sizes="auto" media="(max-width:641px)" data-srcset="/assets/img/${filename}-641.webp 641w" type="image/webp">
   <source sizes="auto" media="(max-width:641px)" data-srcset="/assets/img/${filename}-641.jpeg 641w" type="image/jpeg">
@@ -28,12 +26,13 @@ module.exports = function(eleventyConfig){
 </picture>
     `;
   });
-// eleventyConfig.addShortcode("currentDate", () => `${new Date().toLocaleDateString()}`);
+
 
   // Date formatting (human readable)
-  eleventyConfig.addFilter("readableDate", (dateObj) => {
-    return DateTime.fromJSDate(dateObj).toFormat("dd LLL yyyy");
+  eleventyConfig.addFilter("readableDate", dateObj => {
+    return DateTime.fromJSDate(dateObj).toUTC().toFormat("LLL dd yyyy");
   });
+
   eleventyConfig.addFilter("machineDate", dateObj => {
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
