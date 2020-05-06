@@ -10,4 +10,7 @@ tag:
   -  environment
   -  politics
 ---
+<!-- Excerpt Start -->
+This is included on the homepage3.
+<!-- Excerpt End -->
 Hello, here is the body of the post.

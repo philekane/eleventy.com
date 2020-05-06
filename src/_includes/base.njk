@@ -7,10 +7,13 @@
         <meta name="date" content="{% currentDate %}">
         <meta name="author" content="{{ settings.siteSettings.companyName }}">
         <meta name="description" content="{{ meta.description }}">
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
         <meta property="og:title" content="{{ meta.title }}"/>
         <meta property="og:description" content="{{ meta.description }}"/>
         <meta property="og:image" content="{{ settings.siteSettings.companyUrl ~ meta.image}}"/>
         <meta property="og:url" content="{{ meta.url}}"/>
+        <meta property="og:site_name" content="{{ settings.siteSettings.siteName }}" />
 
         <title>{{ settings.siteSettings.companyName }} - {{ meta.title }}</title>
 
@@ -26,12 +29,80 @@
     </head>
 
     <body>
-
-        <div class="preloader">
-            <span class="preloader-spin"></span>
-        </div>
+        <script type="javascript"><!-- need this or preloader -->
+            <div class="preloader">
+                <span class="preloader-spin"></span>
+            </div>
+        </script>
         <div class="site">
             <header>
+            {% if headerRibbon.show == true %}
+            <style>
+            .header-top {
+                margin-top: -1em;
+                background-color: #723609;
+                color: #D9C4B0;
+                text-align: center;
+                height: auto;
+                display: flex;
+                flex-wrap: wrap;
+                top: 0;
+                font-size: 110%;
+                
+               /* position: fixed;
+                right: 0;
+                left: 0;
+                z-index: 1030;*/
+            }
+            .header-top a {
+                text-decoration: underline;
+                color: #D9C4B0;
+            }
+            .ribbon_email {
+                margin:.3em;
+            }
+            .ribbon_phone {
+                margin:.3em;
+            }
+            .ribbon_social {
+                margin:.3em;
+            }
+            .ribbon_social a {
+                text-decoration: none;
+                padding:.4em;
+            }
+            header .container{
+                margin-top:1em;
+                top: 1em;               
+            }
+            .slicknav_menu{
+            margin-top: 1.5em;
+            }
+            .nav-column{
+            margin-top: 1em;
+            }
+            .grid>* {
+                margin: .1em;
+                -ms-flex: 1 0 10em;
+                flex: 1 0 10em;
+            }
+            </style>
+            <div class="header-top grid">
+                <div class = "ribbon_email">
+                    Email: <a href="mailto:pkane-marcus@spindry.com">pkane-marcus@spindry.com</a>
+                </div>
+                <div class = "ribbon_phone">
+                    Call: <a href="tel:2068540369">(206)854-0369</a>
+                </div>
+                
+	</style>
+                <div class="ribbon_social">
+                 {% for social in settings.socialSettings %}
+                                        <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}"  aria-label="{{ social.socialName }}"></a>
+                                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
                 <div class="container">
                     <div class="row">
                         {% if settings.siteSettings.logo %}
@@ -44,15 +115,15 @@
                             </div>
                         {% endif %}
                         <div class="col-6 col-sm-10 nav-column clearfix">
+                         {% if headerRibbon.show == false %}
                             <div class="right-nav">
-
                                 <div class="header-social">
                                     {% for social in settings.socialSettings %}
                                         <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}"  aria-label="{{ social.socialName }}"></a>
                                     {% endfor %}
-
                                 </div>
                             </div>
+                        {% endif %}
                             <nav id="menu" class="d-none d-lg-block">
                                 <ul>
                                     <!--class="current-menu-item"-->
@@ -109,6 +180,7 @@
         </div>
 
         <!--Required JS files-->
+        
         <script src="https://code.jquery.com/jquery-3.5.0.min.js"  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
         
@@ -118,6 +190,6 @@
         <script src="/assets/js/vendor/isotope.pkgd.min.js"></script>
         <script src="/assets/js/vendor/slicknav.min.js"></script>
         <script src="/assets/js/active.js"></script>
-
-        <!-- Include the script that builds the page and powers Netlify CMS -->
+     
+     
     </html>

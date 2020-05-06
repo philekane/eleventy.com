@@ -14,16 +14,14 @@
 					{% endif %}
 				</a>
 			</h2>
-			{% if post.data.summary %}
-				<p>
-					{{ post.data.summary }}
-				</p>
-			{% endif %}
+			
 			<p class="blog-post-meta">
             	<time datetime="{{ post.date | machineDate }}">
                 <small>{{ post.date | readableDate }} by {{ post.data.author }}</small>
 				</time>
 			</p>
+			  {% excerpt post %}  
+			
 			{% if post.data.tag %}
 				<p class="blog-post-tags">
 					{% for tag in post.data.tag %}

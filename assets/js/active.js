@@ -152,10 +152,12 @@ var document,
         flat.wlPlugins();
     };
 
-
-    $(document).ready(flat.docReady);
-    $(window).on('load', flat.winLoad);
-
+    
+        $(document).ready(flat.docReady);
+        $(window).on('load', flat.winLoad);
+    
+    
+   
 
 
 })(jQuery); // jshint ignore:line

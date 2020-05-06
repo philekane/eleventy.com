@@ -123,9 +123,11 @@
                                     <div class="inner">
                                         <p>{{ testimonial.data.quote }}</p>
                                         <div class="client-info">
-                                            <div class="client-img">
-                                                <img src="{{ testimonial.data.headShot }}" alt="{{ testimonial.data.name }}">
-                                            </div>
+                                            {% if testimonial.data.headShot | length %}                               
+                                                <div class="client-img">
+                                                    <img src="{{ testimonial.data.headShot }}" alt="{{ testimonial.data.name }}">
+                                                </div>
+                                            {% endif %}
                                             <div class="client-data">
                                                 <h4>{{ testimonial.data.name }}</h4>
                                                 <span>{{ testimonial.data.jobTitle }}</span>

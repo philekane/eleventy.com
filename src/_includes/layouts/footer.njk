@@ -46,15 +46,18 @@
                             {% for post in collections.posts | reverse %}
                                 {% if loop.index0 < 3 %}
                                     <div class="media">
-                                        <a href="{{ post.url }}">
-                                            <img src="{{ post.data.image }}" class="d-flex mr-3" alt="post 1">
+                                        <a href="{{ post.url | url }}">
+                                            <img src="{{ post.data.image }}" class="d-flex mr-3" alt="{{ post.data.title }}">
                                         </a>
                                         <div class="media-body">
                                             <h4>
                                                 <a href="{{ post.url }}">{{ post.data.title }}</a>
                                             </h4>
-                                            <span>{{ post.data.date | readableDate }}</span>                                            
-                                        </div>
+                                             <span>{{ post.data.date | readableDate }}</span>                                            
+                                       {% excerpt post %}                                         
+                                          <p>  <a href="{{ post.url | url }}"
+   aria-label="Read more on {{ post.data.title }}">Read This Post</a></p>
+                                            </div>
                                     </div>
                                 {% endif %}
                             {% endfor %}
