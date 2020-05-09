@@ -1,0 +1,120 @@
+/*!
+Theme Name: Business Websites Etc Theme Two
+Theme URI: http://underscores.me/
+Author: Phil Kane
+Author URI: https://business-websites-etc.com/#who
+Description: Custom theme: Business Websites Etc Theme Two, developed by Phil Kane
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: bizsitesetc_themetwo
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Business Websites Etc Theme Two is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+#Post Types
+	##plant-post
+--------------------------------------------------------------*/
+@import "variables-site/variables-site";
+@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@import "normalize-8.0.1";
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+@import "typography/typography";
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+@import "elements/elements";
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/*@import "forms/forms";
+/*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+/*@import "layout/box-grids";
+/*@import "layout/no-sidebar";
+/*@import "layout/content-sidebar";*/
+@import "layout/footer";
+@import "layout/header";
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*@import "navigation/navigation";*/
+@import "navigation/menu-access";
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/*@import "modules/accessibility";
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/*@import "modules/alignments";
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+/*@import "modules/clearings";
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+/*@import "site/secondary/widgets";
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+@import "site/site";
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/*@import "modules/infinite-scroll";
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+/*@import "media/media";
+
+/*--------------------------------------------------------------
+# Post type for plant post plugin
+--------------------------------------------------------------*/
+/*@import "post-types/post-types";*/

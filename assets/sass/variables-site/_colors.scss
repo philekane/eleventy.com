@@ -1,0 +1,107 @@
+$footerColor: #B0BBC9;
+$footerBackground: #222538;
+$footerBottomColor: #FFFFFF;
+$footerBottomBackground: #575757;
+$navColor: #B0BBC9;
+$navBackgroundColor: #222538;
+$c1: #000000;
+$c2: $navBackgroundColor; /* header background color*/
+$c3: #004EAD;
+$c4: #f4f4f4;
+
+
+$green:#3C6100;/*green that has the good color contrast ratio*/
+
+
+/*$sunshine: #FAFA00;*/
+$sunshine: #ffdead; /*navajowhite*/
+$soil: #443200;
+
+// Monochrome colors.
+$light-gray: #ddd;
+$medium-gray: #888;
+$dark-gray: #333;
+$white: #fff;
+$black: #000;
+$purple:#800080;
+$purple: #6F2DD2;
+
+
+$navbar-background-color: #443200;
+$navbar-color: #d4d4d4;
+$background-color: #513000;
+
+$navbar-background-color: $sunshine;
+$navbar-color: $soil;
+$background-color: $soil;
+
+// Blues.
+$blue: #0000ff;
+$medium-blue: #5599bf;
+$footer-blue: #293a6a;
+$footer-blue: #3A8BC2;
+$footer-blue: #70CFFF;
+$footer-green: #7DB300;
+
+$color__background-body: #fff;
+$color__background-screen: #f1f1f1;
+$color__background-hr: #ccc;
+$color__background-button: #e6e6e6;
+$color__background-pre: #eee;
+$color__background-ins: #fff9c0;
+
+$color__text-screen: #21759b;
+$color__text-input: #666;
+$color__text-input-focus: #111;
+
+
+$color__link: $green;
+$color__link-visited: purple;
+$color__link-hover: purple;
+$color__text-main: $c1;
+
+$color__border-button: #ccc #ccc #bbb;
+$color__border-button-hover: #ccc #bbb #aaa;
+$color__border-button-focus: #aaa #bbb #bbb;
+$color__border-input: #ccc;
+$color__border-abbr: #666;
+
+
+
+$color__primary: $medium-gray;
+$color__primary--light: lighten($color__primary, 10%);
+$color__primary--lighter: lighten($color__primary--light, 10%);
+$color__primary--lightest: lighten($color__primary--lighter, 10%);
+$color__primary--dark: darken($color__primary, 10%);
+$color__primary--darker: darken($color__primary--dark, 10%);
+$color__primary--darkest: darken($color__primary--darker, 10%);
+
+$color__headline: desaturate($color__primary, 55%);
+$color__headline: mix($color__headline, white, 75%);
+
+$color__secondary: $medium-blue;
+$color__secondary--light: lighten($color__secondary, 10%);
+$color__secondary--lighter: lighten($color__secondary--light, 10%);
+$color__secondary--lightest: lighten($color__secondary--lighter, 10%);
+$color__secondary--dark: darken($color__secondary, 10%);
+$color__secondary--darker: darken($color__secondary--dark, 10%);
+$color__secondary--darkest: darken($color__secondary--darker, 10%);
+
+$link-color: $color__secondary;
+$link-color--hover: $color__secondary--light;
+$nav-color: $navbar-background-color;
+$nav-link: $navbar-color;
+$nav-hover: #5C002E;
+$nav-visited-background-color:$white;
+$nav-visited-color:$navbar-color;
+$nav-active: #5C002E;
+
+$footer-background-color:$navbar-background-color;
+$footer-color:$navbar-color;
+$footer-link: #002B57;
+$footer-hover: $sunshine;
+$footer-visited:#5C002E;
+$footer-active: $sunshine;
+
+$header-title-color: #443200;
+$header-description-color: purple;

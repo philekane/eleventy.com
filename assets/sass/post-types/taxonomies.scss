@@ -1,0 +1,42 @@
+.taxonomies{
+    font-family: inherit;
+    font-size: 90%;
+    margin-bottom: 2rem;
+}
+.taxonomies a{
+    font-weight:600;
+}
+/*.taxomony-header{
+    padding: 3px 3rem;
+    margin-top: -1.8em;
+    background: hsl(0, 0% 25%);
+    font-family: 'Lato';
+    font-size:80%;
+    text-transform: uppercase;
+    color: #fff;
+}
+*/
+#testimonials {
+    background: #fff;
+    padding: 4rem 0;
+}
+
+.testimonial {
+    width: 33.333333%;
+    float: left;
+    padding: 0 4rem;
+}
+
+.testimonial-thumb img {
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+.testimonial h1 {
+    text-align: center;
+}
+
+.taxonomy-grid{
+    border: 1px solid green;
+    padding:.5em;
+}

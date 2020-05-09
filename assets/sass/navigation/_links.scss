@@ -1,0 +1,51 @@
+a {
+	color: $color__link;
+
+	&:visited {
+		color: $color__link-visited;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $color__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+
+/* displays email to the right of "send mail" uses the title as the link*/
+/**
+ * a[href^="https"] begins with
+ * a[href$=".pdf"]  ends with
+ * a[href*="w3schools"] contains
+*/
+a[href*="usda.gov"]:hover:after {
+	content: " > " attr(title);
+	color: $color__link;
+	text-decoration:none;
+	font-size:80%;
+}
+a[href^="/inventory"]:hover:after {
+	content: " > " attr(title);
+	color: $color__link;
+	text-decoration:none;
+	font-size:80%;
+}
+h1 a[href^="http://biology.burke.washington.edu"]:hover:after {
+	content: " > " attr(title);
+	color: $color__link;
+	text-decoration:none;
+	font-size:40%;
+}
+
+li a[href^="http://biology.burke.washington.edu"]:hover:after {
+	content: " > " attr(title);
+	color: $color__link;
+	text-decoration:none;
+}

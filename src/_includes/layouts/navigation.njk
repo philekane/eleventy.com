@@ -1,0 +1,32 @@
+{% if settings.siteSettings.logo %}
+    <div class="col-6 col-sm-2 logo-column">
+        <h1>
+            <a href="index.html" class="logo">
+                <img src="{{ settings.siteSettings.logo }}" alt="{{ settings.siteSettings.logoAlt }}">
+            </a>
+        </h1>
+    </div>
+{% endif %}
+<div class="col-6 col-sm-10 nav-column clearfix">
+
+    {% if headerRibbon.show == false %}
+        <div class="right-nav">
+            <div class="header-social">
+                {% for social in settings.socialSettings %}
+                    <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}"  aria-label="{{ social.socialName }}"></a>
+                {% endfor %}
+            </div>
+        </div>
+    {% endif %}
+
+    <nav id="menu" class="d-none d-lg-block">
+        <ul>
+            <!--class="current-menu-item"-->
+            {% for menu in settings.navigationMenu %}
+                <li {% if page.url == menu.pageUrl~"/" %} class="current-menu-item"{% endif %}>
+                    <a href="{{ menu.pageUrl }}" >{{ menu.pageName }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</div>

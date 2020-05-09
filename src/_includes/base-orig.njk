@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="date" content="{% currentDate %}">
+        <meta name="author" content="{{ settings.siteSettings.companyName }}">
+        <meta name="description" content="{{ meta.description }}">
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="{{ meta.title }}"/>
+        <meta property="og:description" content="{{ meta.description }}"/>
+        <meta property="og:image" content="{{ settings.siteSettings.companyUrl ~ meta.image}}"/>
+        <meta property="og:url" content="{{ meta.url}}"/>
+        <meta property="og:site_name" content="{{ settings.siteSettings.siteName }}"/>
+
+        <title>{{ settings.siteSettings.companyName }} - {{ meta.title }}</title>
+
+        <!-- Required CSS files -->
+        {% if (slider.showSlider == true) 
+            or(clientTestimonials.show == true)or(page.url == "/testimonials/") %}
+            <link rel="stylesheet" href="/assets/css/owl.carousel.css">
+        {% endif %}
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/slicknav.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+
+    </head>
+
+    <body>
+        <script type="javascript">
+            <!-- need this or preloader -->
+            <div class="preloader">
+                <span class="preloader-spin"></span>
+            </div>
+        </script>
+        <div class="site">
+            {% include "layouts/header.njk" %}
+            <main >
+                {% block pageHeader %}
+                    <div class="page-title item-middle spt" style="height:30rem;background-image: url({{ backgroundImage }})">
+                        <!-- style="height:20rem;background-repeat: no-repeat;background-image: url({{ backgroundImage }})">-->
+                        {% if (page.url == "/") and (homepageBannerTextBox.show == true) %}
+                            <link rel="stylesheet" href="/assets/css/banner-text-box.css">
+                            <div class="middle-content text-center">
+                                <div class="container">
+                                    <div class="tr-section" >
+                                        <div class="banner-info">
+                                            <h1 >{{ homepageBannerTextBox.title }}</h1>
+                                        </div>
+                                        <h2 >
+                                            <span >{{ homepageBannerTextBox.secondTitle }}</span>
+                                            <br>
+                                            <small>{{ homepageBannerTextBox.description }}</small>
+                                        </h2>
+                                        <a href="{{ homepageBannerTextBox.linkUrl }}" data-animation="animated fadeIn" class="btn btn-lg btn-primary mt-1">
+                                            <i class="fa fa-cart-arrow-down" aria-hidden="true"></i>
+                                            {{ homepageBannerTextBox.linkText }}</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                    {% if length %}##not putting the text title and description over the image
+                     <div class="container text-center spt" >
+                            <h2>{{ title }}</h2>
+                            <p>{{ description }}</p>
+                        </div>
+                    {% endif %}
+                {% endblock pageHeader%}
+
+                {% block content %}
+                    {{ content | safe }}
+                {% endblock content %}
+
+                {% block postContent %}{% endblock postContent %}
+            </main>
+            {% include "layouts/footer.njk" %}
+        </div>
+
+        <!--Required JS files-->
+
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+        {% if (slider.showSlider == true) 
+            or(clientTestimonials.show == true)or(page.url == "/testimonials/") %}
+            <script src="/assets/js/vendor/owl.carousel.min.js"></script>
+        {% endif %}
+        <script src="/assets/js/vendor/isotope.pkgd.min.js"></script>
+        <script src="/assets/js/vendor/slicknav.min.js"></script>
+        <script src="/assets/js/active.js"></script>
+
+    </html>

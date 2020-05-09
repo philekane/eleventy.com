@@ -1,0 +1,290 @@
+.plant_post{
+    background-color:#fff;
+    padding: 1.1em;
+    margin: .7em 0 .7em 0;
+   /* border-radius: 25px;*/
+    .entry-header{
+        /*background-color:red;*/
+		width: -webkit-fit-content;
+    	width: -moz-fit-content;
+    	width: fit-content;
+    }
+
+    .entry-meta{
+       padding-left:.8em;
+       padding-right: .8em;
+    }
+    .entry-title{
+        padding-left:.5em;
+    }
+    .entry-content{
+        background-color:#fff;
+    }
+    .entry-content .two-column-image-right{
+        background-color: #fff;
+        /*margin-left:.5em;*/
+        margin-right:auto;
+    }
+    .entry-content .two-column-image-left{
+        /*margin-left:.5em;*/
+    }
+     h2{
+        /*color:red;*/
+    }
+    .plant-content a{
+        color:green;
+        text-decoration:underline;
+    }
+     .wp-block-image figure{
+        float:left;
+        border: 2px green;
+        width:50%;
+    }
+
+
+    .header-image img{
+	    border: solid .5em #000;
+        padding: .1em;
+        background-color: #ffdead;
+	}
+    .plant-header{
+		padding-left:.1em;
+		padding-right:.2em;
+	}
+    .alignleft {
+        float: left;
+        margin-right: 2em;
+    }
+	.entry-footer{
+     /*   background-color:green;*/
+    }
+    li{
+        padding-left:.5em;
+    }
+
+}
+.page-template-page-full .site-content {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 .5em;
+    background-color: #fff;
+	}
+.page-template-page-full .entry-content {
+    background-color: #ffffff;
+    margin-left:auto;
+	margin-right:auto;
+    padding: .5em;
+    border-radius: 0;
+}
+
+.header-image img{
+	border: solid .5em #000;
+    padding: .1em;
+    background-color: #ffdead;
+	}
+.plant-header{
+	padding-left:.1em;
+	padding-right:.2em;
+}
+.plant-grid{
+	width: 12em;
+    height: auto;
+}
+.plant-grid p, h4{
+	margin:.1em;
+}
+/* start latin name styling*/
+ .plant-grid  h4{
+	font-style: italic;
+	text-transform: lowercase;
+}
+ .plant-grid  h4::first-letter{
+	text-transform: uppercase;
+}
+/* end latin name*/
+
+.plant-grid img{
+	display: block;
+}
+
+/*additional info links to usda, burke, inventory at the bottom of plant post*/
+.additionalInfo{
+	margin-bottom:1.5em;
+	line-height: 1.5;
+}
+.tax-table{
+	font-size: 80%;
+	max-width: 355px;
+}
+
+.plant_post .entry-title{
+	font-style: italic;
+	text-transform: lowercase;
+	margin:0;
+}
+.plant_post .entry-title::first-letter{
+	text-transform: uppercase;
+}
+/* end latin name*/
+.entry-content div.plantArchivesSearch{
+	margin-top:0;
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom:1em ;
+	text-align:right;
+}
+div.plantArchivesSearch{
+	margin-top:0;
+	margin-right:auto;
+	margin-left:auto;
+	margin-bottom:1em ;
+	text-align:center;
+}
+.entry-meta h2, h1, ul{
+	margin:0;
+}
+
+.details li {
+    line-height:140%;
+}
+
+@media only screen and (max-width: 768px) {
+
+     .plant-grid{
+        width:unset;
+    }
+    .site {
+		width:100%;
+	}
+    .detailTable{
+        margin-right:auto;
+        margin-left:auto;
+    }
+	[type="checkbox"]{
+		margin: .01em;
+		/*margin-left:.5em;*/
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		line-height: 15px;
+		font-size: 15px;
+		position: relative;
+		top: 3px;
+		margin-right: .6em;
+		margin-left:auto;
+        margin-right:auto;
+    }
+
+    .filterdiv [data-menu-component] {
+        position: relative;
+        display: inline-block;
+        width:100%;
+        margin-bottom:0;
+    }
+    .search_crumb h3{
+        margin:.2em;
+    }
+    .plant_post .entry-title a{
+        overflow:hidden;
+        word-wrap: break-word;
+        white-space: wrap;
+	}
+	.plant_post  .grid > *{
+		flex:unset;
+		padding: unset;
+        margin: unset;
+	}
+
+
+	.wp-block-plants-plant-block {
+		padding:.2em;
+        width: 100%;
+        display: flex;
+        align-items: stretch;
+        background-color: #ffffff;
+        margin: .2em;
+        /* box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.12);*/
+        box-shadow: unset;
+	}
+
+	.page-template-page-default .entry-content {
+        background-color: white;
+        /*margin: 0 1.5em 1.5em .5em;*/
+	}
+
+    .single .entry-content {
+        background-color: white;
+ }
+    .single .wp-block-plants-plant-block {
+        margin-left:auto;
+        margin-right:auto;
+	}
+	#main .plant_post  .entry-content {
+	/* background-color: red; */
+	 margin: unset;
+	 padding:unset;
+}
+.plant_post{
+	padding:.5em;
+}
+
+    .wp-block-plants-plant-block .plant-content {
+        width: 100%;
+        align-self: left;
+        padding: unset;
+        box-sizing: border-box;
+    }
+    .wp-block-plants-plant-block ul, .wp-block-plants-plant-block li {
+        list-style: disc;
+        margin: 0 .4em 0 .6em;
+        padding: 0;
+        white-space: normal;
+    }
+	 .has-3-columns .wp-block-image img{
+		margin:.5em;
+	}
+	.dataTables_wrapper {
+		padding:unset;
+		margin:auto;
+    }
+    .site-content {
+		margin-top:.6em;
+		width: 100%;
+		margin-right: auto;
+		margin-left: auto;
+		padding: .1em .5em .5em .5em;
+	/*	background-color: #d4d4d4;*/
+	}
+	.site-content .widget-area, .site-footer {
+		float: left;
+		width: 100%;
+		clear: both;
+		/*margin: 1em;*/
+	}
+	.after-wide-box, .banner-image, .colophon, .content-area, .entry-content, .entry-footer, .entry-meta, .entry-title, .fatfooter, .main, .sidebar-full, .site-content, .site-main, .wide-box article, .widget-area, aside.after-footer, aside.after-header, aside.after-nav, nav.main, section {
+		clear: both;
+		width: 100%;
+	}
+	.site{
+		width:100%;
+	}
+	.page-template-page-full .site-content {
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 .5em;
+		/* background-color: white; */
+	}
+	#respond {
+        background-color: #fff;
+        width: 100%;
+	}
+	.mobile-hide{
+		display:none;
+	}
+
+}
+.sortForm fieldset {
+    border: 1px solid transparent;
+}

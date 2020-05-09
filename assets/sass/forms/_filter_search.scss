@@ -1,0 +1,135 @@
+
+.vh {
+    /*position: absolute !important;*/
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+
+  }
+
+  [data-menu-component] {
+    position: relative;
+    display: inline-block;
+    width:100%;
+    margin-bottom:1.5em;
+
+  }
+
+  label {
+    display:inline;
+    }
+
+
+  [role="menu"] ul {
+    list-style: none;
+    margin: 0;
+    padding: .7em;
+    white-space: wrap;
+
+  }
+  [role="menu"] ul li p {
+      display: block;
+      margin: .01em;
+      padding: .01em .5em .01em 0;
+      font-size: 90%;
+  }
+
+  [data-opens-menu], [role="menu"] a {
+    line-height: 1;
+    text-align: left;
+    background: #3c6100;
+    border: 0;
+    color: #fff;
+    padding: 0.33rem 0.5rem;
+    text-decoration: none;
+   /* border-radius: 50%;
+    padding:.7rem;*/
+   }
+
+  [type="checkbox"]:focus + [data-opens-menu], [role="menu"] a:focus {
+    outline: none;
+    background: darkBlue;
+    background:green;
+   }
+
+  :checked + label .expanded-text {
+    display: inline;
+  }
+
+  :checked + label .collapsed-text {
+    display: none;
+  }
+
+  [type="checkbox"]:not(:checked) + label .expanded-text {
+    display: none;
+  }
+
+  [type="checkbox"]:not(:checked) + label .collapsed-text {
+    display: inline;
+  }
+
+  [type="checkbox"]{
+        margin-left:.5em;
+  }
+  [role="menu"] {
+    background-color:#ffdead;
+    position: absolute;
+    left: 0;
+    display: none;
+   /* overflow: hidden;*/
+    z-index: 3;
+    /*max-height: 0;*/
+  }
+
+  :checked ~ [role="menu"] {
+    display: block;
+    /*max-height: 400px;
+    transition: max-height 1s ease;*/
+    background: #ffdead;
+
+  }
+
+  [data-menu-origin="right"] {
+    left: auto;
+    right: 0;
+  }
+  [data-menu-origin="center"] {
+    width:100%;
+    right: 0;
+
+  }
+
+  [role="menu"] a {
+    display: block;
+    min-width: 100%;
+    margin-top: 0.125rem;
+    white-space: nowrap;
+  }
+  .filterdiv{
+      width:100%;
+      display:block;
+
+  }
+   [type="checkbox"]{
+      margin: .01em;
+      /*margin-left:.5em;*/
+      display: inline-block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    font-size: 15px;
+    position: relative;
+    top: 3px;
+    margin-right: .6em;
+  }
+  .filter-grid label{
+      font-weight:bold;
+  }
+  .response{
+    margin-left: auto;
+    margin-right: auto;
+  }
+

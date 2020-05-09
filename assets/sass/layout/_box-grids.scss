@@ -1,0 +1,234 @@
+//border radius
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+    }
+
+  .box {
+     @include border-radius(3px);
+    }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -.5em;
+  }
+  .grid > * {
+    margin: .5em;
+    flex: 1 0 10em;
+  }
+  .fukol {
+    overflow:hidden;
+  }
+  .fukol-grid{
+      display: flex;
+      flex-flow: row;
+      margin: -.5em;
+  }
+  .fukol-grid > * {
+    margin: .5em;
+    flex: 1 0 10em;
+    flex-grow: 1;
+  }
+
+  .grid-box h3 a {
+    text-decoration:none;
+    color:#1C435F;
+  }
+  .footer-grid{
+    display: flex;
+    flex-flow: row;
+    margin: -.5em;
+  }
+ .footer-grid > * {
+    margin: .5em;
+    flex: 1 0 10em;
+    flex-grow: 1;
+  }
+  /* make the fifth element twice the width */
+  /*.fukol-grid > *:nth-child(5) {
+    flex-basis: 10em;
+  }
+  /* make first element 100% in width*/
+  /*
+  .footer-grid > *:first-child {
+    flex-basis: calc(25% - 1em);
+  }
+  .footer-grid > *:first-child {
+    flex-basis: calc(100% - 1em);
+  }
+*/
+  .cssgrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-columns: 1fr 3fr 2fr 2fr ;*/
+    border: 1px solid black;
+}
+.cssgrid > span {
+  padding: 8px 4px;
+  border: 1px solid black;
+}
+.cssgrid .theader{
+  background-color: navajowhite;
+
+}
+.singleGrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -.5em;
+}
+.singleGrid > * {
+  margin: 0em;
+  flex: 1 0 10em;
+}
+.entry-content .csstax{
+  /*max-width:150px;*/
+
+}
+.entry-content .cssgrid1 {
+  display: grid;
+  grid-template-columns:  repeat(1, 1fr);
+  border: 1px solid black;
+}
+.cssgrid1 > span {
+  padding: 8px 4px;
+ /* border: 1px solid black;    */
+
+}
+.entry-content .spanValue{
+  max-height:300px;
+}
+.cssgrid1 .theader{
+  background-color: navajowhite;
+  max-height:45px;
+}
+.entry-content .cssgrid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /*grid-template-columns: 1fr 3fr 2fr 2fr ;*/
+   border: 1px solid black;
+}
+.cssgrid4 > span {
+  padding: 8px 4px;
+  border: 1px solid black;
+}
+.cssgrid4 .theader{
+  background-color: navajowhite;
+}
+.entry-content .cssgrid5 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  /*grid-template-columns: 1fr 3fr 2fr 2fr ;*/
+   border: 1px solid black;
+}
+.cssgrid5 > span {
+  padding: 8px 4px;
+  border: 1px solid black;
+}
+.cssgrid5 .theader{
+  background-color: navajowhite;
+}
+
+.filterGrid {
+  display: block;
+  /*flex-wrap: wrap;*/
+ /* margin: .5em;*/
+  /*background-color:#ffdead;*/
+  border-top: 1px solid green;
+  border-left: 1px solid green;
+  border-right: 1px solid green;
+  float:right;
+  margin-top: .5em;
+  width:250px;
+
+}
+/* start latin name styling*/
+.filterGrid legend p{
+  display: block;
+  text-transform: lowercase;
+  margin:.1em;
+  padding: .2em .1em .01em .3em;
+  font-size:110%;
+}
+.filterGrid  p{
+  display: block;
+  margin:.01em;
+  padding:.01em .5em;
+  font-size:80%;
+}
+.filterGrid input{
+  display: block;
+  margin:  .01em .5em;
+  padding: .01em .5em;
+
+}
+.filterGrid legend p::first-letter{
+	text-transform: uppercase;
+}
+/* end latin name*/
+.smselectbox{
+  /*padding-bottom:1em;*/
+  border-bottom: 1px dashed green;
+}
+.smselectbox:last-child {
+  border-bottom: 1px solid green;
+}
+
+
+/*
+.buttongrid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: .5em;
+}
+.buttongrid > button {
+  margin: -.5em;
+  flex: 1 0 10em;
+
+}
+*/
+.smselectbox .buttongrid {
+  margin-right: auto;
+  margin-left:auto;
+  padding:.5em;
+  }
+  .smselectbox button {
+    width:100px;
+  }
+  .buttongrid {
+    text-align:center;
+    margin-right: auto;
+    margin-left:auto;
+    padding:.5em;
+    border-top:1px green;
+    margin-bottom: 1em;
+    }
+    .buttongrid button{
+      font-size:90%;
+      width:40%;
+      padding: .5em;
+    }
+
+	@media only screen and (max-width: 768px) {
+
+  .filterGrid {
+    display: block;
+    flex-wrap: wrap;
+    margin: unset;
+    background-color: #ffdead;
+    border: 1px solid orange;
+    float: unset;
+  }
+}
+
+.filter-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -.5em;
+}
+.filter-grid > * {
+  margin: .5em;
+  flex: 1 0 5em;
+}

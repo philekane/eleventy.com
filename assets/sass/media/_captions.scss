@@ -1,0 +1,32 @@
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+
+	img[class*="wp-image-"] {
+		@include center-block;
+	}
+
+	.wp-caption-text {
+		margin: 0.8075em 0;
+	}
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.post .entry-content{
+	 p:first-child:after {
+	/* http://www.decodeunicode.org/en/u+262F more unicodes */
+		  content: "\2615"; /* hot beverage*/		  
+		  content: "\262F"; /* Yin and yang */
+		  content: "\2766"; /* Here comes the ivy leaf */
+		  font-size: 150%; /* Makes the leaf larger than the normal text */
+		  padding-left: 10px; /* Leaf won't clash with the last letter of the text */
+		  position: relative; /* This is just an homage to Albert Einstein */
+		  top: 15px; /*Vertical distance from the last line of text */
+		 /* display: block; /* Put it on a new line */
+		 color:green;
+   
+   }
+}

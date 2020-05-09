@@ -1,0 +1,88 @@
+<style>
+
+    .header-top {
+        margin-top: .1em;
+        background-color: #723609;
+        color: #EEE0D8;
+        text-align: center;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        top: 0;
+        font-size: 110%;
+
+        position: fixed;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    
+
+    }
+    .header-top a {
+        text-decoration: underline;
+        color: #D9C4B0;
+    }
+
+    .ribbon_email {
+        margin: 0.3em;
+    }
+
+    .ribbon_phone {
+        margin: 0.3em;
+    }
+
+    .ribbon_social {
+        margin: 0.3em;
+    }
+
+    .ribbon_social a {
+        text-decoration: none;
+        padding: 0.4em;
+    }
+
+    header .container {
+        margin-top: 2em;
+        top: 1em;
+    }
+
+    .slicknav_menu {
+        margin-top: 1.5em;
+    }
+
+    .nav-column {
+        margin-top: 1.2em;
+    }
+
+    .logo-column h1 {
+        padding-top: 0.2em;
+    }
+
+    #menu {
+        padding-top: 0.3em;
+    }
+
+    .grid > * {
+        margin: 0.1em;
+        -ms-flex: 1 0 10em;
+        flex: 1 0 10em;
+    }
+    /*  @media (max-width: 768px) {
+        .header-top {
+            display: none;
+        }
+        */
+</style>
+<div class="header-top grid">
+    <div class = "ribbon_email">
+        Email: <a href="mailto:{{ settings.siteSettings.email }}">{{ settings.siteSettings.email }}</a>
+    </div>
+    <div class = "ribbon_phone">
+        Call: <a href="tel:{{ settings.siteSettings.phone }}">{{ settings.siteSettings.phone }}</a>
+    </div>
+
+    <div class="ribbon_social">
+        {% for social in settings.socialSettings %}
+            <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}"  aria-label="{{ social.socialName }}"></a>
+        {% endfor %}
+    </div>
+</div>

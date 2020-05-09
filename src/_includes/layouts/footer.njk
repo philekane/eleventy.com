@@ -1,14 +1,14 @@
 <footer>
     <div class="footer-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-lg-3 footer_widget">
+        <div class="footer-container">
+            <div class="row grid">
+                <div class="footer_widget">
                     <div class="inner">
                         <h3>About</h3>
                         <p>{{ settings.siteSettings.companyDescription }}</p>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3 footer_widget">
+                <div class="footer_widget">
                     <div class="inner">
                         <h3>Company</h3>
                         <ul>
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 {% if collections.posts | length %}
-                    <div class="col-md-6 col-lg-3 footer_widget">
+                    <div class="footer_widget">
                         <div class="inner">
                             <h3>Recent Posts</h3>
                             {% for post in collections.posts | reverse %}
@@ -55,8 +55,7 @@
                                             </h4>
                                              <span>{{ post.data.date | readableDate }}</span>                                            
                                        {% excerpt post %}                                         
-                                          <p>  <a href="{{ post.url | url }}"
-   aria-label="Read more on {{ post.data.title }}">Read This Post</a></p>
+                                         
                                             </div>
                                     </div>
                                 {% endif %}
@@ -64,7 +63,7 @@
                         </div>
                     </div>
                 {% endif %}
-                <div class="col-md-6 col-lg-3 footer_widget">
+                <div class="footer_widget">
                     <div class="inner">
                         <h3>Address</h3>
                         <h4>{{ settings.siteSettings.companyName }}</h4>
@@ -82,17 +81,16 @@
         </div>
     </div>
     <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
+        <div class="footer-container">
+            <div class="row grid">
+                <div class="dateYear">
                     <div class="copyright-txt">
                         <p>
                             {% copyrightYear %}
                             {{ settings.siteSettings.companyName }}. All Rights Reserved.</p>
                     </div>
                 </div>
-                <div class="col-lg-8 text-right">
-                    <div class="footer-nav">
+                     <div class="footer-nav">
 
                         <!--class="current-menu-item"-->
                         {% for menu in settings.navigationMenu %}
@@ -102,7 +100,7 @@
                         {% endfor %}
 
                     </div>
-                </div>
+               
             </div>
         </div>
     </div>

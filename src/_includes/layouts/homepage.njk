@@ -25,12 +25,12 @@
         </div>
     {% endif %}
     {% if brands.show == true %}
-       {% include "layouts/brands.njk" %}
+        {% include "layouts/brands.njk" %}
     {% endif %}
     {% if about.show == true %}
-        <div class="about-area sp bg2">
+        <div class="area spt">
             <div class="container">
-                <div class="row">
+                <div class="row grid">
                     {% if about.imagePosition == "right" %}
                         {% include "layouts/about-right.njk" %}
                     {% endif %}
@@ -38,8 +38,8 @@
                         {% include "layouts/about-left.njk" %}
                     {% endif %}
                     {% if about.imagePosition == "noImage" %}
-                        <div class="col-md-8 mx-auto">
-                            <div class="about-content">
+                        <div>
+                            <div class="content">
                                 <h2>{{ about.title}}</h2>
                                 <p>{{ about.description }}</p>
                                 <a href="{{ about.linkUrl }}" class="button">{{ about.linkText }}</a>
@@ -52,44 +52,49 @@
         </div>
     {% endif %}
     {% if homepageServices.show == true %}
-        <div class="service-area sp">
+        <div class="area spc">
             <div class="container">
-                <div class="section-title" data-margin="0 0 40px">
+                <div class="section-title">
                     <h2>{{ homepageServices.title}}</h2>
                     <h3>{{ homepageServices.description }}</h3>
                 </div>
-                <div class="row">
-                    {% for service in collections.services %}
+                <div class="cards">
+                    <ul>
+                        {% for service in collections.services %}
 
-                        <div class="col-md-4 single-service-2">
-                            <div class="inner">
-                                <div class="title">
-                                    <div class="icon">
-                                        <i class="fa fa-{{ service.data.faIcon }}"></i>
-                                    </div>
-                                    <h4>{{ service.data.title }}</h4>
+                            <li class="card">
+                                <div class="text">
+                                    <div class="title">
+                                        <div class="icon">
+                                            <i class="fa fa-{{ service.data.faIcon }}"></i>
+                                        </div>
+                                        <h3>
+                                            <a href="{{ service.url }}" class="button" aria-label="{{ service.url }}" aria-describedby="desc-card-design-woes">
+                                                {{ service.data.title }}</a>
+                                        </h3>
+                                    </div>                                    
+                                        <p>{{ service.data.description }}</p>                                    
+                                    <span class="cta" aria-hidden="true" id="desc-card-design-woes">{{ homepageServices.linkText }} →</span>
                                 </div>
-                                <div class="content">
-                                    <p>{{ service.data.description }}</p>
-                                </div>
-                                <a href="{{ service.url }}" class="button" aria-label="{{ service.url }}">{{ homepageServices.linkText }}</a>
-                            </div>
-                        </div>
-                    {% endfor %}
+                            </li>
+                        {% endfor %}
+                    </ul>
                 </div>
             </div>
         </div>
     {% endif %}
 
-    <div class="portfolio-area spt bg2">
+    <div class="portfolio-area spc bg2">
         <div class="container">
             <div class="section-title">
-                <a href="/portfolio"><h2>{{ homepagePortfolio.title }}</h2></a>
+                <a href="/portfolio">
+                    <h2>{{ homepagePortfolio.title }}</h2>
+                </a>
                 <h3>{{ homepagePortfolio.description }}</h3>
             </div>
-            <div class="row">
+            <div class="row grid">
                 {% for portfolio in collections.portfolio %}
-                    <div class="single-portfolio col-md-4">
+                    <div class="single-portfolio">
                         <div class="inner">
                             <div class="portfolio-img">
                                 <img src="{{ portfolio.data.image }}" alt="{{ portfolio.data.title }}">
@@ -99,9 +104,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="portfolio-content">
-                                                                 <h3>{{ portfolio.data.title }}</h3>
-                               
+                            <div class="content">
+                                <h3>{{ portfolio.data.title }}</h3>
+
                                 <span>{{ portfolio.data.genre}}</span>
                             </div>
                         </div>
@@ -110,38 +115,38 @@
             </div>
         </div>
     </div>
-        {% if clientTestimonials.show == true %}
-                <div class="testimonial-area sp">
-                    <div class="container">
-                        <div class="section-title">
-                            <h2>{{ clientTestimonials.title }}</h2>
-                            <h3>{{ clientTestimonials.description }}</h3>
-                        </div>
-                        <div class="testimonial-slider bordered">
-                            {% for testimonial in collections.testimonials %}
-                                <div class="single-slide">
-                                    <div class="inner">
-                                        <p>{{ testimonial.data.quote }}</p>
-                                        <div class="client-info">
-                                            {% if testimonial.data.headShot | length %}                               
-                                                <div class="client-img">
-                                                    <img src="{{ testimonial.data.headShot }}" alt="{{ testimonial.data.name }}">
-                                                </div>
-                                            {% endif %}
-                                            <div class="client-data">
-                                                <h4>{{ testimonial.data.name }}</h4>
-                                                <span>{{ testimonial.data.jobTitle }}</span>
-                                            </div>
+    {% if clientTestimonials.show == true %}
+        <div class="testimonial-area sp">
+            <div class="container">
+                <div class="section-title">
+                    <h2>{{ clientTestimonials.title }}</h2>
+                    <h3>{{ clientTestimonials.description }}</h3>
+                </div>
+                <div class="testimonial-slider bordered">
+                    {% for testimonial in collections.testimonials %}
+                        <div class="single-slide">
+                            <div class="inner">
+                                <p>{{ testimonial.data.quote }}</p>
+                                <div class="client-info">
+                                    {% if testimonial.data.headShot | length %}
+                                        <div class="client-img">
+                                            <img src="{{ testimonial.data.headShot }}" alt="{{ testimonial.data.name }}">
                                         </div>
+                                    {% endif %}
+                                    <div class="client-data">
+                                        <h4>{{ testimonial.data.name }}</h4>
+                                        <span>{{ testimonial.data.jobTitle }}</span>
                                     </div>
                                 </div>
-                            {% endfor %}
+                            </div>
                         </div>
-                    </div>
+                    {% endfor %}
                 </div>
-            {% endif %}
-           
-            {% if faqs.show == true %}
-                {% include "layouts/faqscomponent.njk" %}
-            {% endif %}
-        {% endblock content %}
+            </div>
+        </div>
+    {% endif %}
+
+    {% if faqs.show == true %}
+        {% include "layouts/faqscomponent.njk" %}
+    {% endif %}
+{% endblock content %}

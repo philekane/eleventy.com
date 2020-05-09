@@ -1,0 +1,81 @@
+#respond{
+	margin-left: auto;
+   margin-right: auto;
+	width: 90%;
+	margin-bottom:1em;
+	padding-bottom:1em;
+
+.error{
+    padding: 5px 9px;
+    border: 1px solid red;
+    color: red;
+    border-radius: 3px;
+  }
+
+  .success{
+    padding: 5px 9px;
+    border: 1px solid green;
+    color: green;
+    border-radius: 3px;
+  }
+
+  form span{
+    color: red;
+  }
+
+label {
+	padding-top:.5em;
+	line-height: 1;
+	font-weight: 700;
+	display: block;
+}
+/* make the containers relative */
+fieldset > div {
+	position: relative;
+}
+
+/* set up hidden tooltip */
+[role="tooltip"] {
+	display: none;
+	padding: 0.25em;
+	margin: 0;
+	color: #000000;
+	background: green;
+	width: 100%;
+	z-index: 2;
+}
+input:focus + [role="tooltip"] {
+	display: block;
+	position: absolute;
+	top: 100%;
+}
+textarea:focus + [role="tooltip"] {
+	display: block;
+	position: absolute;
+	top: 100%;
+}
+#respond > textarea, input, select {
+	font-size: inherit;
+	font-family: inherit;
+	margin-top: 0.33em;
+	line-height: 1.5;
+	width: 100%;
+	padding: 0.25em;
+	border: 2px solid #222;
+}
+label{
+	display:inline;
+}
+[type="checkbox"] {
+	margin: .01em;
+	/* margin-left: .5em; */
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	line-height: 15px;
+	font-size: 15px;
+	position: relative;
+	top: 3px;
+	margin-right: .6em;
+}
+}

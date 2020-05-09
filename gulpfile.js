@@ -6,7 +6,8 @@ const postcss = require('gulp-postcss');
 const sourcemaps = require('gulp-sourcemaps');
 
 function cssTask() {
-  return src('./assets/sass/style.sass')
+ // return src('./assets/sass/style.sass')
+  return src('./assets/sass/style.scss')
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' })).on('error', sass.logError)
     .pipe(postcss([autoprefixer(), cssnano()]))
@@ -15,7 +16,8 @@ function cssTask() {
 }
 
 function watchFiles() {
-  watch('./assets/**/*.sass', parallel(cssTask));
+ // watch('./assets/**/*.sass', parallel(cssTask));
+  watch('./assets/**/*.scss', parallel(cssTask));
 };
 
 exports.default = parallel(cssTask, watchFiles);

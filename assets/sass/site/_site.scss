@@ -1,0 +1,228 @@
+// @import "../layout/content-sidebar";
+// @import "../layout/sidebar-content";
+
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+/*@import "primary/posts-and-pages";
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+/*@import "primary/comments";*/
+
+
+@media (min-width: 1200px){
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1140px;
+    }
+}
+/*
+.container * + * {
+    margin:2rem;
+}
+*/
+.content{
+    padding: 1rem;
+}
+.spc {  
+    /*border-top: 10rem #FFA347 solid;*/
+   /* margin-top: 5rem;*/
+    border-top: .1rem #FFA347 solid;
+    padding-top:2rem;
+    margin-top:2rem;
+   
+  }
+  .spt {
+    margin-top: 4rem;
+  
+  }
+  .spb {
+    margin-top: 0rem;
+    margin-bottom: 4rem;
+    border-bottom: 4rem #FFA347 solid;
+   
+  }
+  .card-grid {
+    --auto-grid-min-size: 20rem;  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    grid-gap: 1rem;
+  }
+/*****************************************
+     Cards
+/*****************************************/
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+.cards{
+  margin-top:1.5em;
+}
+.img{
+   margin-left:auto;
+  margin-right:auto;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 4rem));
+}
+.cards > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 1.5rem;
+}
+.cards > ul {
+    list-style: none;
+}
+.card {
+    border: 1px solid;
+    border-radius: 0.25rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.card a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.card h2 a:focus {
+    text-decoration: underline;
+}
+
+.card h2:focus-within ~ .cta {
+    box-shadow: 0 0 0 0.125rem;
+}
+
+.card:focus-within h2 a:focus {
+    text-decoration: none;
+}
+
+.subhead {
+  font-size:1.3rem;
+  font-weight:normal;
+}
+.card .text {
+    padding: 0 1rem;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    order: 1;
+}
+.card .text > :nth-last-child(3) {
+    margin-bottom: 0.75rem;
+}
+.card .text > * + * {
+    margin-top: 0.75rem;
+}
+.card .title {
+    text-align: center;
+}
+.cta {
+    padding: 0.75rem;
+    border: 1px solid;
+    border-radius: 0.25rem;
+    text-align: center;
+    margin-bottom: 1em;
+} 
+.cards {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+@media (max-width: 450px) {
+  .cards > ul {
+    grid-gap: 4.5rem;
+  }
+}
+
+  /*  *****************************
+      05. portfolio-area
+    ******************************/
+
+
+.isotope-menu{
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 400;
+    li {
+        display: inline-block;
+        padding: 0 15px;
+        cursor: pointer;
+        color: #000;
+       /* +trns;
+        &.active,
+        &:hover
+            @extend .c3;
+*/
+    }
+.single-portfolio {
+    margin: 20px 0;
+}
+.single-portfolio .inner {
+        .portfolio-img {
+            position: relative;
+            img {
+                width: 100%;
+            }
+          }
+            .hover-content {
+               /* @extend .c3;*/
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+               /* +flex_center;*/
+                text-align: center;
+                opacity: 0;
+                visibility: hidden;
+               /* +trns;*/
+                .button {
+                    background-color: #fff;
+                   /* @extend .c3;*/
+                    border-color: #fff !important;
+                    color: #000;
+                    &:hover {
+                        background-color: #222;
+                        color: #fff;
+                        border-color: #222 !important;
+                    &:hover .hover-content {
+                        opacity: 1;
+                        visibility: visible;
+                    }
+                  }
+                }
+            }
+}
+        .portfolio-content {
+            text-align: center;
+            padding-top: 25px;
+            color: #6d7784;
+            a {
+                display: block;
+            h3 {
+                font-weight: 400;
+                margin: 0;
+                font-size: 24px;
+               /* +trns */
+                &:hover {
+                   /* @extend .c3;*/
+                }
+            }
+          }
+        }
+      }
+  

@@ -7,160 +7,62 @@
         <meta name="date" content="{% currentDate %}">
         <meta name="author" content="{{ settings.siteSettings.companyName }}">
         <meta name="description" content="{{ meta.description }}">
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="website"/>
         <meta property="og:title" content="{{ meta.title }}"/>
         <meta property="og:description" content="{{ meta.description }}"/>
         <meta property="og:image" content="{{ settings.siteSettings.companyUrl ~ meta.image}}"/>
         <meta property="og:url" content="{{ meta.url}}"/>
-        <meta property="og:site_name" content="{{ settings.siteSettings.siteName }}" />
+        <meta property="og:site_name" content="{{ settings.siteSettings.siteName }}"/>
 
         <title>{{ settings.siteSettings.companyName }} - {{ meta.title }}</title>
 
         <!-- Required CSS files -->
-        {% if ( slider.showSlider == true ) or ( clientTestimonials.show == true ) or ( page.url == "/testimonials/" ) %}        
-         <link rel="stylesheet" href="/assets/css/owl.carousel.css">
+        {% if (slider.showSlider == true) 
+            or(clientTestimonials.show == true)or(page.url == "/testimonials/") %}
+            <link rel="stylesheet" href="/assets/css/owl.carousel.css">
         {% endif %}
         <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="/assets/css/slicknav.css">
+       {% if page.url != "/" %}
+            <link rel="stylesheet" href="assets/css/animate.css">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+            <link rel="stylesheet" href="assets/css/slicknav.css">
+        {% endif %}    
+        <!-- <link rel="stylesheet" href="/assets/css/slicknav.css">-->
         <link rel="stylesheet" href="/assets/css/style.css">
 
     </head>
-
     <body>
-        <script type="javascript"><!-- need this or preloader -->
+        <script type="javascript">
+            <!-- need this or preloader -->
             <div class="preloader">
                 <span class="preloader-spin"></span>
             </div>
-        </script>
-        <div class="site">
-            <header>
-            {% if headerRibbon.show == true %}
-            <style>
-            .header-top {
-                margin-top: -1em;
-                background-color: #723609;
-                color: #D9C4B0;
-                text-align: center;
-                height: auto;
-                display: flex;
-                flex-wrap: wrap;
-                top: 0;
-                font-size: 110%;
-                
-               /* position: fixed;
-                right: 0;
-                left: 0;
-                z-index: 1030;*/
-            }
-            .header-top a {
-                text-decoration: underline;
-                color: #D9C4B0;
-            }
-            .ribbon_email {
-                margin:.3em;
-            }
-            .ribbon_phone {
-                margin:.3em;
-            }
-            .ribbon_social {
-                margin:.3em;
-            }
-            .ribbon_social a {
-                text-decoration: none;
-                padding:.4em;
-            }
-            header .container{
-                margin-top:1em;
-                top: 1em;               
-            }
-            .slicknav_menu{
-            margin-top: 1.5em;
-            }
-            .nav-column{
-            margin-top: 1em;
-            }
-            .grid>* {
-                margin: .1em;
-                -ms-flex: 1 0 10em;
-                flex: 1 0 10em;
-            }
-            </style>
-            <div class="header-top grid">
-                <div class = "ribbon_email">
-                    Email: <a href="mailto:pkane-marcus@spindry.com">pkane-marcus@spindry.com</a>
-                </div>
-                <div class = "ribbon_phone">
-                    Call: <a href="tel:2068540369">(206)854-0369</a>
-                </div>
-                
-	</style>
-                <div class="ribbon_social">
-                 {% for social in settings.socialSettings %}
-                                        <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}"  aria-label="{{ social.socialName }}"></a>
-                                    {% endfor %}
-                </div>
-            </div>
-            {% endif %}
-                <div class="container">
-                    <div class="row">
-                        {% if settings.siteSettings.logo %}
-                            <div class="col-6 col-sm-2 logo-column">
-                                <h1>
-                                    <a href="index.html" class="logo">
-                                        <img src="{{ settings.siteSettings.logo }}" alt="{{ settings.siteSettings.logoAlt }}">
-                                    </a>
-                                </h1>
-                            </div>
-                        {% endif %}
-                        <div class="col-6 col-sm-10 nav-column clearfix">
-                         {% if headerRibbon.show == false %}
-                            <div class="right-nav">
-                                <div class="header-social">
-                                    {% for social in settings.socialSettings %}
-                                        <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}"  aria-label="{{ social.socialName }}"></a>
-                                    {% endfor %}
-                                </div>
-                            </div>
-                        {% endif %}
-                            <nav id="menu" class="d-none d-lg-block">
-                                <ul>
-                                    <!--class="current-menu-item"-->
-                                    {% for menu in settings.navigationMenu %}
-                                        <li {% if page.url == menu.pageUrl~"/" %} class="current-menu-item"{% endif %}>
-                                            <a href="{{ menu.pageUrl }}" >{{ menu.pageName }}</a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </header>
-            <main >               
+        </script>        
+            {% include "layouts/header.njk" %}
+            <main >
                 {% block pageHeader %}
-                    <div class="page-title item-middle spt" style="height:30rem;background-image: url({{ backgroundImage }})">
+                    <div class="page-title item-middle" style="height:30rem;background-image: url({{ backgroundImage }})">
                         <!-- style="height:20rem;background-repeat: no-repeat;background-image: url({{ backgroundImage }})">-->
-                       {% if (page.url == "/") and (homepageBannerTextBox.show == true) %}
-                       <link rel="stylesheet" href="/assets/css/banner-text-box.css">
-                        <div class="middle-content text-center">
-                            <div class="container">
-                                <div class="tr-section" >
-                                    <div class="banner-info">
-                                        <h1 >{{ homepageBannerTextBox.title }}</h1>
+                        {% if (page.url == "/") and (homepageBannerTextBox.show == true) %}
+                            <link rel="stylesheet" href="/assets/css/banner-text-box.css">
+                            <div class="middle-content text-center">
+                                <div class="container">
+                                    <div class="tr-section" >
+                                        <div class="banner-info">
+                                            <h1 >{{ homepageBannerTextBox.title }}</h1>
+                                        </div>
+                                        <h2 >
+                                            <span >{{ homepageBannerTextBox.secondTitle }}</span>
+                                            <br>
+                                            <small>{{ homepageBannerTextBox.description }}</small>
+                                        </h2>
+                                        <a href="{{ homepageBannerTextBox.linkUrl }}"  class="button">
+                                            <i class="fa fa-lg fa-cart-arrow-down" aria-hidden="true"></i> {{ homepageBannerTextBox.linkText }}</a>
                                     </div>
-                                    <h2 >
-                                        <span >{{ homepageBannerTextBox.secondTitle }}</span>
-                                        <br>
-                                        <small>{{ homepageBannerTextBox.description }}</small>
-                                    </h2>
-                                    <a href="{{ homepageBannerTextBox.linkUrl }}" data-animation="animated fadeIn" class="btn btn-lg btn-primary mt-1">
-                                        <i class="fa fa-cart-arrow-down" aria-hidden="true"></i> {{ homepageBannerTextBox.linkText }}</a>
                                 </div>
                             </div>
-                        </div>
-                    {% endif %}
+                        {% endif %}
                     </div>
                     {% if length %}##not putting the text title and description over the image
                      <div class="container text-center spt" >
@@ -177,19 +79,19 @@
                 {% block postContent %}{% endblock postContent %}
             </main>
             {% include "layouts/footer.njk" %}
-        </div>
+        
 
         <!--Required JS files-->
-        
-        <script src="https://code.jquery.com/jquery-3.5.0.min.js"  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        
-        {% if (slider.showSlider == true) or (clientTestimonials.show == true) or ( page.url == "/testimonials/" ) %}
+        {% if page.url != "/" %}
+            <script src="https://code.jquery.com/jquery-3.5.0.min.js"  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+            <script src="/assets/js/vendor/isotope.pkgd.min.js"></script>
+        {% endif %}
+        {% if (slider.showSlider == true) 
+            or(clientTestimonials.show == true)or(page.url == "/testimonials/") %}
             <script src="/assets/js/vendor/owl.carousel.min.js"></script>
         {% endif %}
-        <script src="/assets/js/vendor/isotope.pkgd.min.js"></script>
-        <script src="/assets/js/vendor/slicknav.min.js"></script>
+         <script src="/assets/js/vendor/slicknav.min.js"></script>
         <script src="/assets/js/active.js"></script>
-     
-     
+
     </html>

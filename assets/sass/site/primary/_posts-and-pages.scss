@@ -1,0 +1,39 @@
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: .1em;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+.site-content{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding:1em;
+	background-color: #fff;
+}
+
+.entry-content {
+    background-color: #fff;
+    margin: auto;
+    padding: .5em;
+	/*border-radius: 25px;*/
+}
