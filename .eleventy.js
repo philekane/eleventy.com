@@ -37,6 +37,12 @@ module.exports = function(eleventyConfig){
     return DateTime.fromJSDate(dateObj).toFormat("yyyy-MM-dd");
   });
 
+  //remove spaces replace with dashess
+  eleventyConfig.addFilter("spaceless", str => {
+    return str.replace(/\s+/g, '-').toLowerCase();
+  });
+  
+
   function extractExcerpt(article) {
     if (!article.hasOwnProperty('templateContent')) {
       console.warn('Failed to extract excerpt: Document has no property "templateContent".');

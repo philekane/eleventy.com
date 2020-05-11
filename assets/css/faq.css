@@ -4,6 +4,9 @@ Custom elements are inline by default
 toggle-section {
     display: block;
 }
+.faq{
+    padding:1rem;
+}
 
 /*
 Only applies if script runs and 

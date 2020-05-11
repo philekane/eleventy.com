@@ -1,11 +1,12 @@
 /*****************************
 08. footer-top
 *****************************/
+$fontsize: 80%;
 
 footer {
   background-color: $footerBackground;
   color: $footerColor;
-  line-height: 24px;
+  line-height: 1.5;
 }
 footer h3 {
   color: $footerColor;
@@ -47,18 +48,18 @@ footer h3 {
   }
 
 .footer_widget h5 {
-  font-size: 16px;
+  font-size: 16pt;
 }
 
 .footer_widget h3 {
-  color: $footerColor;
-  font-size: 19px;
+ padding-bottom:.5em;
+  font-size: 18pt;
 }
 
 .footer_widget h4,
 .footer_widget h5 {
   color: $footerColor;
-  margin: -.4em;
+ /* margin: .4em;*/
 }
 .footer_widget p {
   color: $footerColor;
@@ -72,7 +73,7 @@ footer h3 {
 
 .footer_widget h4 {
   margin-bottom: .1em;
-  font-size: 18px;
+  font-size: 12pt;
 }
 .footer_widget ul {
   list-style: none;
@@ -87,18 +88,18 @@ footer h3 {
   margin-bottom: 14px;
   h5 {
       margin: 0;
-      line-height: 20px;
+      line-height: 1.3;
   }
   a {
       color: $footerColor;
-      font-size: 14px;
+      font-size: 13pt;
   }
   a:hover {
       color: #fff;
   }
   span {
       color: $footerColor;
-      font-size: 12px;
+      font-size: 9pt;
   }
 
 .nw_form {
