@@ -249,3 +249,14 @@
     border-radius: .3rem;
     color: #fff;
    }
+   
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+  border: 5px dotted #33FF00 !important;
+}
+/*add red dotted border if image alt attribute is empty*/
+img[alt=""] {
+  border: 3px dotted red;
+  /*filter: blur(10px);*/
+}

@@ -1,5 +1,6 @@
 const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon");
+//const  hostUrl = window.location.hostname;
 module.exports = function(eleventyConfig){
 
     eleventyConfig.addPassthroughCopy("css");
@@ -41,6 +42,11 @@ module.exports = function(eleventyConfig){
   eleventyConfig.addFilter("spaceless", str => {
     return str.replace(/\s+/g, '-').toLowerCase();
   });
+
+  //get url
+  eleventyConfig.addShortcode("getHomeUrl", () => { hostUrl
+    } );
+  
   
 
   function extractExcerpt(article) {
