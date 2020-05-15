@@ -1,5 +1,5 @@
 {
-    "layout": "layouts/simple.njk",
+    "layout": "simple.njk",
     "tags": "portfolio",
     "backgroundImage": "/assets/img/page-title.jpg"
 }

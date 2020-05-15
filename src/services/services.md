@@ -1,5 +1,5 @@
 ---
-layout: "layouts/services.njk"
+layout: "services.njk"
 title: "Services"
 description: "Description Description"
 backgroundImage: "/assets/img/flowers.jpg"

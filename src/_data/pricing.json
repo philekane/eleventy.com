@@ -4,7 +4,7 @@
             "option": "option 1",
             "title": "Free",
             "price": "$0",
-            "duration": "",
+            "duration": "Always",
             "features": [
                 {
                     "name": "5GB Storage"

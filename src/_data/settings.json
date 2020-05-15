@@ -1,4 +1,11 @@
 {
+   "theme": {
+    "name": "biz-sites-etc",
+    "author": "https://business-websites-etc.com",
+    "description": "Made with grid",
+    "base": "src/themes/biz-sites-etc/_includes/layouts/base.njk",
+    "path": "src/themes/biz-sites-etc/_includes/layouts/"
+  },
   "navigationMenu": [
     {
       "pageName": "Home",

@@ -40,7 +40,7 @@
   .spb {
     margin-top: 0rem;
     margin-bottom: 4rem;
-    border-bottom: 4rem #FFA347 solid;
+   
    
   }
   .card-grid {
@@ -73,8 +73,11 @@
     grid-column-gap: 1rem;
     grid-row-gap: 1.5rem;
 }
-.cards > ul {
+.cards > ul  {
     list-style: none;
+}
+.cards .text  ul  {
+  list-style: none;
 }
 .card {
     border: 1px solid;
@@ -102,7 +105,12 @@
 .card:focus-within h2 a:focus {
     text-decoration: none;
 }
+.card:hover {
+ 
+ /* box-shadow: 2px 2px 25px #00000026;*/
 
+ 
+}
 .subhead {
   font-size:1.3rem;
   font-weight:normal;
@@ -232,17 +240,18 @@
         /*top: 0px;*/
         height: 3em;
         /*color: rgb(176, 187, 201);*/
+        color: #fff;
         border-width: initial;
         border-style: none;
         border-color: initial;
         border-image: initial;
         padding: 0px 15px;
         border-radius: 3px 3px 3px 3px;
-        background-color: rgb(0, 78, 173);
+        background-color: #004ead;
         font-size: large;
     }
    .button{
-    background-color: rgb(0, 78, 173);
+    background-color: #004ead;
     padding: .5rem 1rem;
     font-size: 1.25rem;
     line-height: 1.5;
@@ -259,4 +268,125 @@ img:not([alt]) {
 img[alt=""] {
   border: 3px dotted red;
   /*filter: blur(10px);*/
+}
+
+.area {
+  margin: 4rem 0;
+}
+fieldset{
+  border:1px solid black;
+}
+legend{ 
+  width:auto;
+}
+
+        
+.google-map {
+    height: 500px;
+    width: 100%;
+    display: block;
+    background-color: #eee;
+   /*+mq(xsm)*/
+        height: 280px;
+}
+    iframe{
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+    .contact-social-icon a{
+      text-decoration: none;
+    }
+
+.cards .price {
+ text-align: center;
+ padding: 1em 0;
+}
+/*
+.cards .activeprice{
+ background-color: #004ead;
+ color:#fff;
+ }
+
+ .cards .activeprice a:hover{
+  background-color: #fff;
+  color:#004ead;
+  }
+
+  .cards .activeprice .button{
+    background-color: #fff;
+    color:#004ead;
+    }
+*/
+.price .button{
+  background-color: #fff;
+  padding: .5rem 1rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  border-radius: .3rem;
+  color: #000;
+  border:1px solid #000;
+ }
+.cards .price a {
+  width:70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cards .price a:hover {
+  background-color: #004ead;
+  color: #fff;
+  border:1px solid #000;
+  width:70%;   
+ }
+ 
+.card:focus-within h2 ~ .price{
+  box-shadow: 5px 10px;
+  background-color: red;
+}
+ .cards .price li{
+  border-top:1px solid #000;
+  padding: .3em 0;
+ 
+ }
+
+ .single-faq {
+    border: 1px solid #cad4de;
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.faq-sidebar-wrap {
+  border: 1px solid #cad4de;
+  margin-bottom: 30px;
+  padding: 35px;
+  border-radius: 4px;
+}
+
+.single-faq h2 span {
+  background-color: #004ead;
+  height: 2.5em;
+  width: 2.5em;
+  text-align: center;
+  line-height: 40px;
+  color: #fff;
+  border-radius: 4px;
+  margin-right: 20px;
+  padding:.5em;
+}
+.single-faq h2 {
+  margin-bottom: 1em;
+}
+.faq-grid > * {
+  margin: .6em;
+  flex: 1 0 10em;
+}
+.faq-grid > *:first-child {
+  flex-basis: calc(50% - 1em);
+}
+.faq-grid a{
+  color: #004ead;
+  text-decoration: underline;
 }

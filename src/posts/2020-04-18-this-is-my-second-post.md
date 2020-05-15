@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: This is my second post
 author: Fred Kane
 date: 2020-04-18

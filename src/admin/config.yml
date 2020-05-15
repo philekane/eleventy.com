@@ -217,6 +217,7 @@ collections:
         - { label: "Icon", name: "faIcon", widget: "string" }
         - { label: "Description", name: "description", widget: "text" }
         - { label: "Service Body", name: "Service", widget: "markdown" }
+        - { label: "Link Text", name: "linktext", widget: "string" }
         - { label: "Frequency Page Changes", name: "changeFreq", widget: "select", options: ["always", "hourly", "daily", "weekly", "monthly", "yearly", "never"], hint: "For the robots reading the sitemap" }
     - label: "Project Types"
       name: "projectTypes1"

@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-title: Contact Uss
+title: Contact Us
 description: Please Contact Us, We Really Want To Hear From You!
 backgroundImage: /assets/img/flowers.jpg
 showMap: true
@@ -12,61 +12,76 @@ meta:
   image: /assets/img/realhazardLogo.jpg
   url: https://www.philekane.com
 ---
-    <div class="contact-area sp">
+<div class="area">
     <div class="container">
-        <div class="section-title">
-                <h2>{{ title }}</h2>
-                <p>{{ description }}</p>
-            </div>
-        <div class="row">
-            <div class="col-md-5 contact-info">
+        <div class="area-title">
+            <h1>{{ title }}</h1>
+            <p>{{ description }}</p>
+        </div>
+        <div class="row grid">
+            <div class="contact-info">
+             <h2>Contact Information</h2>
                 <div class="single-info">
-                    <h5>Phone</h5>
-                     <p>{{ settings.siteSettings.phone }}</p>
+                    <h3>Phone</h3>
+                    <p>{{ settings.siteSettings.phone }}</p>
                 </div>
                 <div class="single-info">
-                    <h5>Email</h5>
+                    <h3>Email</h3>
                     <p>{{ settings.siteSettings.email }}</p>
                 </div>
                 <div class="single-info">
-                    <h5>Address</h5>
+                    <h3>Address</h3>
                     <p>{{ settings.siteSettings.address }}</p>
                 </div>
                 <div class="single-info">
-                    <h5>Social</h5>
-                    <p>
-                     {% for social in settings.socialSettings %}
-                        <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}"  aria-label="{{ social.socialName }}"></a>
-                     {% endfor %}
+                    <h3>Social</h3>
+                    <p class="contact-social-icon">
+                        {% for social in settings.socialSettings %}
+                            <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}"  aria-label="{{ social.socialName }}"></a>
+                        {% endfor %}
                     </p>
                 </div>
             </div>
-            <div class="col-md-7">
+            <div id="respond">
                 <form action="#" name="contact-page" netlify class="contact-form">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <input type="text" name="name" placeholder="Name" aria-label="name">
+                    <fieldset>
+                        <legend></legend>
+                        <div>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name"  aria-label="name" aria-describedby="username-tip" autofocus="" value="">
+                            <div role="tooltip" id="username-tip">Please add your full name.</div>
                         </div>
-                        <div class="col-lg-6">
-                            <input type="email" name="email" placeholder="Email" aria-label="email">
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" id="email"  aria-label="email" aria-describedby="email-tip" value="">
+                            <div role="tooltip" id="email-tip">Please add your email address.</div>
                         </div>
-                        <div class="col-lg-12">
-                            <input type="text" name="subject" placeholder="Subject" aria-label="subject">
+                        <div>
+                            <label for="subject">Subject:</label>
+                            <input type="text" name="subject" id="subject"  aria-label="subject" aria-describedby="subject-tip">
+                            <div role="tooltip" id="subject-tip">Please add your subject.</div>
+
                         </div>
-                        <div class="col-lg-12">
-                            <textarea name="message" placeholder="Message" aria-label="message"></textarea>
+                        <div>
+                            <label for="message">Message:</label>
+                            <textarea name="message" id="message"  aria-label="message" aria-describedby="message-tip"></textarea>
+                            <div role="tooltip" id="message-tip">How may we help you and your business?</div>
                         </div>
-                        <div class="col-lg-12">
-                            <input class="button" type="submit" value="Send Message">
+                        <div>
+                            <input type="hidden" name="submitted" value="1">
+                            <input class="button" type="submit" value="submit">
                         </div>
-                    </div>
+                    </fieldset>
+                    <input type="hidden" name="-od_wxsAu" value="GmY*IrCpf"><input type="hidden" name="sIKiNyJ" value="vGSmD7C"><input type="hidden" name="hdL_ZczC" value="7ANK1Q[R"><input type="hidden" name="u-ZaTrFHGBStxj" value="B7S_si2jeDc6pa">
                 </form>
             </div>
         </div>
     </div>
+    <!-- container -->
 </div>
 {% if showMap == true %}
+
     <div class="google-map">
         <iframe src="{{ googleMap }}" title="map"></iframe>
-    </div>  
+    </div
 {% endif %}

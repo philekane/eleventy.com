@@ -1,0 +1,31 @@
+---
+layout: blog.njk
+backgroundImage: /assets/img/flowers.jpg
+section: post
+---
+
+<article class="article sp">
+  <h1>{{ title }}</h1>
+  <p>
+    <small>
+      <time datetime="{{ date | machineDate }}">{{ date | readableDate }}</time> by {{ metadata.author }}
+    </small>
+  </p>
+
+ {{ content | safe }}
+
+  {% if tag %}
+    <p>
+    {% for tag in tag %}
+      {%- if tag != "post" -%}
+        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
+      {%- endif -%}
+    {% endfor %}
+    </p>
+  {% endif %}
+<nav>
+  <a href="{{ '/posts/' | url }}">← Blog Post index</a>
+</nav>
+</article>
+

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: This is my second to last post
 author: Fred Kane
 description: The fourth post

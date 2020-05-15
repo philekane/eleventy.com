@@ -1,6 +1,6 @@
 const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon");
-//const  hostUrl = window.location.hostname;
+
 module.exports = function(eleventyConfig){
 
     eleventyConfig.addPassthroughCopy("css");
@@ -12,6 +12,7 @@ module.exports = function(eleventyConfig){
 
     eleventyConfig.addShortcode("copyrightYear", () => `&copy; ${new Date().getFullYear()}`);
     eleventyConfig.addShortcode("currentDate", () => `${new Date().toLocaleDateString()}`);
+    
 
     // Responsive image shortcode
   eleventyConfig.addShortcode("insertImage", function(filename, alttext) {
@@ -46,8 +47,7 @@ module.exports = function(eleventyConfig){
   //get url
   eleventyConfig.addShortcode("getHomeUrl", () => { hostUrl
     } );
-  
-  
+      
 
   function extractExcerpt(article) {
     if (!article.hasOwnProperty('templateContent')) {
@@ -85,8 +85,10 @@ module.exports = function(eleventyConfig){
         dir:{
             input: "src",
             output: "_site",
-            include: "includes",
-            data: "_data"
+            include: "themes/biz-sites-etc/_includes",
+            data: "_data",
+            layouts: "themes/biz-sites-etc/_includes/layouts"
+           
 
         }
     }

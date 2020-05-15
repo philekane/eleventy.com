@@ -1,5 +1,5 @@
 ---
-layout: layouts/blog.njk
+layout: blog.njk
 permalink: /posts/
 backgroundImage: /assets/img/flowers.jpg
 ---
@@ -9,4 +9,4 @@ backgroundImage: /assets/img/flowers.jpg
 
 
 {% set postslist = collections.posts %}
-{% include "layouts/postslist.njk" %}
+{% include settings.theme.path~"postslist.njk" %}

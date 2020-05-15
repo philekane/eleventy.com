@@ -1,0 +1,10 @@
+<header>
+    {% if settings.headerRibbon.show == true %}
+        {% include "header-ribbon.njk" %}
+    {% endif %}
+    <div class="menu-container">
+        <div class="row grid">
+            {% include "navigation-access.njk" %}
+        </div>
+    </div>
+</header>

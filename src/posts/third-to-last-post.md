@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: This is my third post
 author: Fred Kane
 description: The first post on the Eleventy + Netlify CMS from scratch blog

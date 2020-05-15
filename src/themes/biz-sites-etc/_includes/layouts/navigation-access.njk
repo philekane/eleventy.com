@@ -1,0 +1,78 @@
+<style>
+    /*
+ Demo purposes only
+*/
+    *,
+    *:after,
+    *:before {
+        box-sizing: border-box;
+    }
+
+    article {
+        padding: 30px;
+        max-width: 55em;
+        font-size: 16px;
+        line-height: 1.5em;
+    }
+
+    article h2 {
+        font-weight: 500;
+        font-size: 28px;
+    }
+/*
+    .logo {
+        margin: 0 30px 0 10px;
+        font-size: 1.5em;
+    }
+*/
+    .social-icons {
+        text-align: right;
+    }
+    .social-icons a:hover {
+        text-decoration: none;
+        color: #FF8A14;
+    }
+</style>
+{% if settings.siteSettings.logo %}
+    <div class="logo-column">     
+        <a href="index.html" class="logo">
+            <img src="{{ settings.siteSettings.logo }}" alt="{{ settings.siteSettings.logoAlt }}">
+        </a>       
+    </div>
+{% endif %}
+<a href="#main-menu"
+     id="main-menu-toggle"
+     class="menu-toggle"
+     aria-label="Open main menu">
+    <span class="sr-only">Open main menu</span>
+    <span class="fa fa-lg fa-bars" aria-hidden="true"> Menu</span>
+</a>
+
+<nav id="main-menu" class="main-menu" aria-label="Main menu">
+    <a href="#main-menu-toggle"
+       id="main-menu-close"
+       class="menu-close"
+       aria-label="Close main menu">
+        <span class="sr-only">Close main menu</span>
+        <span class="fa fa-lg fa-close" aria-hidden="true" aria-label="close main menu"></span>
+    </a>
+    <ul>
+        {% for menu in settings.navigationMenu %}
+            <li {% if page.url == menu.pageUrl~"/" %} class="current-menu-item"{% endif %}>
+                <a href="{{ menu.pageUrl }}" >{{ menu.pageName }}</a>
+            </li>
+        {% endfor %}
+        {% if settings.headerRibbon.show == false %}
+            {% for social in settings.socialSettings %}
+                <li class="social-icons">
+                    <a href="{{ social.socialUrl }}" class="fa fa-lg fa-{{ social.socialName }}"  aria-label="{{ social.socialName }}" ></a>
+                </li>
+            {% endfor %}
+
+        {% endif %}
+    </ul>
+</nav>
+<a href="#main-menu-toggle"
+     class="backdrop"
+     tabindex="-1"
+     aria-hidden="true" hidden aria-label="menu-toggle"></a>

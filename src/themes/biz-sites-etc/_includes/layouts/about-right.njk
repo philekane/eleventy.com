@@ -1,0 +1,14 @@
+<div>
+    <div class="content">
+        <h1>{{ about.title}}</h1>
+        <p>{{ about.description }}</p>
+        {% if about.linkText %}
+            <a href="{{ about.linkUrl ~ "/#" }}" class="button">{{ about.linkText }}</a>
+        {% endif %}
+    </div>
+</div>
+<div>
+    <div class="about-img">
+       <img src="{{ about.image}}" alt="{{ about.title }}">
+    </div>
+</div>

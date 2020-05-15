@@ -1,0 +1,11 @@
+{% extends "base.njk" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row grid">
+            <div class="content">
+                {{ content | safe }}
+            </div>
+        </div>
+    </div>
+{% endblock content %}

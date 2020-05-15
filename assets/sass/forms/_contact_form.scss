@@ -20,7 +20,9 @@
   }
 
   form span{
-    color: red;
+	color: red;
+	font-size: 20pt;
+	font-weight: 600;
   }
 
 label {
@@ -31,7 +33,12 @@ label {
 }
 /* make the containers relative */
 fieldset > div {
-	position: relative;
+	position: relative;  
+
+}
+fieldset {
+border-radius: 3px;
+padding: 1em 2em;
 }
 
 /* set up hidden tooltip */
@@ -54,7 +61,7 @@ textarea:focus + [role="tooltip"] {
 	position: absolute;
 	top: 100%;
 }
-#respond > textarea, input, select {
+ textarea, input, select {
 	font-size: inherit;
 	font-family: inherit;
 	margin-top: 0.33em;
@@ -63,6 +70,8 @@ textarea:focus + [role="tooltip"] {
 	padding: 0.25em;
 	border: 2px solid #222;
 }
+
+
 label{
 	display:inline;
 }
@@ -77,5 +86,15 @@ label{
 	position: relative;
 	top: 3px;
 	margin-right: .6em;
+}
+}
+@media screen and (max-width: 37.5em) {
+
+#respond{
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	margin-bottom:1em;	
+	padding-bottom:1em;
 }
 }

@@ -1,5 +1,5 @@
 ---
-layout: "layouts/testimonials.njk"
+layout: "testimonials.njk"
 title: "Testimonials"
 description: "In our clients own words"
 backgroundImage: "/assets/img/flowers.jpg"
