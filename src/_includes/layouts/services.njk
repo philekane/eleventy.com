@@ -1,0 +1,32 @@
+{% extends "layouts/base.njk" %}
+
+{% block postContent %}
+    <div class="area">
+        <div class="container">
+        <div class="section-title">
+                <h1>{{ title }}</h1>
+                <p>{{ description }}</p>
+            </div>
+            <div class="cards">
+                    <ul>
+                {% for service in collections.services %}
+                    <li class="card">
+                                <div class="text">
+                                    <div class="title">
+                                        <div class="icon">
+                                            <i class="fa fa-{{ service.data.faIcon }}"></i>
+                                        </div>
+                                        <h3>
+                                            <a href="{{ service.url }}" class="cardButton" aria-label="{{ service.url }}" aria-describedby="{{ service.data.title | spaceless }}-id">
+                                                {{ service.data.title }}</a>
+                                        </h3>
+                                    </div>                                    
+                                        <p>{{ service.data.description }}</p>                                    
+                                    <span class="cta" aria-hidden="true" id="{{ service.data.title | spaceless }}-id">{{ service.data.linkText }} →</span>
+                                </div>
+                            </li>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock postContent %}

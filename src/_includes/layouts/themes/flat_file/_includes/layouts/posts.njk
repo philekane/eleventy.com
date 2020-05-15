@@ -1,0 +1,26 @@
+{% extends settings.theme.path~"simple.njk" %}
+
+{% block postContent %}
+    <div class="service-area sp">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-10 mx-auto">
+                    <div class="section-title">
+                        <h2>{{ title }}</h2>
+                        <p>{{ description }}</p>
+                    </div>
+                    <ul>
+                        {% for post in collections.posts %}
+                            <li>
+                                <a href="{{ post.url }}">
+                                    <h3>{{ post.data.title }}</h3>
+                                    <h3>{{ post.data.title }}</h3>
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock postContent %}

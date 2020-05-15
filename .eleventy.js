@@ -85,9 +85,9 @@ module.exports = function(eleventyConfig){
         dir:{
             input: "src",
             output: "_site",
-            include: "themes/biz-sites-etc/_includes",
+            include: "_includes",
             data: "_data",
-            layouts: "themes/biz-sites-etc/_includes/layouts"
+            layouts: "_includes/layouts/"
            
 
         }

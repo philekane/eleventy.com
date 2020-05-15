@@ -1,0 +1,45 @@
+{% extends settings.theme.base %}
+
+{% block content %}
+
+    <div class="faq-area-2 sp">
+
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>{{ faqs.description }}</p>
+            </div>
+            <div class="row">
+
+                <div class="col-md-8">
+                    {% for faq in faqs.faq %}
+                        <a name="{{ loop.index }}" ></a>
+                        <div class="single-faq">
+                            <h2>
+                                <span>{{ loop.index }}</span>{{ faq.question }}</h2>
+                            <p>{{ faq.answer }}
+                            </p>
+                        </div>
+                    {% endfor %}
+
+                </div>
+                <div class="col-md-4">
+                    <div class="faq-sidebar-wrap">
+                        <h3>Index</h3>
+                        <ul class="faq-sidebar">
+                            {% for faq in faqs.faq %}
+                                <li>
+                                    <a href="#{{ loop.index }}">
+                                        <span>{{ loop.index }}.</span>
+                                        {{ faq.question }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
