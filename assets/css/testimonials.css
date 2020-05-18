@@ -1,0 +1,84 @@
+/*
+    *****************************
+      06. testimonial-area
+    *****************************
+*/
+.testimonial-area .section-title {
+    margin-bottom: 45px;
+}
+
+    .testimonial-slider .single-slide {
+        box-sizing: border-box;
+        background-color: #fff;
+        padding: 35px;
+        border-radius: 5px;
+        font-weight: 300;
+        color: #000000;
+        border: 1px solid;
+    /* @extend .c3-bo;*/
+        img{
+            width: auto;
+        }
+    }
+        .testimonial-slider .single-slide  .client-info{
+                overflow: hidden;
+        }
+
+        .testimonial-slider .single-slide .client-info .client-img{
+            width: 58px;
+            float: left;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: .5em;
+        }
+
+        .testimonial-slider .single-slide  .client-info .client-data{
+            padding-left: .5em;
+        }
+
+        .testimonial-slider .single-slide    .client-info .client-data h4 {
+            font-size: 16px;
+            margin: 4px 0 0;
+        }
+         
+        .testimonial-slider .owl-nav > div{
+            background-color: #222222;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: #fff;
+            position: absolute;
+            left: -55px;
+            top: 50%;
+        /*  +transform(translateY(-50%))*/
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            border-radius: 4px;
+                        
+        }      
+
+        .testimonial-slider .owl-nav > div.owl-next  {
+                left: auto;
+                right: -55px;
+               
+            }
+
+            @media only screen and (max-width: 991px){
+                .testimonial-slider .owl-nav > div {                    
+                    left: -12.5px;
+                    height: 25px;
+                    width: 25px;
+                    line-height: 25px;
+                        i {
+                            font-size: 13px;
+                        }
+                    }
+                    .testimonial-slider .owl-nav > div.owl-next  {
+                        left: auto;
+                        right: -12.5px;
+                       
+                    }
+            }
+        
+   

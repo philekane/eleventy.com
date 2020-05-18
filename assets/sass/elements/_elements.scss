@@ -2,11 +2,11 @@ html {
 	box-sizing: border-box;
 }
 .container {
-    width: 100%;
-    padding-right: 1rem;
-    padding-left: 1rem;
     margin-right: auto;
     margin-left: auto;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+    width: 100%;
 }
 .row {
     display: -ms-flexbox;
