@@ -1,0 +1,48 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<style>
+.isotope-menu ul li{
+    color:#000;
+}
+</style>
+<div class="portfolio-area sp">
+    <div class="container">
+        <div class="row">
+            <ul class="isotope-menu">
+             <li data-filter="*" class="active">Show All</li>
+            {% for category in portfolio.projectTypes %}
+               <li data-filter=".{{ category.name }}">{{ category.name }}</li>
+            {% endfor %}
+                
+            </ul>
+        </div>
+
+        <div class="row portfolio-isotope">
+        {% for portfolio in collections.portfolio %}
+         <div class="single-portfolio col-md-4  {% for projectType in portfolio.data.projectTypes %}
+                     {{ projectType }}{% endfor %}">
+                <div class="inner">
+                    <div class="portfolio-img">
+                        <img src="{{ portfolio.data.image }}" alt="{{ portfolio.data.title }}">
+                        <div class="hover-content">
+                            <div>
+                                <a href="{{ portfolio.url }}" class="button">{{ linkText }}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-content">
+                        <a href="#"><h3>{{ portfolio.data.title }}</h3></a>
+                        <span> {% for projectType in portfolio.data.projectTypes %}
+                        {{ projectType }}
+                        {% endfor %}</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+           
+        </div>
+    </div>
+</div>  
+
+{% endblock content %}

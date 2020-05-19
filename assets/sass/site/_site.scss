@@ -150,89 +150,6 @@
     grid-gap: 4.5rem;
   }
 }
-
-  /*  *****************************
-      05. portfolio-area
-    ******************************/
-
-
-.isotope-menu{
-    margin: 0 0 20px;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-    display: block;
-    width: 100%;
-    font-size: 16px;
-    font-weight: 400;
-    li {
-        display: inline-block;
-        padding: 0 15px;
-        cursor: pointer;
-        color: #000;
-       /* +trns;
-        &.active,
-        &:hover
-            @extend .c3;
-*/
-    }
-.single-portfolio {
-    margin: 20px 0;
-}
-.single-portfolio .inner {
-        .portfolio-img {
-            position: relative;
-            img {
-                width: 100%;
-            }
-          }
-            .hover-content {
-               /* @extend .c3;*/
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                left: 0;
-                top: 0;
-               /* +flex_center;*/
-                text-align: center;
-                opacity: 0;
-                visibility: hidden;
-               /* +trns;*/
-                .button {
-                    background-color: #fff;
-                   /* @extend .c3;*/
-                    border-color: #fff !important;
-                    color: #000;
-                    &:hover {
-                        background-color: #222;
-                        color: #fff;
-                        border-color: #222 !important;
-                    &:hover .hover-content {
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                  }
-                }
-            }
-}
-        .portfolio-content {
-            text-align: center;
-            padding-top: 25px;
-            color: #6d7784;
-            a {
-                display: block;
-            h3 {
-                font-weight: 400;
-                margin: 0;
-                font-size: 24px;
-               /* +trns */
-                &:hover {
-                   /* @extend .c3;*/
-                }
-            }
-          }
-        }
-      }
   
       .footer_widget .nw_form button {
        /* position: relative;
@@ -363,7 +280,12 @@ legend{
   margin-bottom: 30px;
   padding: 35px;
   border-radius: 4px;
+  font-size: 80%;
 }
+.faq-sidebar-wrap ul {
+  list-style: none;
+}
+
 
 .single-faq h2 span {
   background-color: #004ead;

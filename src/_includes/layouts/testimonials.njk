@@ -1,20 +1,12 @@
 {% extends "layouts/base.njk" %}
 
 {% block postContent %}
-    <style>
-        .grid {
-            display: flex;
-
-        }
-        .client-data {
-            margin-left: 0.1em;
-        }
-    </style>
+   
     <link rel="stylesheet" href="/assets/css/testimonials.css">
     <div class="area">
         <div class="container">
             <div class="section-title">
-                <h2>{{ title }}</h2>
+                <h1>{{ title }}</h1>
                 <p>{{ description }}</p>
             </div>
             <div class="testimonial-slider bordered">
@@ -29,8 +21,8 @@
                                     </div>
                                 {% endif %}
                                 <div class="client-data">
-                                    <h4>{{ testimonial.data.name }}</h4>
-                                    <span>{{ testimonial.data.jobTitle }}</span>
+                                    <h2>{{ testimonial.data.name }}</h2>
+                                    <h3>{{ testimonial.data.jobTitle }}</h3>
                                 </div>
                             </div>
                         </div>

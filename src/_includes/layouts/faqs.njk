@@ -12,7 +12,7 @@
             <div class="row faq-grid">
                 <div class="faq-page">
                     {% for faq in faqs.faq %}
-                        <a name="{{ loop.index }}" ></a>
+                        <a id="{{ loop.index }}" ></a>
                         <div class="single-faq">
                             <h2>
                                 <span>{{ loop.index }}</span>{{ faq.question }}</h2>

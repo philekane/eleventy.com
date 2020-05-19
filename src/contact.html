@@ -12,6 +12,7 @@ meta:
   image: /assets/img/realhazardLogo.jpg
   url: https://www.philekane.com
 ---
+{% block postContent %}
 <div class="area">
     <div class="container">
         <div class="area-title">
@@ -83,5 +84,6 @@ meta:
 
     <div class="google-map">
         <iframe src="{{ googleMap }}" title="map"></iframe>
-    </div
+    </div>
 {% endif %}
+{% endblock postContent %}

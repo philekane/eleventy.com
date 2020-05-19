@@ -18,29 +18,31 @@
         <title>{{ settings.siteSettings.companyName }} - {{ meta.title }}</title>
 
         <!-- Required CSS files -->
+       
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+             
         {% if ( slider.showSlider == true ) 
             or( clientTestimonials.show == true )or( page.url == "/testimonials/" ) %}
             <link rel="stylesheet" href="/assets/css/owl.carousel.css">
+           
         {% endif %}
-        <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
-       {% if ( page.url != "/" )and( page.url != "/posts/" )and( page.url != "/faqs/" )and( page.url != "/pricing/" )and( page.url != "/services/" )and( page.url != "/about/" )and( page.url != "/contact/" ) %}
-            <link rel="stylesheet" href="assets/css/animate.css">
+        
+       {% if  (page.url == "/") or (page.url == "/portfolio/") %}          
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-            <link rel="stylesheet" href="assets/css/slicknav.css">
+            <link rel="stylesheet" href="/assets/css/portfolio.css">
         {% endif %}    
-        <!-- <link rel="stylesheet" href="/assets/css/slicknav.css">-->
-        <link rel="stylesheet" href="/assets/css/style.css">
+            <link rel="stylesheet" href="/assets/css/style.css">
 
     </head>
     <body>
-        <script type="javascript">
+            
             <!-- need this or preloader -->
-            <div class="preloader">
+            <div class="preloader" >
                 <span class="preloader-spin"></span>
             </div>
-        </script>        
+              
             {% include "layouts/header.njk" %}
-            <main >
+            <main>
                 {% block pageHeader %}
                     <div class="page-title item-middle" style="height:30rem;background-image: url({{ backgroundImage }})">
                         <!-- style="height:20rem;background-repeat: no-repeat;background-image: url({{ backgroundImage }})">-->
@@ -82,17 +84,20 @@
         
 
         <!--Required JS files-->
-        {% if (page.url != "/")and( page.url != "/posts/" )and( page.url != "/faqs/" )and( page.url != "/pricing/" )and( page.url != "/services/" )and(page.url != "/contact/")and(page.url != "/about/") %}
+        {% if (page.url == "/portfolio/") %}
             <script src="https://code.jquery.com/jquery-3.5.0.min.js"  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
             <script src="/assets/js/vendor/isotope.pkgd.min.js"></script>
+            <script src="/assets/js/active.js"></script>
         {% endif %}
         {% if (slider.showSlider == true) 
             or(clientTestimonials.show == true)or(page.url == "/testimonials/") %}
-            <script src="/assets/js/vendor/owl.carousel.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.5.0.min.js"  integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+                <script src="/assets/js/vendor/owl.carousel.min.js"></script>
+                <script src="/assets/js/active.js"></script>
         {% endif %}
-        <!-- <script src="/assets/js/vendor/slicknav.min.js"></script>-->
-        <script src="/assets/js/active.js"></script>
+          
 
 
     </html>

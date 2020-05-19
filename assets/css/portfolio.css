@@ -1,0 +1,121 @@
+/*
+    *****************************
+      05. portfolio-area
+    *****************************/
+
+.isotope-menu{
+    margin: 0 0 20px;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 400;
+   
+    }
+
+.isotope-menu li{
+    display: inline-block;
+    padding: 0 15px;
+    cursor: pointer;
+    color: #000;
+    /*  +trns*/
+}
+    .isotope-menu li.active,
+    .isotope-menu li:hover{
+      color:#0056b3;
+      text-decoration: underline;
+
+}
+.single-portfolio{
+    margin: 20px 0;
+}
+
+.portfolio-content a {
+    color:#0056b3;
+    text-decoration: none;
+}
+
+.portfolio-content a:hover {
+    color: #00203D;
+    text-decoration: underline;
+}
+
+.single-portfolio .inner .portfolio-img{
+    position: relative;
+}
+
+.single-portfolio .inner .portfolio-img img{
+    width: 100%
+}
+
+.single-portfolio .inner .portfolio-img .hover-content{
+    /*  @extend .c3-bg*/
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    /* +flex_center;*/
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+   
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    text-align: center;
+
+    opacity: 0;
+    visibility: hidden;
+}
+    /* +trns*/
+.single-portfolio .inner .portfolio-img .hover-content .button{
+        background-color: #fff;
+       /* @extend .c3*/
+        border-color: #fff !important;
+        color: #000;
+}
+
+.single-portfolio .inner .portfolio-img .hover-content .button:hover{
+            background-color: #222;
+            color: #fff;
+            border-color: #222 !important;
+    
+}
+
+.single-portfolio .inner .portfolio-img:hover .hover-content{
+    opacity: 1;
+    visibility: visible;
+}
+
+.single-portfolio .inner .portfolio-img .portfolio-content{
+    text-align: center;
+    padding-top: 25px;
+    color: #6d7784;
+}
+
+.single-portfolio .inner .portfolio-img .portfolio-content  a{
+    display: block;
+}
+
+.single-portfolio .inner .portfolio-img .portfolio-content h3{
+    font-weight: 400;
+    margin: 0;
+    font-size: 1.5rem;               
+    }
+             /* +trns
+                &:hover
+                    @extend .c3
+                    */
+ 

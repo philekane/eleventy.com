@@ -1,6 +1,6 @@
 ---
 title: "Cedar Street Native Plant Nursery"
-image: "/assets/img/cropped-logo.png"
+image: "/assets/img/cedar-logo-556.jpg"
 description: "This is work we did for Cedar Street Nursery."
 projectTypes:
   - Ceramics

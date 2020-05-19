@@ -36,10 +36,15 @@
             padding-left: .5em;
         }
 
-        .testimonial-slider .single-slide    .client-info .client-data h4 {
-            font-size: 16px;
+        .testimonial-slider .single-slide .client-info .client-data h2 {
+            font-size: 1.3rem;
             margin: 4px 0 0;
         }
+        .testimonial-slider .single-slide .client-info .client-data h3 {
+            font-size: 1rem;
+          
+        }
+       
          
         .testimonial-slider .owl-nav > div{
             background-color: #222222;
