@@ -201,8 +201,19 @@ Horizontal menu
     }
 
     .logo-column {
-        padding:.4em;
+        /*padding:.4em;*/
+        line-height: .8em;
     }
+/*
+    .logo-column a.logo {
+        height: 35px;
+        padding: 5px 0;
+    }
+
+    .logo-column a.logo img {
+       max-height: 100%;
+    }
+    */
 }
 
 .menu-container {
