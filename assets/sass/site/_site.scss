@@ -312,3 +312,56 @@ legend{
   color: #004ead;
   text-decoration: underline;
 }
+
+/*
+  AUTO GRID
+  Set the minimum item size with `--auto-grid-min-size` and you'll
+  get a fully responsive grid with no media queries.
+*/
+
+.auto-grid > * {
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auto-grid > * + * {
+  margin-top: 1rem;
+}
+
+@supports(display: grid) {
+  .auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
+    grid-gap: 1rem;
+  }
+  
+  .auto-grid > * {
+    max-width: unset;
+    margin: unset;
+  }
+}
+
+/*
+  WRAPPER
+  A utility with a max width that contains child elements and horizontal centers them
+*/
+.wrapper {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+
+.wrapper li {
+  display: block;
+  padding: 1rem 1rem;
+  text-align: center;
+ /* background: hsl(338,81%,41%);*/
+ 
+  color: #000;
+}
+
+.wrapper ul {
+  list-style-type:none;
+}

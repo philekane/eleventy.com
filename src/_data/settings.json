@@ -63,7 +63,7 @@
   "socialSettings": [
     {
       "socialName": "facebook",
-      "socialUrl": "https://facebok.com"
+      "socialUrl": "https://facebook.com"
     },
     {
       "socialName": "twitter",
@@ -83,27 +83,155 @@
       "social": [
         {
           "name": "facebook",
-          "link": "https://facebok.com"
+          "link": "https://facebook.com/team1"
         }
       ],
       "image": {
-        "main": "img/phil-kane-3.jpg",
+        "main": "phil-kane-3.jpg",
         "alt": "Phil"
       }
     },
     {
-      "name": "PhalKan",
+      "name": "PhalKan1",
       "position": "Songwriter",
       "bio": "songs",
       "background": "background",
       "image": {
-        "main": "img/onceuponatime_back.jpg",
+        "main": "team1.jpg",
         "alt": "PhalKan"
       },
       "social": [
         {
           "name": "facebook",
-          "link": "https://facebook.com"
+          "link": "https://facebook.com/team2"
+        },
+        {
+          "name": "twitter",
+          "link": "https://twitter.com"
+        },
+        {
+          "name": "linkedin",
+          "link": "https://linkedin.com"
+        }
+      ]
+    },
+    {
+      "name": "PhalKan2",
+      "position": "Songwriter",
+      "bio": "songs",
+      "background": "background",
+      "image": {
+        "main": "team1.jpg",
+        "alt": "PhalKan"
+      },
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://facebook.com/team3"
+        },
+        {
+          "name": "twitter",
+          "link": "https://twitter.com"
+        },
+        {
+          "name": "linkedin",
+          "link": "https://linkedin.com"
+        }
+      ]
+    },
+    {
+      "name": "PhalKan3",
+      "position": "Songwriter",
+      "bio": "songs",
+      "background": "background",
+      "image": {
+        "main": "team1.jpg",
+        "alt": "PhalKan"
+      },
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://facebook.com/team4"
+        },
+        {
+          "name": "twitter",
+          "link": "https://twitter.com"
+        },
+        {
+          "name": "linkedin",
+          "link": "https://linkedin.com"
+        }
+      ]
+    },
+    {
+      "name": "PhalKan4",
+      "position": "Songwriter",
+      "bio": "songs",
+      "background": "background",
+      "image": {
+        "main": "team1.jpg",
+        "alt": "PhalKan"
+      },
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://facebook.com/team5"
+        },
+        {
+          "name": "twitter",
+          "link": "https://twitter.com"
+        },
+        {
+          "name": "linkedin",
+          "link": "https://linkedin.com"
+        }
+      ]
+    },
+    {
+      "name": "PhalKan5",
+      "position": "Songwriter",
+      "bio": "songs",
+      "background": "background",
+      "image": {
+        "main": "team1.jpg",
+        "alt": "PhalKan"
+      },
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://facebook.com/team6"
+        },
+        {
+          "name": "twitter",
+          "link": "https://twitter.com"
+        },
+        {
+          "name": "linkedin",
+          "link": "https://linkedin.com"
+        }
+      ]
+    },
+    {
+      "name": "PhalKan6",
+      "position": "Songwriter",
+      "bio": "songs",
+      "background": "background",
+      "image": {
+        "main": "team1.jpg",
+        "alt": "PhalKan"
+      },
+      "social": [
+        {
+          "name": "facebook",
+          "link": "https://facebook.com/team7"
+        },
+        {
+          "name": "twitter",
+          "link": "https://twitter.com"
+        },
+        {
+          "name": "linkedin",
+          "link": "https://linkedin.com"
         }
       ]
     }
