@@ -38,6 +38,7 @@ collections:
             - { label: "Title", name: "title", widget: "string" }
             - { label: "Description", name: "description", widget: "text", hint: "Think SEO" }
             - { label: "Image", name: "image", widget: "image" }
+            - { label: "Alt Text (Alternative Text)", name: "altText", widget: "image", hint: "Alternative text describes your image to people who can't see it. Add a short description with its key details. It also helps SEO." }
             - { label: "Url", name: "url", widget: "string" }
     - name: "pages"
       label: "Pages"

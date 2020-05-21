@@ -9,6 +9,11 @@ summary: blah blah blah
 tag:
   -  environment
   -  politics
+meta:
+  title: "Phil Kane's second post"
+  description: "Songwriter, screenwriter and writer of source code for web applications."
+  image: "/assets/img/realhazardLogo.jpg"
+  url: "https://www.philekane.com"
 ---
 <!-- Excerpt Start -->
 This is included on the homepage3.

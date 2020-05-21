@@ -24,7 +24,7 @@
                      {{ projectType }}{% endfor %}">
                 <div class="inner">
                     <div class="portfolio-img">
-                        <img src="{{ portfolio.data.image }}" alt="{{ portfolio.data.title }}">
+                                          {% insertImage  portfolio.data.image ,  portfolio.data.altText %}
                         <div class="hover-content">
                             <div>
                                 <a href="{{ portfolio.url }}" class="button">{{ linkText }}</a>

@@ -15,16 +15,24 @@ module.exports = function(eleventyConfig){
     
 
     // Responsive image shortcode
-  eleventyConfig.addShortcode("insertImage", function(filename, alttext) {
-    return `
-<picture>
-  <source sizes="auto" media="(max-width:641px)" srcset="/assets/img/${filename}.webp" type="image/webp">
+    /*
+    <source sizes="auto" media="(max-width:500px)" data-srcset="/assets/img/${filename}-500.webp 500w" type="image/webp">
+  <source sizes="auto" media="(max-width:500px)" data-srcset="/assets/img/${filename}-500.jpeg 500w" type="image/jpeg">
+ 
   <source sizes="auto" media="(max-width:641px)" data-srcset="/assets/img/${filename}-641.webp 641w" type="image/webp">
   <source sizes="auto" media="(max-width:641px)" data-srcset="/assets/img/${filename}-641.jpeg 641w" type="image/jpeg">
   <source sizes="auto" media="(max-width:873px)" data-srcset="/assets/img/${filename}-873.webp 873w" type="image/webp">
   <source sizes="auto" media="(max-width:873px)" data-srcset="/assets/img/${filename}-873.jpeg 873w" type="image/jpeg">
-  <!-- And more image sizes and formats-->
-  <img sizes="auto" src="/assets/img/${filename}" srcset="/assets/img/${filename}" alt="${alttext}">
+  */
+  eleventyConfig.addShortcode("insertImage", function(filename, alttext) {
+    const imageName = filename.substring(0, filename.length - 4);
+    const extension = filename.substr(filename.lastIndexOf('.') + 1);
+    
+    return `
+<picture>
+  <source sizes="auto"   type="image/webp" srcset="/assets/img/${imageName}.webp">
+  <source sizes="auto"   type="image/${extension}" srcset="/assets/img/${imageName}.${extension}" >
+  <img sizes="auto" src="/assets/img/${imageName}.${extension}" srcset="/assets/img/${imageName}.${extension}" alt="${alttext}">
 </picture>
     `;
   });

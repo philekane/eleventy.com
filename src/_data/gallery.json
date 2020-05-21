@@ -1,0 +1,29 @@
+{
+    "flowers": [
+        {
+            "image": "CAM00443.jpg",
+            "alt": "flower picture1"
+        },
+        {
+            "image": "CAM00083.jpg",
+            "alt": "flower picture2"
+        },
+        {
+            "image": "CAM00075.jpg",
+            "alt": "flower picture4"
+        },
+        {
+            "image": "CAM00077.jpg",
+            "alt": "flower picture3"
+        },
+        {
+            "image": "CAM00081.jpg",
+            "alt": "flower picture5"
+        },
+        {
+            "image": "CAM00082.jpg",
+            "alt": "flower picture6"
+        }
+
+    ]
+}

@@ -1,0 +1,26 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+    <link rel="stylesheet" href="/assets/css/gallery.css">
+    <div class="area">
+        <div class="container">
+            <div class="section-title">
+                <h1>{{ title }}</h1>
+                <h2>{{ description }}</h2>
+            </div>
+            <div class="gallery-grid">
+               {% for picture in gallery.flowers %}
+                
+                <div class="item photo">
+                    <div class="content">                        
+                        <img class="photothumb" src="/assets/img/flowers/{{ picture.image }}"  alt="{{ picture.alt }}">
+                       
+                    </div>
+                </div>
+                {% endfor %}
+                
+                
+                <script src="/assets/js/gallery.js"></script>
+            </div>
+        </div>
+    {% endblock content %}
