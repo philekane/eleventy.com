@@ -10,14 +10,13 @@
                         <p>{{ description }}</p>
                     </div>
                     <div class="about-img">
-                        <img src="{{image}}" alt="{{ title }}">
+                     {% insertImage  image ,  title , "" %}
                     </div>
 
                 {% endif %}
                 {% if imagePosition == "left" %}
-
                     <div class="about-img">
-                        <img src="{{ image}}" alt="{{ title }}">
+                        {% insertImage  image ,  title , "" %}
                     </div>
 
                 {% endif %}

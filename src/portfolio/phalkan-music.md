@@ -1,5 +1,5 @@
 ---
-image: "phalkan-musician.jpg"
+image: "/assets/img/onceuponatime_back.jpg"
 altText: "Charcoal drawing of Phalkan the songwriter"
 title: "PhalKan Music Website"
 description: "This is the website we made for PhalKan Music"

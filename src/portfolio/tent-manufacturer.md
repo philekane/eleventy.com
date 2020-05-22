@@ -1,5 +1,5 @@
 ---
-image: "tent-on-beach.jpg"
+image: "/assets/img/tent-on-beach.jpg"
 altText: "Tent set up on beautiful beach"
 title: "Eureka Tent Manufacturer"
 description: "We worked on the marketing for one of their best tents."

@@ -1,5 +1,6 @@
 const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon");
+const fs = require('fs')
 
 module.exports = function(eleventyConfig){
 
@@ -24,19 +25,33 @@ module.exports = function(eleventyConfig){
   <source sizes="auto" media="(max-width:873px)" data-srcset="/assets/img/${filename}-873.webp 873w" type="image/webp">
   <source sizes="auto" media="(max-width:873px)" data-srcset="/assets/img/${filename}-873.jpeg 873w" type="image/jpeg">
   */
-  eleventyConfig.addShortcode("insertImage", function(filename, alttext) {
+  eleventyConfig.addShortcode("insertImage", function(filename, alttext, classname) {
     const imageName = filename.substring(0, filename.length - 4);
     const extension = filename.substr(filename.lastIndexOf('.') + 1);
-    
-    return `
-<picture>
-  <source sizes="auto"   type="image/webp" srcset="/assets/img/${imageName}.webp">
-  <source sizes="auto"   type="image/${extension}" srcset="/assets/img/${imageName}.${extension}" >
-  <img sizes="auto" src="/assets/img/${imageName}.${extension}" srcset="/assets/img/${imageName}.${extension}" alt="${alttext}">
-</picture>
-    `;
-  });
 
+    /* the following is what you place in markup
+    {% insertImage  portfolio.data.image ,  portfolio.data.altText, "" %}
+  */
+
+//<img sizes="auto" src="${imageName}.${extension}" srcset="${imageName}.${extension} alt="${alttext}">" ; 
+
+try {
+  if (fs.existsSync(imageName+".jpg")) {
+    console.error("nope")
+  }
+} catch(err) {
+  console.error(err)
+}
+
+  return `
+    <picture>
+      <source sizes="auto"   type="image/webp" srcset="${imageName}.webp">
+      <source sizes="auto"   type="image/${extension}" srcset="${imageName}.${extension}" >
+      <img sizes="auto"  ${ classname != "" ?  `class="${classname}"` : '' }  src="${imageName}.${extension}" srcset="${imageName}.${extension}" alt="${alttext}">
+    </picture>
+    `;
+
+});
 
   // Date formatting (human readable)
   eleventyConfig.addFilter("readableDate", dateObj => {

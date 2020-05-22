@@ -1,6 +1,6 @@
 ---
 title: "Once Upon A Train Album"
-image: "once-upon-a-train-album.jpg"
+image: "/assets/img/once-upon-a-train-album.jpg"
 altText: "picture of boots on a freight train, cover of album"
 description: "did marketing and distrubution for this album"
 projectTypes:
