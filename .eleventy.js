@@ -28,6 +28,7 @@ module.exports = function(eleventyConfig){
   eleventyConfig.addShortcode("insertImage", function(filename, alttext, classname) {
     const imageName = filename.substring(0, filename.length - 4);
     const extension = filename.substr(filename.lastIndexOf('.') + 1);
+    
 
     /* the following is what you place in markup
     {% insertImage  portfolio.data.image ,  portfolio.data.altText, "" %}
@@ -45,11 +46,24 @@ try {
 
   return `
     <picture>
-      <source sizes="auto"   type="image/webp" srcset="${imageName}.webp">
-      <source sizes="auto"   type="image/${extension}" srcset="${imageName}.${extension}" >
+      <source sizes="auto" media="(max-width:500px)"  type="image/webp" srcset="${imageName}.webp">
+      <source sizes="auto" media="(max-width:500px)"  type="image/${extension}" srcset="${imageName}.${extension}" >
       <img sizes="auto"  ${ classname != "" ?  `class="${classname}"` : '' }  src="${imageName}.${extension}" srcset="${imageName}.${extension}" alt="${alttext}">
     </picture>
     `;
+
+});
+
+eleventyConfig.addShortcode("insertLazyImage", function(filename, alttext, classname) {
+  const imageName = filename.substring(0, filename.length - 4);
+  const extension = filename.substr(filename.lastIndexOf('.') + 1);
+  
+return `
+  <picture  >
+    <source sizes="auto" media="(max-width:500px)"  type="image/webp" data-srcset="${imageName}.webp">
+    <img sizes="auto"  ${ classname != "" ?  `class="${classname} lazy"` : 'class="lazy"' }  data-src="${imageName}.${extension}" data-srcset="${imageName}.${extension}" alt="${alttext}">
+  </picture>
+  `;
 
 });
 

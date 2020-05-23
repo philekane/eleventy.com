@@ -46,7 +46,7 @@
                             {% for post in collections.posts | reverse %}
                                 {% if loop.index0 < 3 %}
                                     <div class="media">
-                                     {% insertImage  post.data.image,  post.data.title, "d-flex mr-3" %}
+                                     {% insertLazyImage  post.data.image,  post.data.title, "d-flex mr-3" %}
                       
                                        <div class="media-body">
                                             <h4>

@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="/assets/css/faq.css">
-  <div class="faq-area spc">
+  <div class="area spc">
                 <div class="container">
 
                     <div class="section-title">
@@ -29,7 +29,8 @@
                          {% if faqs.showImage == true %}
                             <div class="col-md-6">
                                 <div class="faq-img text-center">
-                                    <img src="{{ faqs.image }}" alt="{{ faqs.imageAlt }}">
+                                       {% insertLazyImage  faqs.image ,  faqs.imageAlt, "" %}
+                        
                                 </div>
                             </div>
                         {% endif %}

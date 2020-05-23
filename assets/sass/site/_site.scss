@@ -365,3 +365,25 @@ legend{
 .wrapper ul {
   list-style-type:none;
 }
+
+.portfolio_container{
+  margin-top: 2rem;
+}
+
+
+ .no-webp {
+  background-image: url("/assets/img/flowers.jpg"); 
+  /*style="height:30rem;background-image: url({{ backgroundImage }})"*/
+}
+
+#homeBannerId {
+  background-image: url("/assets/img/red-stone.webp");
+  height:30rem;
+  background-color: green;
+
+}
+#headerPageBanner{
+  background-image: url("/assets/img/flowers.jpg"); 
+  height:30rem;
+  background-color: green;
+}
