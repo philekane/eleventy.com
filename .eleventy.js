@@ -118,7 +118,7 @@ return `
     return{
         passthroughFileCopy: true,
         markdownTemplateEngine: "njk",
-        templateFormats: ["html", "njk", "md", "yml", "css", "txt" ],
+        templateFormats: ["html", "njk", "md", "yml", "css", "txt", "htaccess" ],
         dir:{
             input: "src",
             output: "_site",
