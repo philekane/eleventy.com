@@ -23,7 +23,7 @@
                      {{ projectType }}{% endfor %}">
                 <div class="inner">
                     <div class="portfolio-img">
-                        {% insertImage  portfolio.data.image ,  portfolio.data.altText, " " %}
+                        {% insertLazyImage  portfolio.data.image ,  portfolio.data.altText, "" %}
                         <div class="hover-content">
                             <div>
                                 <a href="{{ portfolio.url }}" class="button">{{ linkText }}</a>

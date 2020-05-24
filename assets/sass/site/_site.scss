@@ -373,6 +373,7 @@ legend{
 
  .no-webp {
   background-image: url("/assets/img/flowers.jpg"); 
+  height:30rem;
   /*style="height:30rem;background-image: url({{ backgroundImage }})"*/
 }
 
@@ -386,4 +387,7 @@ legend{
   background-image: url("/assets/img/flowers.webp"); 
   height:30rem;
   
+}
+.portfolio-isotope .lazy{
+  margin-bottom:6rem;
 }

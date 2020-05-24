@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
               lazyImages = lazyImages.filter(function(image) {
                 return image !== lazyImage;
               });
+              
+      
   
               if (lazyImages.length === 0) {
                 document.removeEventListener("scroll", lazyLoad);

@@ -113,14 +113,27 @@
         
   Modernizr.on('webp', function(result) {
     if (result) {
-      // supported
-      document.getElementById("homeBannerId").classList.add("webp");
-      document.getElementById("headerPageBanner").classList.add("webp");
+        // supported
+        if(document.getElementById("headerPageBanner"))
+        {
+            document.getElementById("headerPageBanner").classList.add("webp");
+        } 
+        else
+        {
+            document.getElementById("homeBannerId").classList.add("webp");
+        }
+     
       
     } else {
       // not-supported
-      document.getElementById("homeBannerId").classList.add("no-webp");
-      document.getElementById("headerPageBanner").classList.add("no-webp");
+      if(document.getElementById("headerPageBanner"))
+        {
+            document.getElementById("headerPageBanner").classList.add("no-webp");
+        } 
+        else
+        {
+            document.getElementById("homeBannerId").classList.add("no-webp");
+        }
     }
   });
   </script>
