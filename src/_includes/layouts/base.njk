@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"class="no-js">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -33,14 +33,31 @@
             <link rel="stylesheet" href="/assets/css/portfolio.css">
         {% endif %}    
         
-            <link rel="stylesheet" href="/assets/css/style.css">
-<script src="/assets/js/vendor/modernizr-custom.js"></script>
+        <link rel="stylesheet" href="/assets/css/style.css">
+
+        <script>document.documentElement.classList.remove("no-js");</script>
+
+        <script src="/assets/js/vendor/modernizr-custom.js"></script>
         <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
-         <script src="/assets/js/lazyload.js"></script>
-     
+        <!--<script src="/assets/js/lazysizes.min.js" async=""></script>-->
     </head>
     <body>
-            
+    
+<style>
+	/*.blur-up {
+		-webkit-filter: blur(5px);
+		filter: blur(5px);
+		transition: filter 400ms, -webkit-filter 400ms;
+	}
+
+	.blur-up.lazyloaded {
+		-webkit-filter: blur(0);
+		filter: blur(0);
+	}*/
+    .no-js img.ll{
+    	display: none;
+    }
+</style>
             <!-- need this or preloader -->
             <div class="preloader" >
                 <span class="preloader-spin"></span>
@@ -48,29 +65,34 @@
               
             {% include "layouts/header.njk" %}
             <main>
-                {% block pageHeader %}
-                {% if layout == "homepage.njk" %}
-                    {% set headerBanner="homeBannerId" %}
+             {% block pageHeader %}
+                {% if bannerTextBox.show == true %}                   
+                    {% if layout == "homepage.njk" %}
+                        {% set headerBanner="homeBannerId" %}
+                    {% else %}
+                        {% set headerBanner="headerPageBanner" %}
+                    {% endif %}
                 {% else %}
-                    {% set headerBanner="headerPageBanner" %}
-                {% endif %}
+                    {% if page.url == "/about/" %}
+                      {% endif %}
+                  {% endif %}
+
                     <div class="page-title item-middle" id="{{ headerBanner }}">
-                        <!-- style="height:20rem;background-repeat: no-repeat;background-image: url({{ backgroundImage }})">-->
-                        {% if (page.url == "/") and (homepageBannerTextBox.show == true) %}
+                        {% if bannerTextBox.show == true %}
                             <link rel="stylesheet" href="/assets/css/banner-text-box.css">
                             <div class="middle-content text-center">
                                 <div class="container">
                                     <div class="tr-section" >
                                         <div class="banner-info">
-                                            <h1 >{{ homepageBannerTextBox.title }}</h1>
+                                            <h1 >{{ bannerTextBox.title }}</h1>
                                         </div>
                                         <h2 >
-                                            <span >{{ homepageBannerTextBox.secondTitle }}</span>
+                                            <span >{{ bannerTextBox.secondTitle }}</span>
                                             <br>
-                                            <small>{{ homepageBannerTextBox.description }}</small>
+                                            <small>{{ bannerTextBox.description }}</small>
                                         </h2>
-                                        <a href="{{ homepageBannerTextBox.linkUrl }}"  class="button">
-                                            <i class="fa fa-lg fa-cart-arrow-down" aria-hidden="true"></i> {{ homepageBannerTextBox.linkText }}</a>
+                                        <a href="{{ bannerTextBox.linkUrl }}"  class="button">
+                                            <i class="fa fa-lg fa-cart-arrow-down" aria-hidden="true"></i> {{ bannerTextBox.linkText }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -109,34 +131,7 @@
                 <script src="/assets/js/active.js"></script>
         {% endif %}
 
-        <script>
-        
-  Modernizr.on('webp', function(result) {
-    if (result) {
-        // supported
-        if(document.getElementById("headerPageBanner"))
-        {
-            document.getElementById("headerPageBanner").classList.add("webp");
-        } 
-        else
-        {
-            document.getElementById("homeBannerId").classList.add("webp");
-        }
      
-      
-    } else {
-      // not-supported
-      if(document.getElementById("headerPageBanner"))
-        {
-            document.getElementById("headerPageBanner").classList.add("no-webp");
-        } 
-        else
-        {
-            document.getElementById("homeBannerId").classList.add("no-webp");
-        }
-    }
-  });
-  </script>
           
 
     </html>

@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var lazyImages = [].slice.call(document.querySelectorAll(".lazy > source"));
+    var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
   
     if ("IntersectionObserver" in window) {
       console.log("IntersectionObserver is supported. Rock on!");
       let lazyImageObserver = new IntersectionObserver(
-        function(entries, observer) {
+        function(entries, lazyImageObserver) {
           entries.forEach(function(entry) {
             if (entry.isIntersecting) {
               let lazyImage = entry.target;

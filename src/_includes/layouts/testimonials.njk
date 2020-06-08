@@ -17,7 +17,7 @@
                             <div class="client-info">
                                 {% if testimonial.data.headShot | length %}
                                     <div class="client-img">
-                                        <img src="{{ testimonial.data.headShot }}" alt="{{ testimonial.data.name }}">
+                                        {% insertLazyImage  testimonial.data.headShot,  testimonial.data.name, "" %}
                                     </div>
                                 {% endif %}
                                 <div class="client-data">

@@ -95,9 +95,10 @@
                 {% for portfolio in collections.portfolio %}
                     <div class="single-portfolio">
                         <div class="inner">
-                            <div class="portfolio-img">
-                                {% insertLazyImage  portfolio.data.image ,  portfolio.data.altText, "" %}
-                        
+                            <div class="portfolio-img">                           
+                            
+                                {% insertLazyImage  portfolio.data.image,  portfolio.data.altText, "" %}
+                            
                                 <div class="hover-content">
                                     <div>
                                         <a href="{{ portfolio.url }}" class="button">{{ homepagePortfolio.linkText }}</a>
@@ -130,7 +131,7 @@
                                 <div class="client-info">
                                     {% if testimonial.data.headShot | length %}
                                         <div class="client-img">
-                                            <img src="{{ testimonial.data.headShot }}" alt="{{ testimonial.data.name }}">
+                                         {% insertLazyImage  testimonial.data.headShot,  testimonial.data.name, "" %}
                                         </div>
                                     {% endif %}
                                     <div class="client-data">

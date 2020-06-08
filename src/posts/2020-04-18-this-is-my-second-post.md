@@ -3,7 +3,7 @@ layout: post.njk
 title: This is my second post
 author: Fred Kane
 date: 2020-04-18
-image: /assets/img/cropped-logo.png
+image: "/assets/img/cropped-logo.png"
 summary: This is a great second post
 tag:
   -  tech

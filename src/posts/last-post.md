@@ -13,7 +13,7 @@ date: 2020-04-27T00:00:00.000Z
 tag:
   - environment
   - politics
-image: /assets/img/onceuponatime_back.jpg
+image: "/assets/img/onceuponatime_back.jpg"
 description: The fourth post
 ---
 

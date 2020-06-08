@@ -45,8 +45,12 @@ hr {
 //@import "lists";
 
 img {
+    display: block;
+    width: 100%;
 	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+    max-width: 100%; /* Adhere to container width. */
+    
+   
 }
 
 figure {

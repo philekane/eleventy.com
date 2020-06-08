@@ -1,11 +1,16 @@
 const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon");
-const fs = require('fs')
+const fs = require('fs');
+const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function(eleventyConfig){
 
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("assets");
+    eleventyConfig.setWatchJavaScriptDependencies(false);
+
+    eleventyConfig.addPlugin(lazyImagesPlugin);
+   
 
     eleventyConfig.addFilter("cssmin", function(code) {
         return new CleanCSS({}).minify(code).styles;
@@ -36,22 +41,13 @@ module.exports = function(eleventyConfig){
 
 //<img sizes="auto" src="${imageName}.${extension}" srcset="${imageName}.${extension} alt="${alttext}">" ; 
 
-try {
-  if (fs.existsSync(imageName+".jpg")) {
-    console.error("nope")
-  }
-} catch(err) {
-  console.error(err)
-}
-
   return `
     <picture>
-      <source sizes="auto" media="(max-width:500px)"  type="image/webp" srcset="${imageName}.webp">
-      <source sizes="auto" media="(max-width:500px)"  type="image/${extension}" srcset="${imageName}.${extension}" >
-      <img sizes="auto"  ${ classname != "" ?  `class="${classname}"` : '' }  src="${imageName}.${extension}" srcset="${imageName}.${extension}" alt="${alttext}">
-    </picture>
+      <source data-sizes="auto" media="(max-width:500px)"  type="image/webp" srcset="${imageName}.webp">
+      <source data-sizes="auto" media="(max-width:500px)"  type="image/${extension}" srcset="${imageName}.${extension}" >
+      <img data-sizes="auto"  ${ classname != "" ?  `class="${classname}"` : '' } src="${imageName}.${extension}" srcset="${imageName}.${extension}" alt="${alttext}">
+    </picture>    
     `;
-
 });
 
 eleventyConfig.addShortcode("insertLazyImage", function(filename, alttext, classname) {
@@ -59,12 +55,19 @@ eleventyConfig.addShortcode("insertLazyImage", function(filename, alttext, class
   const extension = filename.substr(filename.lastIndexOf('.') + 1);
   
 return `
-  <picture  >
-    <source sizes="auto" media="(max-width:500px)"  type="image/webp" data-srcset="${imageName}.webp">
-    <img sizes="auto"  ${ classname != "" ?  `class="${classname} lazy"` : 'class="lazy"' }  data-src="${imageName}.${extension}" data-srcset="${imageName}.${extension}" alt="${alttext}">
-  </picture>
-  `;
-
+  <noscript>
+    <picture>
+      <source data-sizes="auto" media="(max-width:500px)"  type="image/webp" srcset="${imageName}.webp">
+      <source data-sizes="auto" media="(max-width:500px)"  type="image/${extension}" srcset="${imageName}.${extension}" >
+      <img data-sizes="auto"  ${ classname != "" ?  `class="${classname}"` : '' }  src="${imageName}.${extension}"  srcset="${imageName}.${extension}" alt="${alttext}">
+    </picture>
+  </noscript>
+<picture>
+<source data-sizes="auto" media="(max-width:500px)"  type="image/webp" srcset="${imageName}.webp">
+<source data-sizes="auto" media="(max-width:500px)"  type="image/${extension}" srcset="${imageName}.${extension}" >
+<img data-sizes="auto"  ${ classname != "" ?  `class="${classname} ll"` : 'class="ll"' } src="${imageName}.${extension}" srcset="${imageName}.${extension}" alt="${alttext}">
+</picture>    
+`;
 });
 
   // Date formatting (human readable)

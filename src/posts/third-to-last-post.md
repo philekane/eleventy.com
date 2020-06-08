@@ -4,7 +4,7 @@ title: This is my third post
 author: Fred Kane
 description: The first post on the Eleventy + Netlify CMS from scratch blog
 date: 2020-04-25
-image: 
+image: "/assets/img/recent1.jpg"
 summary: blah blah blah
 tag:
   -  environment

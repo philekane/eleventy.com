@@ -383,10 +383,21 @@ legend{
   background-color: green;
 
 }
+
 #headerPageBanner{
   background-image: url("/assets/img/flowers.webp"); 
   height:30rem;
   
+}
+
+.no-js .headerPageBanner {
+  background-image: url("/assets/img/flowers.jpg");
+  height:30rem;
+}
+
+.no-js .homeBannerId {
+  background-image: url("/assets/img/red-stone.jpg");
+  height:30rem;
 }
 .portfolio-isotope .lazy{
   margin-bottom:6rem;

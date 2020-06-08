@@ -13,7 +13,8 @@
                     <div class="item blog-item">
                         <div class="content">
                             {% if post.data.image | length %}
-                                <img class="photothumb" src="{{ post.data.image }}" alt="{{ post.data.title | spaceless }}">
+                                  {% insertLazyImage  post.data.image,  post.data.title | spaceless , "photothumb" %}
+                      
                             {% endif %}
                             <h3>
                                 <a href="{{ post.url }}">{{ post.data.title }}</a>
