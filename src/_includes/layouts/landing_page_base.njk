@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"class="no-js">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="date" content="{% currentDate %}">
+        <meta name="author" content="{{ settings.siteSettings.companyName }}">
+        <meta name="description" content="{{ meta.description }}">
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:type" content="website111"/>
+        <meta property="og:title" content="{{ meta.title }}"/>
+        <meta property="og:description" content="{{ meta.description }}"/>
+        <meta property="og:image" content="{{ settings.siteSettings.companyUrl ~ "/" ~ meta.image}}"/>
+        <meta property="og:url" content="{{ meta.url}}"/>
+        <meta property="og:site_name" content="{{ settings.siteSettings.siteName }}"/>
+        <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">-->
+        <link rel="icon" href="/assets/img/favicon.jpg" type="image/x-icon"/>
+        <title>{{ settings.siteSettings.companyName }} - {{ meta.title }}</title>
+
+        <script>
+            document
+                .documentElement
+                .classList
+                .remove("no-js");
+        </script>
+        <!-- Required CSS files -->
+        <link rel="stylesheet" href="/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/assets/sass/_reset.css">
+
+        <script>
+            document
+                .documentElement
+                .classList
+                .remove("no-js");
+        </script>
+
+    </head>
+    <body class="landingPageBody">
+
+        <main>
+            {% block pageHeader %}
+                <header class="page-title item-middle" id="landingPageHeader"></header>
+            {% endblock pageHeader%}
+
+            {% block content %}
+                {{ content | safe }}
+            {% endblock content %}
+
+            {% block postContent %}{% endblock postContent %}
+
+        </main>
+        {% include "layouts/landing_page_footer.njk" %}
+    </body>
+</html>

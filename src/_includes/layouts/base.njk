@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"class="no-js">
+<html lang="en" class="no-js">
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
@@ -73,9 +73,8 @@
                         {% set headerBanner="headerPageBanner" %}
                     {% endif %}
                 {% else %}
-                    {% if page.url == "/about/" %}
-                      {% endif %}
-                  {% endif %}
+                    {% insertImage  backgroundImage,  backgroundImageAltText, "" %}                    
+                {% endif %}
 
                     <div class="page-title item-middle" id="{{ headerBanner }}">
                         {% if bannerTextBox.show == true %}

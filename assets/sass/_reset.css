@@ -1,5 +1,4 @@
 :root {
-
   --ratio: 1.5;
   --s-5: calc(var(--s-4) / var(--ratio));
   --s-4: calc(var(--s-3) / var(--ratio));
@@ -12,13 +11,20 @@
   --s3: calc(var(--s2) * var(--ratio));
   --s4: calc(var(--s3) * var(--ratio));
   --s5: calc(var(--s4) * var(--ratio));
-  --measure: 60ch;
+  --measure: 70rem;
   font-family: sans-serif;
+  --bg-primary: #8e8e8e;
+  --bg-secondary: #ffbf81;
+  --color-primary: #000;
+  --color-secondary: #fff;
+  --base-color: #fff;
 }
 
 /* owl selector-applying margin between elements*/
 body * + * { 
   margin-top: 1.5rem; 
+  background-color: var(--bg-primary);
+  color: var(--color-primary);
 }
 
 /* elements */
@@ -112,9 +118,15 @@ select {
   font: inherit;
 }
 
-/* Blur images when they have no alt attribute */
+/* Blur images when they have no alt attribute and give green outline*/
 img:not([alt]) {
   filter: blur(10px);
+  border: 5px dotted #33FF00 !important;
+}
+/*add red dotted border if image alt attribute is empty*/
+img[alt=""] {
+  border: 3px dotted red;
+  /*filter: blur(10px);*/
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
@@ -126,25 +138,154 @@ img:not([alt]) {
     scroll-behavior: auto !important;
   }
 }
-.fukol {
-    overflow:hidden;
-  }
-  .fukol-grid{
-      display: flex;
-      flex-flow: row;
-      margin: -.5em;
-  }
-  .fukol-grid > * {
-    margin: .5em;
-    flex: 1 0 10em;
-    flex-grow: 1;
-  }
-  
-  flow {
+
+
+/*
+  WRAPPER
+  A utility with a max width that contains child elements and horizontal centers them
+*/
+.wrapper {
+  margin-inline: auto;
+  padding-inline: 1rem;
+  max-width: var(--measure);
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+ /**
+ * FLOW
+ *
+ * A tiny utility that helps with rhythm by adding margin to siblings
+ *
+ * --flow-space: The amount of space between siblings: Default 1em;
+ */
+ 
+
+.flow {
   --flow-space: 1em;
+}
+
+.flow > * {
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .flow > * + * { 
   margin-top: 1em;
-  margin-top: var(--flow-space);
+  margin-top: var(--flow-space); 
 }
+
+@supports(display: grid) {
+  .flow {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--flow-space, 18rem), 1fr));
+    grid-gap: 1rem;
+  }
+  
+  .flow > * {
+    max-width: unset;
+    margin: unset;
+  }
+}
+
+h2 {
+  --flow-space: 3rem;
+}
+
+h3 {
+  --flow-space: 2rem;
+}
+
+h1 + p {
+  --flow-space: 3rem;
+}
+
+blockquote,
+blockquote + * {
+  --flow-space: 4rem;
+}
+
+
+/* Card Component */
+
+.cards{ 
+  --flow-space: 1.5rem;
+  max-width: 100%;
+}
+
+.cards_list {
+  margin-top: 1em;
+  display: grid;
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: 0;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  max-width: 70rem;
+}
+
+.card {
+  margin-top: 1em;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+/* Media component */
+.media {
+  --flow-space: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.media_img {
+  width: 16rem;
+  flex-shrink: 0;
+}
+
+.media_title{
+  text-align: center;
+}
+
+.media_title h2 a {
+  text-decoration: none;
+}
+
+.media_title h2 a:hover {
+  text-decoration: underline;
+}
+.media_title h2 a:focus {
+  text-decoration: underline;
+}
+
+.media_title h2 a:focus-within ~ .cta {
+  box-shadow: 0 0 0 0.125rem;
+}
+
+.media_content {
+  padding: 1rem 0 0 0;
+}
+
+.cta {
+  padding: 0.75rem;
+  border: 1px solid;
+  border-radius: 0.25rem;
+  text-align: center;
+  margin-bottom: 1em;
+} 

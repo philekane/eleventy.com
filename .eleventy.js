@@ -64,7 +64,6 @@ return `
   </noscript>
 <picture>
 <source data-sizes="auto" media="(max-width:500px)"  type="image/webp" srcset="${imageName}.webp">
-<source data-sizes="auto" media="(max-width:500px)"  type="image/${extension}" srcset="${imageName}.${extension}" >
 <img data-sizes="auto"  ${ classname != "" ?  `class="${classname} ll"` : 'class="ll"' } src="${imageName}.${extension}" srcset="${imageName}.${extension}" alt="${alttext}">
 </picture>    
 `;
