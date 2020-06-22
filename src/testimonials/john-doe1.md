@@ -5,4 +5,6 @@ quote: When I was just starting 8th grade I got my first job. Paperboy! Boy, was
   official.
 jobTitle: Web Designer
 headShot: /assets/img/phil-kane-3.jpg
+backgroundImage: /assets/img/flowers.jpg
+backgroundImageAltText: Testimonial Page
 ---
