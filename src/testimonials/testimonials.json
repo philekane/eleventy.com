@@ -1,4 +1,6 @@
 {
     "layout": "simple.njk",
-    "tags": "testimonials"
+    "tags": "testimonials",
+    "backgroundImage": "/assets/img/red-stone.jpg",
+    "backgroundImageAltText": "Testimonial Page json"
 }

@@ -2,8 +2,8 @@
 layout: testimonials.njk
 title: Testimonials
 description: In our clients own words
-backgroundImage: /assets/img/flowers.jpg
-backgroundImageAltText: Testimonial Page
+backgroundImage: "/assets/img/flowers.jpg"
+backgroundImageAltText: "Testimonial Page md"
 linkText: Check It Out
 changeFreq: monthly
 bannerTextBox:
