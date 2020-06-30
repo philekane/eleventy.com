@@ -5,6 +5,8 @@ const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function(eleventyConfig){
 
+  
+
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("assets");
     eleventyConfig.setWatchJavaScriptDependencies(false);
@@ -33,7 +35,7 @@ module.exports = function(eleventyConfig){
   eleventyConfig.addShortcode("insertImage", function(filename, alttext, classname) {
     const imageName = filename.substring(0, filename.length - 4);
     const extension = filename.substr(filename.lastIndexOf('.') + 1);
-    
+   
 
     /* the following is what you place in markup
     {% insertImage  portfolio.data.image ,  portfolio.data.altText, "" %}

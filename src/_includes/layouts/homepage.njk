@@ -1,6 +1,7 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
+   console.log("My Title") ;
     {% if slider.showSlider == true %}
         <div class="hero-slider">
             {% for banner in banners %}
