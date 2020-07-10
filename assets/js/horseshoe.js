@@ -39,7 +39,7 @@ return average.toFixed(2) + "%";
 let button = document.querySelector("[name=Next]");
   button.addEventListener("click", () => {
     let pitchNumber = Number(localStorage.getItem("pitchNumber"));
-    if(pitchNumber == 4){
+    if(pitchNumber == 16){
         
         alert("done");
         localStorage.removeItem("pitchNumber");
