@@ -1,7 +1,8 @@
 {% extends "layouts/base.njk" %}
 
 {% block content %}
-     {% if slider.showSlider == true %}
+
+     {% if slider.showSlider == true %}     
         <div class="hero-slider">
             {% for banner in banners %}
                 <div class="single-slide" style="background-image: url({{ banner.background }})">

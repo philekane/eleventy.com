@@ -5,7 +5,13 @@ const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function(eleventyConfig){
 
-  
+
+    //eleventyConfig.addFilter("consoleDump",  console.log("dump")  );
+//use {% prd variable %} for debugging
+    eleventyConfig.addShortcode("prd", function(dump) { 
+      const data = dump
+      return `<p class="prdcode">${data}</p>` }
+      );
 
     eleventyConfig.addPassthroughCopy("css");
     eleventyConfig.addPassthroughCopy("assets");

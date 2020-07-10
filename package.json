@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
@@ -21,7 +21,8 @@
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",
     "gulp-webp": "^4.0.1",
-    "imagemin-guetzli": "^2.0.0"
+    "imagemin-guetzli": "^2.0.0",
+    "mocha": "^8.0.1"
   },
   "dependencies": {
     "clean-css": "^4.2.3",
