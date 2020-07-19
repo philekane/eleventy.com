@@ -163,7 +163,7 @@ img[alt=""] {
  
 
 .flow {
-  --flow-space: 1em;
+  --flow-space: 20rem;
 }
 
 .flow > * {
@@ -189,6 +189,47 @@ img[alt=""] {
     margin: unset;
   }
 }
+
+
+/*
+  AUTO GRID
+  Set the minimum item size with `--auto-grid-min-size` and you'll
+  get a fully responsive grid with no media queries.
+*/
+
+.auto-grid > * {
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.auto-grid > * + * {
+  margin-top: 1rem;
+}
+
+@supports(display: grid) {
+  .auto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size, 16rem), 1fr));
+    grid-gap: 1rem;
+  }
+  
+  .auto-grid > * {
+    max-width: unset;
+    margin: unset;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -.5em;
+}
+.grid > * {
+  margin: .5em;
+  flex: 1 0 10em;
+}
+
 
 h2 {
   --flow-space: 3rem;
@@ -308,20 +349,22 @@ table {
   border-collapse: collapse; 
 }
 
-th { 
-  background: #333; 
-  color: white; 
-  font-weight: bold; 
-}
+
 td, th { 
   padding: .35rem; 
   border: 1px solid #ccc; 
   text-align: left; 
 }
+th, thead td { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
 /* Zebra striping */
-.totalscores  td:first-child { 
+.totalscores tbody tr td:first-child { 
   background: #eee; 
 }
+
 
 /*!
 // CSS only Responsive Tables
@@ -434,4 +477,28 @@ td, th {
 .rtable--flip th:not(:last-child),
 .rtable--flip td:not(:last-child) {
   border-bottom: 0;
+}
+
+.pitchers-form label {
+	padding-top:.5em;
+	line-height: 1;
+	font-weight: 500;
+  display: block;
+  margin:0 .5em;
+}
+
+.pitchers-form input {
+	padding-top:.5em;
+	
+  margin:0 .5em;
+}
+
+/* make the containers relative */
+.pitchers-form fieldset > div {
+	position: relative;
+}
+
+.pitchersFieldset{
+  width:726px;
+  
 }

@@ -3,154 +3,205 @@
 {% block content %}
 
 <section class="horseshoe-wrapper">
-<h1>Horseshoe Scoring</h1>
+<h1>Horseshoe Game Score Sheet</h1>
+    <form action="#" name="pitchersForm" class="pitchers-form flow">
+        <fieldset>
+            <legend>Tournament Information</legend>          
+                <label for="date">date</label>
+                <input type="date" id="date" name="date"  aria-label="date">             
+                <label for="tournament">Tournament</label>
+                <input type="text" id="tournament" name="tournament"  aria-label="tournament">
+                <label for="class">Class</label>
+                <input type="text" id="class" name="class"  aria-label="class">
+                <label for="game">Game No.</label>
+                <input type="number" id="game" name="game"  aria-label="game">
+                <label for="court">Court</label>
+                <input type="text" id="court" name="court"  aria-label="court">           
+                <label for="scoreKeepersFullName">Scorekeepers Full Name</label>
+                <input type="text" id="scoreKeepersFullName" name="scoreKeepersFullName"  aria-label="scoreKeepersFullName">             
 
- <form action="#" name="horseshoe_page" class="horseshoe-form">
-                    <fieldset>
-                        <legend>Scoresheet Form</legend>
-                        <fieldset>
-                            <legend>Ringers</legend>
-                            <label for="ringerOne">Null:</label>
-                                <input type="radio" id="ringerZero" name="ringer" checked aria-label="ringerZero" aria-describedby="username-tip" autofocus="" value="0">
-                                <label for="ringerOne">One:</label>
-                                <input type="radio" id="ringerOne" name="ringer"  aria-label="ringerOne" aria-describedby="username-tip" autofocus="" value="1">
-                                <label for="ringerTwo">Two:</label>
-                                <input type="radio" id="ringerTwo" name="ringer"  aria-label="ringerTwo" aria-describedby="username-tip" autofocus="" value="2">
-                                <label for="ringerOne">Three:</label>
-                                <input type="radio" id="ringerThree" name="ringer"  aria-label="ringerThree" aria-describedby="username-tip" autofocus="" value="3">
-                                <label for="ringerTwo">Four:</label>
-                                <input type="radio" id="ringerFour" name="ringer"  aria-label="ringerFour" aria-describedby="username-tip" autofocus="" value="4">
-                        </fieldset>
-                        <fieldset>
-                            <legend>Count</legend>
-                            <fieldset>
-                            <legend>Pitcher A Count</legend>
-                                <label for="countZero">Null:</label>
-                                <input type="radio" id="countZero"  name="A_count"  aria-label="countZero" aria-describedby="username-tip" autofocus="" value="0">
-                                <label for="countOne">One:</label>
-                                <input type="radio" id="countOne" name="A_count"  aria-label="countOne" aria-describedby="username-tip" autofocus="" value="1">
-                                <label for="countTwo">Two:</label>
-                                <input type="radio" id="countTwo" name="A_count"  aria-label="countTwo" aria-describedby="username-tip" autofocus="" value="2">
-                                <label for="countThree">Three:</label>
-                                <input type="radio" id="countThree" name="A_count"  aria-label="countThree" aria-describedby="username-tip" autofocus="" value="3">
-                                <label for="countFour">Four:</label>
-                                <input type="radio" id="countFour" name="A_count"  aria-label="countFour" aria-describedby="username-tip" autofocus="" value="4">
-                                <label for="countSix">Six:</label>
-                                <input type="radio" id="countSix" name="A_count"  aria-label="countSix" aria-describedby="username-tip" autofocus="" value="6">
-                            </fieldset>
-                            <fieldset>
-                            <legend>Pitcher B Count</legend>
-                                <label for="countZero">Null:</label>
-                                <input type="radio" id="countZero"  name="B_count"  aria-label="countZero" aria-describedby="username-tip" autofocus="" value="0">
-                                <label for="countOne">One:</label>
-                                <input type="radio" id="countOne" name="B_count"  aria-label="countOne" aria-describedby="username-tip" autofocus="" value="1">
-                                <label for="countTwo">Two:</label>
-                                <input type="radio" id="countTwo" name="B_count"  aria-label="countTwo" aria-describedby="username-tip" autofocus="" value="2">
-                                <label for="countThree">Three:</label>
-                                <input type="radio" id="countThree" name="B_count"  aria-label="countThree" aria-describedby="username-tip" autofocus="" value="3">
-                                <label for="countFour">Four:</label>
-                                <input type="radio" id="countFour" name="B_count"  aria-label="countFour" aria-describedby="username-tip" autofocus="" value="4">
-                                <label for="countSix">Six:</label>
-                                <input type="radio" id="countSix" name="B_count"  aria-label="countSix" aria-describedby="username-tip" autofocus="" value="6">
-                            </fieldset>
-                       
-                        </fieldset>
-                        <div>
-                         <input type="reset" name ="Next" value="Next">
-                        </div>
-                    </fieldset>
-                    <input type="hidden" name="-od_wxsAu" value="GmY*IrCpf"><input type="hidden" name="sIKiNyJ" value="vGSmD7C"><input type="hidden" name="hdL_ZczC" value="7ANK1Q[R"><input type="hidden" name="u-ZaTrFHGBStxj" value="B7S_si2jeDc6pa">
-                </form>
+        </fieldset>
+        <fieldset class="pitchersFieldset">
+            <legend>Pitchers Information</legend> 
+            <div class="auto-grid">
+                <fieldset>
+                 <legend>Pitcher A</legend> 
+                    <label for="pitcher_A_nhpa_number">NHPA#</label>
+                    <input type="text" id="pitcher_A_nhpa_number" name="pitcher_A_nhpa_number"  aria-label="pitcher_A_nhpa_number">             
+                    <label for="pitcherAlastName">Pitcher A; Last Name</label>
+                    <input type="text" id="pitcherAlastName" name="pitcherAlastName"  aria-label="pitcherAlastName">             
+                    <label for="pitcherAfirstName">Pitcher A; First Name</label>
+                    <input type="text" id="pitcherAfirstName" name="pitcherAfirstName"  aria-label="pitcherAfirstName">             
+                    <label for="pitcherAstate">State</label>
+                    <input type="text" id="pitcherAstate" name="pitcherAstate"  aria-label="pitcherAstate">             
+                    <label for="pitcherAdiv">Division</label>
+                    <input type="text" id="pitcherAdiv" name="pitcherAdiv"  aria-label="pitcherAdiv">             
+                </fieldset>
+                <fieldset>
+                    <legend>Pitcher B</legend> 
+                    <label for="pitcher_B_nhpa_number">NHPA#</label>
+                    <input type="text" id="pitcher_B_nhpa_number" name="pitcher_B_nhpa_number"  aria-label="pitcher_B_nhpa_number">             
+                    <label for="pitcherBlastName">Pitcher B; Last Name</label>
+                    <input type="text" id="pitcherBlastName" name="pitcherBlastName"  aria-label="pitcherBlastName">             
+                    <label for="pitcherBfirstName">Pitcher B; First Name</label>
+                    <input type="text" id="pitcherBfirstName" name="pitcherBfirstName"  aria-label="pitcherBfirstName">             
+                    <label for="pitcherBstate">State</label>
+                    <input type="text" id="pitcherBstate" name="pitcherBstate"  aria-label="pitcherBstate">             
+                    <label for="pitcherBdiv">Division</label>
+                    <input type="text" id="pitcherBdiv" name="pitcherBdiv"  aria-label="pitcherBdiv">             
+                
+                </fieldset>
+            </div>
+        </fieldset>
+    </form>
 
-    <section class="horseshoeTable">
-    <div style="overflow-x:auto;">
-       <table border="0" class="rtable">
-            <thead>
-                </tr>
-                    <th>ringers</th>
-                    <th>count</th>
-                    <th>score</th>
-                    <th>shoes</th>
-                    <th>ringers</th>
-                    <th>count</th>
-                    <th>score</th>
-                </tr>
-            </thead>
-            <tbody>
+
+
+    <form action="#" name="horseshoe_page" class="horseshoe-form">
+        <fieldset >
+            <legend >Scoresheet Form</legend>
+            <fieldset>
+                <legend>Ringers</legend>
+                    <label for="ringerOne">One:</label>
+                    <input type="radio" id="ringerOne" name="ringer"  aria-label="ringerOne"  value="1">
+                    <label for="ringerTwo">Two:</label>
+                    <input type="radio" id="ringerTwo" name="ringer"  aria-label="ringerTwo"  value="2">
+                    <label for="ringerThree">Three:</label>
+                    <input type="radio" id="ringerThree" name="ringer"  aria-label="ringerThree"  value="3">
+                    <label for="ringerFour">Four:</label>
+                    <input type="radio" id="ringerFour" name="ringer"  aria-label="ringerFour"  value="4">
+                    <button id="clearRingers">Clear Ringers</button>
+            </fieldset>
+            <fieldset >
+                <legend>Count</legend>
+                <fieldset>
+                <legend>Pitcher A Count</legend>
+                    <label for="A_countOne">One:</label>
+                    <input type="radio" id="A_countOne" name="A_count"  aria-label="countOne"  value="1">
+                    <label for="A_countTwo">Two:</label>
+                    <input type="radio" id="A_countTwo" name="A_count"  aria-label="countTwo"  value="2">
+                    <label for="A_countThree">Three:</label>
+                    <input type="radio" id="A_countThree" name="A_count"  aria-label="countThree"  value="3">
+                    <label for="A_countFour">Four:</label>
+                    <input type="radio" id="A_countFour" name="A_count"  aria-label="countFour"  value="4">
+                    <label for="A_countSix">Six:</label>
+                    <input type="radio" id="A_countSix" name="A_count"  aria-label="countSix"  value="6">
+                </fieldset>
+                <fieldset>
+                <legend>Pitcher B Count</legend>
+                    <label for="B_countOne">One:</label>
+                    <input type="radio" id="B_countOne" name="B_count"  aria-label="countOne"  value="1">
+                    <label for="B_countTwo">Two:</label>
+                    <input type="radio" id="B_countTwo" name="B_count"  aria-label="countTwo"  value="2">
+                    <label for="B_countThree">Three:</label>
+                    <input type="radio" id="B_countThree" name="B_count"  aria-label="countThree"  value="3">
+                    <label for="B_countFour">Four:</label>
+                    <input type="radio" id="B_countFour" name="B_count"  aria-label="countFour"  value="4">
+                    <label for="B_countSix">Six:</label>
+                    <input type="radio" id="B_countSix" name="B_count"  aria-label="countSix"  value="6">
+                </fieldset>
+        
+            </fieldset>
+            <div>
+            <!--<input type="reset" name ="Next" value="Next">-->
+            <button id ="Next" type="reset">Next</button>
+            </div>
+        </fieldset>
+         <button id="saveData">Save Dataa</button>
+    </form>
+   
+    <div class="flow">
+        <section class="horseshoeTable" style="overflow-x:auto;">
+                 <table border="0" class="rtable">
+                    <thead>
+                        </tr>
+                            <th>ringers</th>
+                            <th>count</th>
+                            <th>score</th>
+                            <td></td>
+                            <th>ringers</th>
+                            <th>count</th>
+                            <th>score</th>
+                        </tr>
+                    </thead>
+                    <tbody>                
+                    {% set rows = horseshoes.shoesPitched / 2 %}                
+                    {% for row in range(1, rows+1) -%}
+                    {% set picthcount = row * 2 %}
+                        <tr>
+                            <td id="pitcher-A-ringer-{{picthcount}}">
+                            </td>
+                            <td id="pitcher-A-count-{{picthcount}}">
+                            </td>
+                            <td id="pitcher-A-score-{{picthcount}}">
+                            </td>
+                            <td class="pitch" id="pitch_{{picthcount}}">{{picthcount}}
+                            </td>
+                            <td id="pitcher-B-ringer-{{picthcount}}">
+                            </td>
+                            <td id="pitcher-B-count-{{picthcount}}">
+                            </td>
+                            <td id="pitcher-B-score-{{picthcount}}">
+                            </td>
+                        </tr>
+                    {% endfor %}  
+                    </tbody>
+                </table>
            
-            {% set rows = horseshoes.shoesPitched / 2 %}
-            {% prd rows %}
-            {% for row in range(1, rows+1) -%}
-              {% set picthcount = row * 2 %}
-                <tr>
-                    <td id="pitcher-A-ringer-{{picthcount}}">
-                    </td>
-                    <td id="pitcher-A-count-{{picthcount}}">
-                    </td>
-                    <td id="pitcher-A-score-{{picthcount}}">
-                    </td>
-                    <td class="pitch" id="pitch_{{picthcount}}">{{picthcount}}
-                    </td>
-                    <td id="pitcher-B-ringer-{{picthcount}}">
-                    </td>
-                    <td id="pitcher-B-count-{{picthcount}}">
-                    </td>
-                    <td id="pitcher-B-score-{{picthcount}}">
-                    </td>
-                </tr>
-            {% endfor %}  
-            </tbody>
-        </table>
-        <table class="totalscores rtable">
-         <thead>
-                </tr>
-                <th>&nbsp;</th>
-                    <th>Pitcher A</th>
-                    <th>Pitcher B</th>
-                    <th colspan="2">dif</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Final Score</td>
-                    <td id="pitcherAtotalScore"></td>
-                    <td id="pitcherBtotalScore"></td>
-                    <td>dif = </td>
-                    <td id="difa"></td>
-                   
-                </tr>
-                 <tr>
-                    <td>Total Ringers</td>
-                    <td id="pitcherAtotalRingers"></td>
-                    <td id="pitcherBtotalRingers"></td>
-                    <td>dif x 3 = </td>
-                    <td id="difb"></td>                   
-                </tr>
-                <tr>
-                    <td>Single Count</td>
-                    <td id="pitcherAtotalSingles"></td>
-                    <td id="pitcherBtotalSingles"></td>
-                    <td>dif =</td>
-                    <td id="difc"></td>                   
-                </tr>
-                <tr>
-                    <td>Total Shoes Pitched</td>
-                    <td id="totalShoesPitched">16</td>
-                    <td >&nbsp</td>
-                    <td>Proof</td>
-                    <td id="proof"></td>                   
-                </tr>
-                 <tr>
-                    <td>Ringer Averages</td>
-                    <td id="pitcherAringerAverage"></td>
-                    <td id="pitcherBringerAverage"></td>
-                     <td >&nbsp</td>
-                      <td >&nbsp</td>                  
-                </tr>
-            </tbody>
-        </table>
-        </div>
-    </section>
-</section>
+        </section>
+    
+        <section class="totalscoreTable" style="overflow-x:auto;">
+          
+                <table class="totalscores rtable">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <th>Pitcher A</th>
+                            <th>Pitcher B</th>
+                            <th colspan="2">dif</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Final Score</td>
+                            <td id="pitcherAtotalScore"></td>
+                            <td id="pitcherBtotalScore"></td>
+                            <td>dif = </td>
+                            <td id="difa"></td>                        
+                        </tr>
+                        <tr>
+                            <td>Total Ringers</td>
+                            <td id="pitcherAtotalRingers">0</td>
+                            <td id="pitcherBtotalRingers">0</td>
+                            <td>dif x 3 = </td>
+                            <td id="difb"></td>                   
+                        </tr>
+                        <tr>
+                            <td>Single Count</td>
+                            <td id="pitcherAtotalSingles"></td>
+                            <td id="pitcherBtotalSingles"></td>
+                            <td>dif =</td>
+                            <td id="difc"></td>                   
+                        </tr>
+                        <tr>
+                            <td>Total Shoes Pitched</td>
+                            <td id="totalShoesPitched">16</td>
+                            <td >&nbsp</td>
+                            <td>Proof</td>
+                            <td id="proof"></td>                   
+                        </tr>
+                        <tr>
+                            <td>Ringer Averages</td>
+                            <td id="pitcherAringerAverage"></td>
+                            <td id="pitcherBringerAverage"></td>
+                            <td >&nbsp</td>
+                            <td >&nbsp</td>                  
+                        </tr>
+                    </tbody>
+                </table>    
+           
+        </section>
+    </div>
+ </section>
 <script src="/assets/js/horseshoe.js"></script>
 {% endblock content %}
