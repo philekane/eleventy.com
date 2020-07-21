@@ -50,31 +50,89 @@ document.getElementById("clearRingers").addEventListener("click", function(){
   });
 
   function sendData() {
-    var request = new XMLHttpRequest()
+   
+    const url = 'https://afamilysstand.com/process.php'
+    // const url = 'http://localhost:8080/process.php'
+   // const url = 'http://localhost:8080/horseshoeData.json'
+    const formElement = document.forms.namedItem('pitchersForm')
+    const formData = new FormData(formElement);
+//request.open('POST', 'http://localhost:8080/horseshoeData.php', true)
 
-request.open('GET', 'http://localhost:8080/horseshoeData.php', true)
-request.onload = function () {
-  // Begin accessing JSON data here
-  alert(this.response);
-  var data = JSON.parse(this.response);
-  //var data = this.response;
+//get totals that are not in the form
+const totalShoesPitched = document.getElementById("totalShoesPitched").innerText;
+const pitcherAtotalScore = document.getElementById("pitcherAtotalScore").innerText;
+const pitcherAtotalRingers = document.getElementById("pitcherAtotalRingers").innerText;
+const pitcherAtotalSingles = document.getElementById("pitcherAtotalSingles").innerText;
+const pitcherAringerAverage = document.getElementById("pitcherAringerAverage").innerText;
 
-  if (request.status >= 200 && request.status < 400) {
-    data.forEach((pitcher) => {
-      console.log(pitcher.firstName)
-    })
-  } else {
+const pitcherBtotalScore = document.getElementById("pitcherBtotalScore").innerText;
+const pitcherBtotalRingers = document.getElementById("pitcherBtotalRingers").innerText;
+const pitcherBtotalSingles = document.getElementById("pitcherBtotalSingles").innerText;
+const pitcherBringerAverage = document.getElementById("pitcherBringerAverage").innerText;
+const proof = document.getElementById("proof").innerText;
+
+formData.append('pitcher_A_total_Score', `${pitcherAtotalScore}`);
+formData.append('pitcher_A_total_Ringers', `${pitcherAtotalRingers}`);
+formData.append('pitcher_A_total_Singles', `${pitcherAtotalSingles}`);
+formData.append('pitcher_A_ringer_average', `${pitcherAringerAverage}`);
+
+formData.append('pitcher_B_total_Score', `${pitcherBtotalScore}`);
+formData.append('pitcher_B_total_Ringers', `${pitcherBtotalRingers}`);
+formData.append('pitcher_B_total_Singles', `${pitcherBtotalSingles}`);
+formData.append('pitcher_B_ringer_average', `${pitcherBringerAverage}`);
+
+formData.append('total_shoes_pitched', `${totalShoesPitched}`);
+formData.append('proof', `${proof}`);
+formData.append('username', 'pkane');
+/*
+var request = new XMLHttpRequest();
+request.open("POST", url);
+ // Add the required HTTP header for form data POST requests
+//request.setRequestHeader( 'Content-Type', 'Access-Control-Allow-Origin' );
+request.send();
+
+if (request.status >= 200 && request.status < 400) {
+    //data = request.headers.get('Access-Control-Allow-Origin');
+    console.log(request);
+}else{
     console.log('error')
-  }
+}
+*/
+fetch(url, {
+    method: 'POST',
+    body: formData,
+    //body: JSON.stringify({text: 'bacon'}),
+   
+  // credentials: 'include'
+        
+ }).then((response) => {
+    
+    if (response.status >= 200 && response.status < 400) {
+        console.log(response);
+    }else{
+        console.log('error')
+    }
+   
+  })
+
 }
 
-request.send();
-  }
-
-  //save data
-    document.getElementById("saveData").addEventListener("click", function(){
-        sendData();   
-  });
+  function saveFile(text, name, type) {
+    var a = document.createElement("a");
+    var file = new Blob([text], {type: type});
+    a.href = URL.createObjectURL(file);
+    a.download = name;
+    a.click();
+}
+//save data
+document.getElementById("saveData").addEventListener("click", function(){
+    sendData();  
+    //let jsonData['pitcherALastname'] = document.getElementById("pitcherAlastName");
+    const jsonData = {'pitcherALastname': pitchersForm.pitcherAlastName.value,
+    'pitcherAfirstname': pitchersForm.pitcherAfirstName.value} 
+    //saveFile(JSON.stringify(jsonData), './_site/test.json', 'text/plain'); 
+});
+ 
    
 
 //let button = document.querySelector("[id=Next]");
