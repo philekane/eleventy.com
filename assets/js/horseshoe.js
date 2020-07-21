@@ -102,13 +102,7 @@ if (request.status >= 200 && request.status < 400) {
 fetch(url, {
     method: 'POST',
     body: formData,
-    //body: JSON.stringify({text: 'bacon'}),
-    mode: 'no-cors',
-    'Access-Control-Allow-Origin' : '*',
-   
-   credentials: 'include'
-        
- }).then((response) => {
+}).then((response) => {
     
     if (response.status >= 200 && response.status < 400) {
         console.log(response);
