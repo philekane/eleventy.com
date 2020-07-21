@@ -50,8 +50,8 @@ document.getElementById("clearRingers").addEventListener("click", function(){
   });
 
   function sendData() {
-    const url = 'https://client-site-template.netlify.app/process.php'
-    //const url = 'https://afamilysstand.com/process.php'
+    //const url = 'https://client-site-template.netlify.app/process.php'
+    const url = 'https://afamilysstand.com/process.php'
     // const url = 'http://localhost:8080/process.php'
    // const url = 'http://localhost:8080/horseshoeData.json'
     const formElement = document.forms.namedItem('pitchersForm')
