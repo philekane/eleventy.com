@@ -10,19 +10,22 @@ container.setAttribute('class', 'container')
 app.appendChild(logo)
 app.appendChild(container)
 
-var request = new XMLHttpRequest()
+let url = 'http://localhost:8080/horseshoeData2.json';
+let reqHeader = new Headers();
+reqHeader.append('Content-Type', 'text/json');
 
-//request.open('GET', 'https://ghibliapi.herokuapp.com/films', true)
-request.open('GET', 'http://localhost:8080/horseshoeData.json', true)
-//request.open('GET', 'http://www.horseshoepitching.com/nstats/WA.TXT', true)
+let initObject = {
+    method: 'Get',
+    headers: reqHeader
+};
+var userRequest = new Request(url, initObject);
 
-request.onload = function () {
-  // Begin accessing JSON data here
-  var data = JSON.parse(this.response)
-  
-  if (request.status >= 200 && request.status < 400) {
-    data.forEach((pitcher) => {
-     
+fetch(userRequest)
+    .then(function (response) {
+      return response.json();            
+    }).then(function (data) {
+      //work with Json data here
+      data.pitchers.forEach((pitcher) => {
       
       // Create a div with a card class
       const card = document.createElement('div')
@@ -52,13 +55,10 @@ request.onload = function () {
       container.appendChild(card)
 
       // Each card will contain an h1 and a p
-      card.appendChild(h1)
-      card.appendChild(p)
-
-    })
-  } else {
-    console.log('error')
-  }
-}
-
-request.send()
+      card.appendChild(h1);
+      card.appendChild(p);
+      })
+    
+    }).catch(function (err) {
+        console.log("Something went wrong!", err);
+    });

@@ -107,12 +107,13 @@
             <button id ="Next" type="reset">Next</button>
             </div>
         </fieldset>
-         <button id="saveData">Save Dataa</button>
+         <button id="saveData">Save Data</button>
     </form>
    
     <div class="flow">
-        <section class="horseshoeTable" style="overflow-x:auto;">
+        <section class="horseshoeTable table-container" style="overflow-x:auto;" tabindex="0" role="group" aria-labelledby="caption" >
                  <table border="0" class="rtable">
+                 <caption id="caption">Game</caption>
                     <thead>
                         </tr>
                             <th>ringers</th>
@@ -148,11 +149,11 @@
                     </tbody>
                 </table>
            
-        </section>
-    
-        <section class="totalscoreTable" style="overflow-x:auto;">
+        </section>    
+        <section class="totalscoreTable table-container" style="overflow-x:auto;"  tabindex="0" role="group" aria-labelledby="caption">
           
                 <table class="totalscores rtable">
+                <caption id="caption">Pitchers Scores</caption>
                     <thead>
                         <tr>
                             <td></td>
@@ -163,11 +164,11 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Final Score</td>
-                            <td id="pitcherAtotalScore"></td>
-                            <td id="pitcherBtotalScore"></td>
-                            <td>dif = </td>
-                            <td id="difa"></td>                        
+                            <td scope="col">Final Score</td>
+                            <td scope="col" id="pitcherAtotalScore"></td>
+                            <td scope="col" id="pitcherBtotalScore"></td>
+                            <td scope="col">dif = </td>
+                            <td scope="col" id="difa"></td>                        
                         </tr>
                         <tr>
                             <td>Total Ringers</td>
