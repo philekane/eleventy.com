@@ -2,14 +2,15 @@ let A_counts = document.querySelectorAll ('[name=A_count]');
 let B_counts = document.querySelectorAll ('[name=B_count]');
 let ringers = document.querySelectorAll ('[name=ringer]');
 
-const differance = function (a_total_score, b_total_score, stage) {
+const differance = function (a_number, b_number, stage) {
   //check if numbers
-  let dif = Math.abs (a_total_score - b_total_score);
+  //get differance between a and b
+  let dif = Math.abs (a_number - b_number);
   switch (stage) {
     case a:
       return Number (dif);
       break;
-    case b:
+    case b: //for ringers
       return dif * 3;
       break;
   }  
@@ -332,8 +333,8 @@ document.getElementById ('Next').addEventListener ('click', function () {
     let pitcherBScore = Number (
       document.getElementById (pitchBClass).innerText
     );
-    let diferance_A = difa (pitcherAScore, pitcherBScore);
-    document.getElementById ('difa').innerText = diferance_A;
+    let differance_A = differance (pitcherAScore, pitcherBScore, 'a');
+    document.getElementById ('difa').innerText = differance_A;
 
     if (pitcherAScore > pitcherBScore) {
       alert ('Pitcher A is the winner');
@@ -347,17 +348,17 @@ document.getElementById ('Next').addEventListener ('click', function () {
       .innerText;
     let pitcherBringers = document.getElementById ('pitcherBtotalRingers')
       .innerText;
-    let diferance_B = difb (pitcherAringers, pitcherBringers);
-    document.getElementById ('difb').innerText = diferance_B;
+    let differance_B = differance (pitcherAringers, pitcherBringers, 'b');
+    document.getElementById ('difb').innerText = differance_B;
 
     let singleBCount = document.getElementById ('pitcherBtotalSingles')
       .innerText;
     let singleACount = document.getElementById ('pitcherAtotalSingles')
       .innerText;
-    let diferance_C = difa (singleACount, singleBCount);
-    document.getElementById ('difc').innerText = diferance_C;
+    let differance_C = differance (singleACount, singleBCount, 'a');
+    document.getElementById ('difc').innerText = differance_C;
 
-    let proofed = proof (diferance_A, diferance_B, diferance_C);
+    let proofed = proof (differance_A, differance_B, differance_C);
     if (proofed == true) {
       document.getElementById ('proof').innerText = 'OK';
     } else {
