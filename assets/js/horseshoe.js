@@ -7,23 +7,13 @@ const differance = function (a_number, b_number, stage) {
   //get differance between a and b
   let dif = Math.abs (a_number - b_number);
   switch (stage) {
-    case a:
+    case "a":
       return Number (dif);
       break;
-    case b: //for ringers
+    case "b": //for ringers
       return dif * 3;
       break;
   }  
-};
-
-const difa = function (a_total_score, b_total_score) {
-  let dif = Math.abs (a_total_score - b_total_score);
-  return Number (dif);
-};
-
-const difb = function (a_total_score, b_total_score) {
-  let dif = Math.abs (a_total_score - b_total_score);
-  return dif * 3;
 };
 
 const proof = function (a, b, c) {
@@ -58,9 +48,7 @@ const getPitchCount = function () {
   return pitchNumber;
 };
 //let clearRingerButton = document.querySelector("[id=clearRingers]");
-document
-  .getElementById ('clearRingers')
-  .addEventListener ('click', function () {
+document.getElementById ('clearRingers').addEventListener ('click', function () {
     //  clearRingerButton.addEventListener("click", () => {
     document.querySelector ('input[name=ringer]:checked').checked = false;
   });
@@ -299,8 +287,13 @@ document.getElementById ('saveData').addEventListener ('click', function () {
 //let button = document.querySelector("[id=Next]");
 // button.addEventListener("click", () => {
 document.getElementById ('Next').addEventListener ('click', function () {
-  let pitchNumber = getPitchCount ();
+  let pitchNumber = getPitchCount ();  
   let pitchCount = document.getElementById ('totalShoesPitched').innerText;
+  if(pitchNumber > pitchCount)
+  {
+    localStorage.removeItem ('pitchNumber');
+    let pitchNumber = getPitchCount ();      
+  }
 
   let A_count = 0;
   if (document.querySelector ('[name=A_count]:checked') != null) {
@@ -374,6 +367,7 @@ document.getElementById ('Next').addEventListener ('click', function () {
 
     localStorage.removeItem ('pitchNumber');
   }
+ 
 });
 
 //get the count of ringers pitched
