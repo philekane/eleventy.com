@@ -2,7 +2,9 @@ const add = (x, y) => +x + +y
 
 const differance = function (a_number, b_number, stage) {
     //check if numbers
-    //get differance between a and b
+    if(Number.isInteger(stage))return undefined;
+    if(!Number.isInteger(a_number))return "undefined_a";
+    if(!Number.isInteger(b_number))return "undefined_b";
     let dif = Math.abs (a_number - b_number);
     switch (stage) {
       case "a":

@@ -1,3 +1,4 @@
+//var axios = require('axios')
 const app = document.getElementById('root')
 
 const logo = document.createElement('img')
@@ -18,8 +19,31 @@ let initObject = {
     method: 'Get',
     headers: reqHeader
 };
-var userRequest = new Request(url, initObject);
+const userRequest = new Request(url, initObject);
 
+const fetch_pitchers = function(){ 
+  let url = 'http://localhost:8080/horseshoeData2.json';
+  let reqHeader = new Headers();
+  reqHeader.append('Content-Type', 'text/json');
+  
+  let initObject = {
+      method: 'Get',
+      headers: reqHeader
+  };
+    const userRequest = new Request(url, initObject);
+    fetch(userRequest).then(function (response) {
+    return response.json();            
+  }).then(function (data) {
+    return data;
+  }).catch(function (err) {
+    console.log("Something went wrong!", err);
+  });
+}
+let pitchers2 = 'phil';
+
+
+
+/*
 fetch(userRequest)
     .then(function (response) {
       return response.json();            
@@ -62,3 +86,6 @@ fetch(userRequest)
     }).catch(function (err) {
         console.log("Something went wrong!", err);
     });
+*/
+
+module.exports = { fetch_pitchers, pitchers2 }

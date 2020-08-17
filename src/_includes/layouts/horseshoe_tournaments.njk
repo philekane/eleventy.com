@@ -1,3 +1,5 @@
+var pitchers = require("../assets/js/horseshoe_tournaments.js");
+{{ pitchers.pitcher2() | log }}
 {% extends "layouts/landing_page_base.njk" %}
 
 {% block content %}
@@ -5,8 +7,13 @@
 <h1>{{ title }}</h1>
 <h2>{{ description }}</h2>
 <div id="root">
+yep 
+<h2>{{ pitchers.pitchers2() }}</h2>
+{% for pitcher in pitchers.fetch_pitchers() %}
+    <h2>{{ pitcher }}</h2>
+{% endfor %}
 </div>
 
 </section>
-<script src="/assets/js/horseshoe_tournaments.js"></script>
+<!--<script src="/assets/js/horseshoe_tournaments.js"></script>-->
 {% endblock content %}
