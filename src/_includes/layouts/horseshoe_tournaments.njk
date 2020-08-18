@@ -1,12 +1,10 @@
 {% extends "layouts/landing_page_base.njk" %}
-{% raw %}
-{% assign pitchers = fetch_pitchers %}
 {% block content %}
 <section class="wrapper">
 <h1>{{ title }}</h1>
 <h2>{{ description }}</h2>
-
-{% for pitcher in pitchers %}
+{% raw %}
+{% for pitcher in fetch_pitchers %}
     <h2>{{ pitcher.firstName }}</h2>
 {% endfor %}
 
@@ -17,5 +15,5 @@ yep
 </div>
 
 </section>
-<script src="/assets/js/horseshoe_tournaments.js"></script>
+<!--<script src="/assets/js/horseshoe_tournaments.js"></script>-->
 {% endblock content %}

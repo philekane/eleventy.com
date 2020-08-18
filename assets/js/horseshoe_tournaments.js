@@ -20,28 +20,6 @@ let initObject = {
     headers: reqHeader
 };
 const userRequest = new Request(url, initObject);
-
-const fetch_pitchers = function(){ 
-  let url = 'http://localhost:8080/horseshoeData.json';
-  let reqHeader = new Headers();
-  reqHeader.append('Content-Type', 'text/json');
-  
-  let initObject = {
-      method: 'Get',
-      headers: reqHeader
-  };
-    const userRequest = new Request(url, initObject);
-    fetch(userRequest).then(function (response) {
-    return response.json();            
-  }).then(function (data) {
-    return data;
-  }).catch(function (err) {
-    console.log("Something went wrong!", err);
-  });
-}
-
-
-
 /*
 fetch(userRequest)
     .then(function (response) {
@@ -85,6 +63,5 @@ fetch(userRequest)
     }).catch(function (err) {
         console.log("Something went wrong!", err);
     });
-*/
 
-module.exports = { fetch_pitchers, pitchers2 }
+*/
