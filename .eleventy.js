@@ -5,6 +5,8 @@ const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function(eleventyConfig){
 
+  
+  eleventyConfig.addFilter("fetch_pitchers", require("./assets/js/horseshoe_tournaments.js"));
 
     //eleventyConfig.addFilter("consoleDump",  console.log("dump")  );
 //use {% prd variable %} for debugging

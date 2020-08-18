@@ -22,7 +22,7 @@ let initObject = {
 const userRequest = new Request(url, initObject);
 
 const fetch_pitchers = function(){ 
-  let url = 'http://localhost:8080/horseshoeData2.json';
+  let url = 'http://localhost:8080/horseshoeData.json';
   let reqHeader = new Headers();
   reqHeader.append('Content-Type', 'text/json');
   
@@ -39,7 +39,6 @@ const fetch_pitchers = function(){
     console.log("Something went wrong!", err);
   });
 }
-let pitchers2 = 'phil';
 
 
 
