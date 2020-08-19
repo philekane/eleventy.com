@@ -18,9 +18,9 @@ const fetch_pitchers = function(){
     });
   }
 */
-  const differance = function (a_number, b_number, stage) {
+  const difference = function (a_number, b_number, stage) {
     //check if numbers
-    //get differance between a and b
+    //get difference between a and b
     if(Number.isInteger(stage))return undefined;
     if(!Number.isInteger(a_number))return "undefined_a";
     if(!Number.isInteger(b_number))return "undefined_b";
@@ -93,4 +93,4 @@ const getRingers = function (count, ringersCount, pitcher, ab) {
 
  };
 
-  module.exports = {  differance, proof, ringerAverage, getRingers }
+  module.exports = {  difference, proof, ringerAverage, getRingers }

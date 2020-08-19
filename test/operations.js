@@ -1,6 +1,6 @@
 const add = (x, y) => +x + +y
 
-const differance = function (a_number, b_number, stage) {
+const difference = function (a_number, b_number, stage) {
     //check if numbers
     if(Number.isInteger(stage))return undefined;
     if(!Number.isInteger(a_number))return "undefined_a";
@@ -75,4 +75,4 @@ const getRingers = function (count, ringersCount, pitcher, ab) {
 
   };
 
-module.exports = { add, differance, proof, ringerAverage, getRingers }
+module.exports = { add, difference, proof, ringerAverage, getRingers }

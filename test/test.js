@@ -4,13 +4,13 @@ const assert = require('assert')
 const operations = require('../assets/js/horseshoe.js')
 
 describe('Scoring Methods', function(){
-  describe('Get differances', function(){
+  describe('Get differences', function(){
   
-    it('correctly calculates the differance of 1 and 3', () => {
-      assert.equal(operations.differance(1, 3, "a"), 2)
+    it('correctly calculates the difference of 1 and 3', () => {
+      assert.equal(operations.difference(1, 3, "a"), 2)
     });
-    it('correctly calculates the differance of 1 and 3 and multiplys by 3', () => {
-      assert.equal(operations.differance(1, 3, "b"), 6)
+    it('correctly calculates the difference of 1 and 3 and multiplys by 3', () => {
+      assert.equal(operations.difference(1, 3, "b"), 6)
     });
   });
   describe('proof score', function(){

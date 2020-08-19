@@ -1,8 +1,8 @@
 //const horseshoe_scoring_functions = require("./horseshoe_scoring_functions");
 
-const differance = function (a_number, b_number, stage) {
+const difference = function (a_number, b_number, stage) {
   //check if numbers
-  //get differance between a and b
+  //get difference between a and b
   let dif = Math.abs (a_number - b_number);
   switch (stage) {
     case "a":
@@ -49,7 +49,7 @@ const getPitchCount = function () {
 //defining modules to use in tests
 if (typeof document == 'undefined')
 {
-  module.exports = {  differance, proof, ringerAverage, getPitchCount }
+  module.exports = {  difference, proof, ringerAverage, getPitchCount }
 }
 
 //this code just runs for client side
@@ -123,8 +123,8 @@ document.getElementById ('Next').addEventListener ('click', function () {
     let pitcherBScore = Number (
       document.getElementById (pitchBClass).innerText
     );
-    let differance_A = differance (pitcherAScore, pitcherBScore, 'a');
-    document.getElementById ('difa').innerText = differance_A;
+    let difference_A = difference (pitcherAScore, pitcherBScore, 'a');
+    document.getElementById ('difa').innerText = difference_A;
 
     if (pitcherAScore > pitcherBScore) {
       alert ('Pitcher A is the winner');
@@ -138,17 +138,17 @@ document.getElementById ('Next').addEventListener ('click', function () {
       .innerText;
     let pitcherBringers = document.getElementById ('pitcherBtotalRingers')
       .innerText;
-    let differance_B = differance (pitcherAringers, pitcherBringers, 'b');
-    document.getElementById ('difb').innerText = differance_B;
+    let difference_B = difference (pitcherAringers, pitcherBringers, 'b');
+    document.getElementById ('difb').innerText = difference_B;
 
     let singleBCount = document.getElementById ('pitcherBtotalSingles')
       .innerText;
     let singleACount = document.getElementById ('pitcherAtotalSingles')
       .innerText;
-    let differance_C = differance (singleACount, singleBCount, 'a');
-    document.getElementById ('difc').innerText = differance_C;
+    let difference_C = difference (singleACount, singleBCount, 'a');
+    document.getElementById ('difc').innerText = difference_C;
 
-    let proofed = proof (differance_A, differance_B, differance_C);
+    let proofed = proof (difference_A, difference_B, difference_C);
     if (proofed == true) {
       document.getElementById ('proof').innerText = 'OK';
     } else {
