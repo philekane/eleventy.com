@@ -46,10 +46,80 @@ const getPitchCount = function () {
   return pitchNumber;
 };
 
+//get the count of ringers pitched
+const ringerCount = function () {
+  if (document.querySelector ('[name=ringer]:checked') != null) {
+    count = document.querySelector ('[name=ringer]:checked').value;
+  } else {
+    count = 0;
+  }
+  return count;
+};
+
+//get the count of ringers pitched
+const getRingers = function (count, ringersCount, pitcher, ab) {
+  
+  let ringers = Array;
+  switch (Number (ringersCount)) {
+    case 1:
+      if (count == 3 || count == 4) {
+        ringers[0] = '0';
+        ringers[1] = '';
+      }
+      break;
+    case 2:
+      if (count == 1) {
+        ringers[0] = 'X';
+        ringers[1] = 'X';
+      } else if (count == 6) {
+        ringers[0] = '00';
+        ringers[1] = '';
+      }
+      break;
+    case 3:
+      if (count == 3) {
+        ringers[0] = '0X';
+        ringers[1] = 'X';
+      }
+      break;
+    case 4:
+      ringers[0] = 'XX';
+      ringers[1] = 'XX';
+      break;
+    case 0:
+      ringers[0] = '';
+      ringers[1] = '';
+      break;
+  }
+  if(pitcher == 'a')
+    {
+        if(ab == 'a')
+        {
+            return ringers[0];
+        }
+        else if(ab == 'b')
+        {
+            return ringers[1];
+        }
+    }
+    else if(pitcher == 'b')
+    {
+        if(ab == 'a')
+        {
+            return ringers[1];
+        }
+        else if(ab == 'b')
+        {
+            return ringers[0];
+        }
+    }
+  
+};
+
 //defining modules to use in tests
 if (typeof document == 'undefined')
 {
-  module.exports = {  difference, proof, ringerAverage, getPitchCount }
+  module.exports = {  difference, proof, ringerAverage, getPitchCount, getRingers }
 }
 
 //this code just runs for client side
@@ -167,54 +237,6 @@ document.getElementById ('Next').addEventListener ('click', function () {
  
 });
 
-//get the count of ringers pitched
-const ringerCount = function () {
-  if (document.querySelector ('[name=ringer]:checked') != null) {
-    count = document.querySelector ('[name=ringer]:checked').value;
-  } else {
-    count = 0;
-  }
-  return count;
-};
-
-//get the count of ringers pitched
-const getRingers = function (count) {
-  let ringersCount = ringerCount ();
-  let ringers = Array;
-  switch (Number (ringersCount)) {
-    case 1:
-      if (count == 3 || count == 4) {
-        ringers[0] = '0';
-        ringers[1] = '';
-      }
-      break;
-    case 2:
-      if (count == 1) {
-        ringers[0] = 'X';
-        ringers[1] = 'X';
-      } else if (count == 6) {
-        ringers[0] = '00';
-        ringers[1] = '';
-      }
-      break;
-    case 3:
-      if (count == 3) {
-        ringers[0] = '0X';
-        ringers[1] = 'X';
-      }
-      break;
-    case 4:
-      ringers[0] = 'XX';
-      ringers[1] = 'XX';
-      break;
-    case 0:
-      ringers[0] = '';
-      ringers[1] = '';
-      break;
-  }
-  return ringers;
-};
-
 //create class for <td> example pitcher-A-Score-2
 const pitcherClass = function (pitcher, tdClass) {
   let pitchClass =
@@ -262,12 +284,12 @@ const set_pitchers_score = function (pitcher, count) {
     document.getElementById ('pitcher' + pitcher + 'totalSingles').innerText =
       Number (origTotalSingle) + 2;
   }
-  rings = getRingers (count);
+  let ringersCount = ringerCount ();
   if (pitcher == 'A') {
     pitcher_A_Score = pitcherScore ('A', count);
     pitcher_B_Score = pitcherScore ('B', 0);
-    ringA = rings[0];
-    ringB = rings[1];
+    ringA = getRingers(count, ringersCount, "a", "a") ;
+    ringB = getRingers(count, ringersCount, "a", "b") ;
     document.getElementById (`${ringersAClass}`).innerText = ringA;
     document.getElementById (`${ringersBClass}`).innerText = ringB;
 
@@ -295,8 +317,8 @@ const set_pitchers_score = function (pitcher, count) {
   } else if (pitcher == 'B') {
     pitcher_A_Score = pitcherScore ('A', 0);
     pitcher_B_Score = pitcherScore ('B', count);
-    ringB = rings[0];
-    ringA = rings[1];
+    ringA = getRingers(count, ringersCount, "b", "a") ;
+    ringB = getRingers(count, ringersCount, "b", "b") ;
     document.getElementById (`${ringersBClass}`).innerText = ringB;
     document.getElementById (`${ringersAClass}`).innerText = ringA;
 
