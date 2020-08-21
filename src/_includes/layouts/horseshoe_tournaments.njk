@@ -3,17 +3,13 @@
 <section class="wrapper">
 <h1>{{ title }}</h1>
 <h2>{{ description }}</h2>
-{% raw %}
-{% for pitcher in fetch_pitchers %}
-    <h2>{{ pitcher.firstName }}</h2>
-{% endfor %}
 
 <div id="root">
 yep 
 <h2>{{ pitchers.pitchers2 }}</h2>
-
 </div>
 
 </section>
 <!--<script src="/assets/js/horseshoe_tournaments.js"></script>-->
+
 {% endblock content %}

@@ -1,12 +1,9 @@
 const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon");
-const fs = require('fs');
+//const fs = require('fs');
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function(eleventyConfig){
-
-  
-  eleventyConfig.addFilter("fetch_pitchers", require("./assets/js/horseshoe_scoring_functions.js"));
 
     //eleventyConfig.addFilter("consoleDump",  console.log("dump")  );
 //use {% prd variable %} for debugging
@@ -141,4 +138,6 @@ return `
 
         }
     }
+
+   
 }

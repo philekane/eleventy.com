@@ -1,0 +1,20 @@
+{% extends "layouts/landing_page_base.njk" %}
+{% block content %}
+<section class="wrapper">
+<h1>{{ title }}</h1>
+<h2>{{ description }}</h2>
+<div id="root">
+    <div class="container">      
+        {% for movie in movies %}
+            <div class="card">
+                <h1>{{ movie.title }}</h1>
+                <p>{{ movie.description }}
+            </div>
+        {% endfor %}       
+    </div>
+</div>
+
+</section>
+<!--<script src="/assets/js/horseshoe_tournaments.js"></script>-->
+
+{% endblock content %}
