@@ -31,6 +31,8 @@
     "imagemin": "^7.0.1",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-webp": "^6.0.0",
-    "luxon": "^1.24.1"
+    "luxon": "^1.24.1",
+    "njwt": "^0.4.0",
+    "secure-random": "^1.1.2"
   }
 }
