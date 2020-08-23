@@ -2,4 +2,4 @@ node_modules
 _site
 # Local Netlify folder
 .netlify
-/src/_data/keys
+src/_data/keys
