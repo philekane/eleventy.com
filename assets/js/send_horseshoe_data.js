@@ -1,3 +1,8 @@
+  //save data
+document.getElementById ('saveData').addEventListener ('click', function () {
+  sendData ();  
+});
+  
   function sendData () {
   caches.keys ().then (function (names) {
     for (let name of names) caches.delete (name);
@@ -6,7 +11,7 @@
   //const url = 'https://afamilysstand.com/process.php'
   // const url = 'http://localhost:8080/process.php'
   //const url = 'http://localhost:8080/horseshoeData.json'
-  const url = 'https://ghibliapi.herokuapp.com/films';
+  //const url = 'https://ghibliapi.herokuapp.com/films';
   const formName = 'pitchersForm';
   const formElement = document.forms.namedItem (formName);
   const formData = new FormData (formElement);
@@ -219,4 +224,3 @@
  // fetchWithAuthorizationCode(url);
   
 }
-module.exports = {  sendData }

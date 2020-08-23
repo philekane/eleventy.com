@@ -138,10 +138,6 @@ document.getElementById ('clearRingers').addEventListener ('click', function () 
   });
 
 
-//save data
-document.getElementById ('saveData').addEventListener ('click', function () {
-  data_operations.sendData ();  
-});
 
 //let button = document.querySelector("[id=Next]");
 // button.addEventListener("click", () => {

@@ -26,11 +26,15 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
+    "base64url": "^3.0.1",
     "clean-css": "^4.2.3",
+    "crypto": "^1.0.1",
     "eleventy": "^1.0.6",
     "imagemin": "^7.0.1",
     "imagemin-jpeg-recompress": "^6.0.0",
     "imagemin-webp": "^6.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "jws": "^4.0.0",
     "luxon": "^1.24.1",
     "njwt": "^0.4.0",
     "secure-random": "^1.1.2"
