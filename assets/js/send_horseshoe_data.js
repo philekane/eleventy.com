@@ -152,7 +152,7 @@ document.getElementById ('saveData').addEventListener ('click', function () {
 
   let headers = new Headers ();
   headers.append ('Content-Type', 'application/x-www-form-urlencoded');
-
+  console.log('head', 'headers');
   let jwtInit = {
     method: 'GET',
     headers: headers,
