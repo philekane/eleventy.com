@@ -514,9 +514,9 @@ h1 {
   text-align: center;
   padding: 1.5rem 2.5rem;
   background-image: linear-gradient(120deg, #fbc2eb 0%, #a6c1ee 100%);
-  margin: 0 0 2rem 0;
+  /*margin: 0 0 2rem 0;*/
   font-size: 1.5rem;
-  color: white;
+  color: #333;
 }
 
 
@@ -526,7 +526,7 @@ h1 {
 }
 
 p {
-  padding: 0 2.5rem 2.5rem;
+  padding: .5rem 2.5rem 2.5rem;
   margin: 0;
 }
 
@@ -567,4 +567,8 @@ p {
 
 .card:nth-child(5n) h1 {
   background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
+}
+
+.italics {
+  font-style: italic;
 }

@@ -2,6 +2,7 @@ const nJwt = require('njwt');
 const fs = require('fs');
 const fetch = require("node-fetch");
 
+module.exports = async function() {
 // The private key without line breaks
 const private_key = fs.readFileSync('c:\\Users\\Philip Kane\\realhazards.com\\src\\_data\\keys\\id_rsa', 'utf8');
 //const private_key = fs.readFileSync(__dirname + '\\keys\\id_rsa', 'utf8');
@@ -29,24 +30,24 @@ let init2 = {
 let tokenUrl =  'https://afamilysstand.com/request/oauth_token';
 
 // get access token with jwt_token
-fetch (tokenUrl, init2).then (function (response) {
-    console.log (response);
-    return response.json ();
+ return fetch (tokenUrl, init2).then (function (response) {
+     return response.json ();
   }).then (function (data) {
-    console.log (data);
     let access_token = data.access_token;
     let init3 = {
       method: 'POST',
       headers: headers,
       body: 'access_token=' + access_token
      };
-    let resourceUrl = 'https://afamilysstand.com/request/quotes';
-      fetch (resourceUrl, init3)
+    let quotesUrl = 'https://afamilysstand.com/request/quotes';
+    return  fetch (quotesUrl, init3)
       .then (function (response) {
-        return response.json ();
+        return response.json();
       }).then (function (data) {
-        console.log (data);
+        //console.log('quote', data2);
+        return data;
       })
     }).catch (function (err) {
         console.log ('Something went wrong! 3', err);
       });
+    }

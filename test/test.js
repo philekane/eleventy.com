@@ -1,8 +1,16 @@
 const assert = require('assert')
-//const operations = require('./operations.js')
+const newoperations = require('./operations.js')
 //const operations = require('../assets/js/horseshoe_scoring_functions.js')
 const operations = require('../assets/js/horseshoe.js')
 
+describe('Test kelvin convertion', function(){
+  it('correctly converts to farenheit', () => {
+    assert.equal(newoperations.convert_kelvin('287', "f"), '56.93°f')
+  });
+  it('correctly converts to celcius', () => {
+    assert.equal(newoperations.convert_kelvin('287', "c"), '13.85°c')
+  });
+});
 describe('Scoring Methods', function(){
   describe('Get differences', function(){
   

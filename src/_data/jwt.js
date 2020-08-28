@@ -32,29 +32,29 @@ let tokenUrl =  'https://afamilysstand.com/request/oauth_token';
 
 // get access token with jwt_token
 fetch (tokenUrl, init2).then (function (response) {
-    console.log (response);
+    //console.log (response);
     return response.json ();
   })
   .then (function (data) {
-    console.log (data);
+    //console.log (data);
     let access_token = data.access_token;
     let init3 = {
       method: 'POST',
       headers: headers,
       body: 'access_token=' + access_token
      };
-    let resourceUrl = 'https://afamilysstand.com/request/quotes';
+    let resourceUrl = 'https://afamilysstand.com/request/resource';
       fetch (resourceUrl, init3)
       .then (function (response) {
         //console.log (response);
-        return response.json ();
+       // return response.json ();
       })
       .then (function (data) {
-        console.log (data);
+       // console.log (data);
       })
     })
       .catch (function (err) {
-        console.log ('Something went wrong! 3', err);
+        console.log ('Something went wrong! 33', err);
       });
 
 /*

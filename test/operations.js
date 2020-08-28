@@ -74,5 +74,19 @@ const getRingers = function (count, ringersCount, pitcher, ab) {
     }
 
   };
+  //convert kelvin to farenheit or celcius
+  function convert_kelvin(kelvin, temp_type){
+    let k =   Number(kelvin);
+    if (temp_type == 'f')//farenheit
+    {
+        let degrees = (((k - 273.15) * 1.8) + 32).toFixed(2);
+        return degrees + '°f';;
+    }
+    else if(temp_type == 'c')//celcius
+    {
+        let degrees = (k - 273.15).toFixed(2);
+        return degrees + '°c'; 
+    }
+  }
 
-module.exports = { add, difference, proof, ringerAverage, getRingers }
+module.exports = { add, difference, proof, ringerAverage, getRingers, convert_kelvin }

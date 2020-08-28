@@ -1,0 +1,62 @@
+{% extends "layouts/landing_page_base.njk" %}
+{% block content %}
+
+<link rel="stylesheet" href="/assets/css/weather_style.css">
+<section class="wrapper">
+<h1>{{ title }}</h1>
+
+<div id="root">
+    <div class="container">  
+        <main class="weather_main">
+            <div id="weather_card" class="weather_card cardTemplate weather-forecast" >
+                <div class="locationDiv">
+                    <div class="city-key" hidden></div>
+                    <div class="card-last-updated" hidden></div>
+                    <div class="location"></div>
+                    <div class="date"></div>
+                    <div class="description"></div>
+                </div>
+                
+                <div class="current">
+                    <div class="visual">
+                        <div class="icon" id="icon"></div>
+                        <div class="temperature">
+                            <span class="value"></span><span class="scale">°F</span>
+                        </div> 
+                    </div>                   
+             
+               
+                <div class="description">
+                    <div class="feelslike">
+                        <span class="value"></span><span class="scale">°F</span>
+                    </div>
+                    <div class="humidity"></div>
+                    <div class="wind">
+                        <span class="value"></span>
+                        <span class="scale">mph</span>
+                        <span class="direction"></span>°
+                    </div>
+                    <div class="sunrise"></div>
+                    <div class="sunset"></div>
+                </div>
+               </div>
+                 
+            </div>
+           
+        </main>
+  
+  </div>
+ 
+            <div class="card" id="quote_card">
+            
+            </div>
+    
+    </div>
+</div>
+
+</section>
+<script src="/assets/js/weather.js"></script>
+<script src="/assets/js/get_quote.js"></script>
+
+
+{% endblock content %}

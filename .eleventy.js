@@ -1,7 +1,6 @@
 const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon");
-const axios = require('axios');
-//const fs = require('fs');
+
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function(eleventyConfig){
@@ -91,6 +90,7 @@ return `
     return str.replace(/\s+/g, '-').toLowerCase();
   });
 
+  
   //get url
   eleventyConfig.addShortcode("getHomeUrl", () => { hostUrl
     } );
