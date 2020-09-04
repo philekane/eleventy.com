@@ -75,9 +75,7 @@ let headers = {'Content-Type': 'application/x-www-form-urlencoded'
         }
     }
 }
-
-   // alert("Ready!");
-   getWeather();
+    getWeather();
  
 /*
 {"coord":{"lon":,"lat":},
