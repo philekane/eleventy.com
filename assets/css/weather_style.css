@@ -107,6 +107,9 @@
     .weather-forecast .current .sunrise:before {
       content: "Sunrise: ";
       color: #212121; }
+      .weather-forecast .current .low_high:before {
+        content: "Low/High: ";
+        color: #212121; }
     .weather-forecast .current .humidity:before {
       content: "Humidity: ";
       color: #212121; }

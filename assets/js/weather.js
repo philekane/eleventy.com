@@ -39,6 +39,7 @@ let headers = {'Content-Type': 'application/x-www-form-urlencoded'
             const card = document.getElementById('weather_card');
             card.querySelector('.location').textContent = data.name;
             card.querySelector('.description').textContent = main;
+            card.querySelector('.low_high').textContent = Math.round(low_temp) + '/' + Math.round(high_temp);
             card.querySelector('.humidity').textContent = Math.round(humidity) + '%';
             card.querySelector('.current .wind .value').textContent =  Math.round(wind_speed);
             card.querySelector('.current .wind .direction').textContent = wind_direction;
