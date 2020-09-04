@@ -3,3 +3,4 @@ _site
 # Local Netlify folder
 .netlify
 src/_data/keys
+src/_data/files_not_using
