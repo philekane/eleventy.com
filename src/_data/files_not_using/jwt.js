@@ -4,7 +4,7 @@ const fs = require('fs');
 const fetch = require("node-fetch");
 
 // The private key without line breaks
-const private_key = fs.readFileSync('c:\\Users\\Philip Kane\\realhazards.com\\src\\_data\\keys\\id_rsa', 'utf8');
+//const private_key = fs.readFileSync('c:\\Users\\Philip Kane\\realhazards.com\\src\\_data\\keys\\id_rsa', 'utf8');
 //const private_key = fs.readFileSync(__dirname + '\\keys\\id_rsa', 'utf8');
 //const public_key =  fs.readFileSync('c:\\Users\\Philip Kane\\realhazards.com\\src\\_data\\\keys\\id_rsa.pub', 'utf8');
 
