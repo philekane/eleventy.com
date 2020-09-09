@@ -316,7 +316,7 @@ collections:
               fields:
                 - { label: "Show Ribbon", name: "show", widget: "boolean" }
                 - { label: "Background Color", name: "backgroundColor", widget: "color" }
-                - { label: "Font Color", name: "color", widget: "color" }
+                - { label: "Font Color", name: "color", widget: "color", picker: github }
             - label: Social Settings
               name: socialSettings
               widget: list
