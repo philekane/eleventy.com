@@ -39,6 +39,9 @@
     "luxon": "^1.24.1",
     "netlify-cms-widget-colorpicker": "0.0.2",
     "njwt": "^0.4.0",
-    "secure-random": "^1.1.2"
+    "prop-types": "^15.7.2",
+    "react-color": "^2.18.1",
+    "secure-random": "^1.1.2",
+    "validate-color": "^2.1.0"
   }
 }
