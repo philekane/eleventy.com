@@ -1,6 +1,5 @@
 const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon");
-
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
 
 module.exports = function(eleventyConfig){
