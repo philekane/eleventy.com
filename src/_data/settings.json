@@ -60,8 +60,8 @@
   },
   "headerRibbon": {
     "show": true,
-    "backgroundColor": "#723609",
-    "color": "#EEE0D8" 
+    "backgroundColor": "",
+    "color": "" 
   },
   "socialSettings": [
     {
