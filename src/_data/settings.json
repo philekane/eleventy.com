@@ -59,9 +59,9 @@
     
   },
   "headerRibbon": {
-    "show": false,
-    "email": "pkane-test@spindry.com",
-    "phone": "(206) 555-1234"
+    "show": true,
+    "backgroundColor": "#723609",
+    "color": "#EEE0D8" 
   },
   "socialSettings": [
     {

@@ -310,6 +310,13 @@ collections:
                 - { label: "Logo Alt", name: "logoAlt", widget: "string" }
                 - { label: "Email", name: "email", widget: "string" }
                 - { label: "Address", name: "address", widget: "string" }
+            - label: Header Ribbon
+              name: headerRibbon
+              widget: object
+              fields:
+                - { label: "Show Ribbom", name: "show", widget: "boolean" }
+                - { label: "Background Color", name: "backgroundColor", widget: "string" }
+                - { label: "Font Color", name: "color", widget: "string" }
             - label: Social Settings
               name: socialSettings
               widget: list
