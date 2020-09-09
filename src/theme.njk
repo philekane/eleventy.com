@@ -1,0 +1,12 @@
+---
+permalink: "assets/css/theme.css"
+---
+
+:root {
+  --colorLight: {{ design_tokens.colorLight }};
+  --colorDark: {{ design_tokens.colorDark }};
+}
+
+{% if settings.headerRibbon.show == true %}
+  {% include "components/header_ribbon.css" %}
+{% endif %}

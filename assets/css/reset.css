@@ -17,14 +17,14 @@
   --bg-secondary: #ffbf81;
   --color-primary: #000;
   --color-secondary: #fff;
-  --base-color: #fff;
+  --base-color: #fff;  
+  
 }
 
 /* owl selector-applying margin between elements*/
 body * + * { 
   margin-top: .5rem; 
-  background-color: var(--bg-primary);
-  color: var(--color-primary);
+  background-color: var(--bg-primary);   
 }
 
 /* elements */

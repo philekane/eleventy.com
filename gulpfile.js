@@ -20,7 +20,7 @@ function cssTask() {
     .pipe(sourcemaps.write('.'))
     .pipe(dest('./assets/css'))
 }
-
+/*
 function resetCssTask() {
    return src('./assets/sass/_reset.css')
      .pipe(sourcemaps.init())
@@ -29,6 +29,7 @@ function resetCssTask() {
      .pipe(sourcemaps.write('.'))
      .pipe(dest('./assets/css'))
  }
+ */
 /* use lossless - lossless: true */
 /*
 function creatWebp() {
@@ -70,4 +71,4 @@ function watchFiles() {
   
 };
 
-exports.default = parallel(cssTask, resetCssTask , watchFiles);
+exports.default = parallel(cssTask,  watchFiles);

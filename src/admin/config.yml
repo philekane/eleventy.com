@@ -121,7 +121,7 @@ collections:
                   - { label: "Position", name: "imagePosition", widget: "select", options: ["left", "right", "noImage"] }
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Description", name: "description", widget: "markdown" }
-                  - { label: "Show Image", name: "show", widget: "boolean" }
+                  - { label: "Show Image", name: "showImage", widget: "boolean" }
                   - { label: "Image", name: "image", widget: "image" }
                   - { label: "Link Text", name: "linkText", widget: "string" }
                   - { label: "Link Url", name: "linkUrl", widget: "string" }
