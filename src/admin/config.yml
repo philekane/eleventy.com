@@ -314,9 +314,9 @@ collections:
               name: headerRibbon
               widget: object
               fields:
-                - { label: "Show Ribbom", name: "show", widget: "boolean" }
-                - { label: "Background Color", name: "backgroundColor", widget: "string" }
-                - { label: "Font Color", name: "color", widget: "string" }
+                - { label: "Show Ribbon", name: "show", widget: "boolean" }
+                - { label: "Background Color", name: "backgroundColor", widget: "color" }
+                - { label: "Font Color", name: "color", widget: "color" }
             - label: Social Settings
               name: socialSettings
               widget: list
