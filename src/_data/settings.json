@@ -1,12 +1,12 @@
 {
-   "theme": {
+  "theme": {
     "name": "biz-sites-etc",
     "author": "https://business-websites-etc.com",
     "description": "Made with grid",
     "base": "src/themes/biz-sites-etc/_includes/layouts/base.njk",
     "path": "src/themes/biz-sites-etc/_includes/layouts/",
     "backgroundImage": "/assets/img/red-stone.jpg",
-    "backgroundImageAltText": "Home Page"   
+    "backgroundImageAltText": "Home Page"
   },
   "navigationMenu": [
     {
@@ -48,20 +48,19 @@
   ],
   "siteSettings": {
     "companyName": "Real Hazards, Inc",
-    "companyUrl": "https://client-site-template.netlify.app",
     "changeFreq": "weekly",
-    "phone": "(206)-425-5252",
-    "email": "tester@test.com",
-    "address": "1316 wall st",
     "logo": "/assets/img/logo.png",
+    "phone": "(206)-425-5252",
+    "companyUrl": "https://client-site-template.netlify.app",
+    "address": "1316 wall st",
+    "email": "tester@test.com",
     "logoAlt": "Company Logo",
     "companyDescription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua thirst. But wait there's morer."
-    
   },
   "headerRibbon": {
-    "show": true,
+    "show": false,
     "backgroundColor": "#723609",
-    "color": "#eee0d8" 
+    "color": "#eee0d8"
   },
   "socialSettings": [
     {
