@@ -14,10 +14,10 @@ function getAirQuality(){
            // console.log('response', response);
            return response.json ();
           }).then (function (data) {
-            console.log('air quality', data);
+            //console.log('air quality', data);
             data.forEach((aqi) => {
-            //    console.log('aqi', aqi.AQI);               
-               theAqi =  aqi.AQI;
+             //   console.log('aqi', aqi.AQI);
+             //  theAqi =  aqi.AQI;
                discussion =  aqi.Discussion;
             })
            //console.log('aqi', theAqi);
