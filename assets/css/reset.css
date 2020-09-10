@@ -572,3 +572,6 @@ p {
 .italics {
   font-style: italic;
 }
+.air_quality_index{
+  text-align: center;
+}
