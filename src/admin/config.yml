@@ -315,8 +315,8 @@ collections:
               widget: object
               fields:
                 - { label: "Show Ribbon", name: "show", widget: "boolean" }
-                - { label: "Background Color", name: "backgroundColor", widget: "color" }
-                - { label: "Font Color", name: "color", widget: "color" }
+                - { label: "Background Color", name: "backgroundColor", widget: "Color" }
+                - { label: "Font Color", name: "color", widget: "Color" }
             - label: Social Settings
               name: socialSettings
               widget: list
