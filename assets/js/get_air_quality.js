@@ -16,12 +16,12 @@ function getAirQuality(){
           }).then (function (data) {
             console.log('air quality', data);
             data.forEach((aqi) => {
-                console.log('aqi', aqi.AQI);               
+            //    console.log('aqi', aqi.AQI);               
                theAqi =  aqi.AQI;
                discussion =  aqi.Discussion;
             })
            //console.log('aqi', theAqi);
-            console.log('discussion', discussion);
+           // console.log('discussion', discussion);
             document.getElementById('aqi_discussion').textContent = discussion;
                
               
