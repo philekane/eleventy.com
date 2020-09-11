@@ -1,4 +1,4 @@
-//import CMS from '/node_modules/netlify-cms-app';
-import ColorControl from "/node_modules/netlify-cms-widget-colorpicker";
-CMS.registerWidget("color", ColorControl);
+import CMS from "/netlify-cms";
+import * as ColorWidget from "/netlify-cms-widget-color";
+CMS.registerWidget("color", ColorWidget.Control);
 //CMS.init();
