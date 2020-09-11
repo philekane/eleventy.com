@@ -5,10 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "node ./bin/www"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "",
