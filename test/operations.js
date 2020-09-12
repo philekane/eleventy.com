@@ -88,5 +88,11 @@ const getRingers = function (count, ringersCount, pitcher, ab) {
         return degrees + '°c'; 
     }
   }
+  //convert wind degrees to human readable direction
+  function convert_wind_degrees(deg){
+    let compassDirVal = Math.round((deg % 360) / 22.5, 0);    
+    let directions = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSW","SW","WSW","W","WNW","NW","NNW","N"];
+    return directions[compassDirVal];    
+  }
 
-module.exports = { add, difference, proof, ringerAverage, getRingers, convert_kelvin }
+module.exports = { add, difference, proof, ringerAverage, getRingers, convert_kelvin, convert_wind_degrees }

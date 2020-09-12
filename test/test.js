@@ -2,13 +2,39 @@ const assert = require('assert')
 const newoperations = require('./operations.js')
 //const operations = require('../assets/js/horseshoe_scoring_functions.js')
 const operations = require('../assets/js/horseshoe.js')
+const weatherFunctions = require('../assets/js/weather.js')
+
+describe('Convert wind direction', function(){
+  it('correctly converts to wind degrees to human readable 260 Degrees = W', () => {
+    assert.equal(weatherFunctions.convert_wind_degrees('260'), "W")
+  });
+  it('correctly converts to wind degrees to human readable 270 Degrees = W', () => {
+    assert.equal(weatherFunctions.convert_wind_degrees('270'), "W")
+  });  
+  it('correctly converts to wind degrees to human readable 350 Degrees == N', () => {
+    assert.equal(weatherFunctions.convert_wind_degrees('350'), "N")
+  });
+  it('correctly converts to wind degrees to human readable 360 Degrees == N', () => {
+    assert.equal(weatherFunctions.convert_wind_degrees('360'), "N")
+  });
+  it('correctly converts to wind degrees to human readable 010 Degrees == N', () => {
+    assert.equal(weatherFunctions.convert_wind_degrees('010'), "N")
+  });
+  it('correctly converts to wind degrees to human readable 330 Degrees == NNW', () => {
+    assert.equal(weatherFunctions.convert_wind_degrees('330'), "NNW")
+  });
+  it('correctly converts to wind degrees to human readable 340 Degrees == NNW', () => {
+    assert.equal(weatherFunctions.convert_wind_degrees('340'), "NNW")
+  });
+  
+});
 
 describe('Test kelvin convertion', function(){
   it('correctly converts to farenheit', () => {
-    assert.equal(newoperations.convert_kelvin('287', "f"), '56.93°f')
+    assert.equal(weatherFunctions.convert_kelvin('287', "f"), '56.93')
   });
   it('correctly converts to celcius', () => {
-    assert.equal(newoperations.convert_kelvin('287', "c"), '13.85°c')
+    assert.equal(weatherFunctions.convert_kelvin('287', "c"), '13.85')
   });
 });
 describe('Scoring Methods', function(){

@@ -1,3 +1,35 @@
+//convert kelvin to farenheit or celcius
+function convert_kelvin(kelvin, temp_type){
+  let k =   Number(kelvin);
+  if (temp_type == 'f')//farenheit
+  {
+      let degrees = (((k - 273.15) * 1.8) + 32).toFixed(2);
+      return degrees //+ '°f';
+  }
+  else if(temp_type == 'c')//celcius
+  {
+      let degrees = (k - 273.15).toFixed(2);
+      return degrees //+ '°c'; 
+  }
+}
+
+//convert wind degrees to human readable direction
+function convert_wind_degrees(deg){
+let compassDirVal = Math.round((deg % 360) / 22.5, 0);    
+let directions = ["N","NNE","NE","ENE","E","ESE","SE","SSE","S","SSW","SW","WSW","W","WNW","NW","NNW","N"];
+return directions[compassDirVal];    
+}
+
+//defining modules to use in tests
+if (typeof document == 'undefined')
+{
+  module.exports = {  convert_kelvin, convert_wind_degrees }
+}
+
+
+//this code just runs for client side
+if (typeof document != 'undefined')
+{ 
 function getWeather(){
   
 //let url = 'http://localhost:8000/basicphp/public/request/get_weather';
@@ -42,7 +74,7 @@ let headers = {'Content-Type': 'application/x-www-form-urlencoded'
             card.querySelector('.low_high').textContent = Math.round(low_temp) + '/' + Math.round(high_temp);
             card.querySelector('.humidity').textContent = Math.round(humidity) + '%';
             card.querySelector('.current .wind .value').textContent =  Math.round(wind_speed);
-            card.querySelector('.current .wind .direction').textContent = wind_direction;
+            card.querySelector('.current .wind .direction').textContent = convert_wind_degrees(wind_direction);
             card.querySelector('.current .temperature .value').textContent = Math.round(temp);
             card.querySelector('.current .feelslike .value').textContent = Math.round(feels_like);
             card.querySelector('.current .sunrise').textContent = sunrise;
@@ -60,29 +92,7 @@ let headers = {'Content-Type': 'application/x-www-form-urlencoded'
         console.log ('Something went wrong!', err);
       });     
 
-      //convert kelvin to farenheit or celcius
-      function convert_kelvin(kelvin, temp_type){
-        let k =   Number(kelvin);
-        if (temp_type == 'f')//farenheit
-        {
-            let degrees = (((k - 273.15) * 1.8) + 32).toFixed(2);
-            return degrees //+ '°f';
-        }
-        else if(temp_type == 'c')//celcius
-        {
-            let degrees = (k - 273.15).toFixed(2);
-            return degrees //+ '°c'; 
-        }
-    }
+      
 }
     getWeather();
- 
-/*
-{"coord":{"lon":,"lat":},
-"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01d"}],
-"base":"stations","main":{"temp":292.12,"feels_like":291.56,"temp_min":289.82,"temp_max":294.26,
-"pressure":1018,"humidity":68},"visibility":10000,"wind":{"speed":2.1,"deg":320},
-"clouds":{"all":1},"dt":1598549674,"sys":{"type":1,"id":5301,"country":"US",
-"sunrise":1598534498,"sunset":1598583573},"timezone":-25200,"id":5788125,
-"name":"Brier","cod":200}
-*/
+}
