@@ -1,7 +1,18 @@
-//const horseshoe_scoring_functions = require("./horseshoe_scoring_functions");
-
+/**
+ * Gets the difference between 2 numbers.
+ * 
+ * Using Math.abs() returns the absolute value of a number in this case
+ * the difference between a_number and b_number. The stage determines if 
+ * the difference need to be multiplied by 3 if this is for ringers.
+ * 
+ * @param {*} a_number 
+ * @param {*} b_number 
+ * @param {a  or b} stage 
+ * 
+ * @returns integer
+ */
 const difference = function (a_number, b_number, stage) {
-  //check if numbers
+  
   //get difference between a and b
   let dif = Math.abs (a_number - b_number);
   switch (stage) {
@@ -13,7 +24,19 @@ const difference = function (a_number, b_number, stage) {
       break;
   }  
 };
-
+/**
+ * To proof whether the scoring is correct
+ *
+ * If the sum of the two smaller numbers equals the largest number then
+ * it proofs okay. Sorting the 3 numbers smallest to largest then adding the
+ * 2 smaller ones and comparing the sum to the largest number.
+ *
+ * @param {number} a
+ * @param {number} b
+ * @param {number} c
+ *
+ * @returns {boolean} proof
+ */
 const proof = function (a, b, c) {
   let array = [a, b, c];
   array.sort (function (a, b) {
@@ -31,12 +54,30 @@ const proof = function (a, b, c) {
   }
 };
 
+/**
+ * Averages the ringers thrown
+ * 
+ * Takes the number of pitches thrown and divides by ringers.
+ * 
+ * @param {number} pitches 
+ * @param {number} ringers 
+ * 
+ * @returns {number} the average (ringers / pitches)
+ */
 const ringerAverage = function (pitches, ringers) {
   let average = Number (ringers) / Number (pitches) * 100;
   return average.toFixed (2) + '%';
 };
 
-//get the count of pitches pitched
+/**
+ * Gets the number of pitches pitched from local storage
+ * 
+ * Checks if there is a pitchcount in local storage, if not adds to storage
+ * 2 because it is the first inning. If it's not the first inning add 2 to 
+ * the pitchnumber.
+ * 
+ * @returns pitchnumber
+ */
 const getPitchCount = function () {
   let pitchNumber = localStorage.getItem ('pitchNumber');
   if (pitchNumber == null) {
@@ -46,7 +87,12 @@ const getPitchCount = function () {
   return pitchNumber;
 };
 
-//get the count of ringers pitched
+
+/**
+ * Gets the value of ringers radio button selected in the form
+ * 
+ * @returns {number} the value of radio button checked
+ */
 const ringerCount = function () {
   if (document.querySelector ('[name=ringer]:checked') != null) {
     count = document.querySelector ('[name=ringer]:checked').value;
@@ -56,7 +102,20 @@ const ringerCount = function () {
   return count;
 };
 
-//get the count of ringers pitched
+/**
+ * Gets the ringers pitched and return what needs to be showed on the
+ * scoresheet.
+ * 
+ * Using @ringersCount and @count to determine what should be showed on the
+ * scoresheet for pitcher a and pitcher b based on who got the points @ab
+ * 
+ * @param {number} count 
+ * @param {number} ringersCount 
+ * @param {string} pitcher 
+ * @param {string} ab 
+ * 
+ * @returns {string} example: empty, X, XX, X0, 0X
+ */
 const getRingers = function (count, ringersCount, pitcher, ab) {
   
   let ringers = Array;

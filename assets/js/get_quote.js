@@ -1,22 +1,12 @@
-  function addHeader () {}
+
   function logResult (result) {
-   // console.log (result);
-  }
+    console.log (result);
+   }
   function logError (error) {
     console.log ('Looks like there was a problem: \n', error);
   }
-  function validateTextResponse (response) {
-    if (!response.ok) {
-      throw Error (response.statusText);
-    }
-    return response;
-  }
-
+  
   function validateJsonResponse (response) {
-    return response.json ();
-  }
-
-  function readResponseAsJSON (response) {
     return response.json ();
   }
 
@@ -24,29 +14,28 @@
     //return response.json ();
     return response.jwt_bearer;
   }
-  /**
-   * Handle errors for fetch
-   * @param {} response
-   */
-  function handleErrors (response) {
-    if (!response.ok) {
-      throw Error (response.statusText);
-    }
-    return response;
-  }
-
+  
   let headers = {'Content-Type': 'application/x-www-form-urlencoded'
   }
-  //console.log('head', 'headers');
+ 
   let jwtInit = {
     method: 'GET',
     headers: headers,
   };
 
+/**
+ * Using fetch it uses oauth2 first at api on familysstand.com gets the jwt
+ * then using the jwt gets the access code and thereafter gets quotes from the 
+ * quotes api.
+ * 
+ * @param {string} url 
+ * 
+ * @return {json} displays data to html
+ */
   function fetchJwtJSON (url) {
     let headers = {'Content-Type': 'application/x-www-form-urlencoded'
   }
-  //console.log('head', 'headers');
+ 
   let jwtInit = {
     method: 'GET',
     headers: headers,
@@ -65,7 +54,6 @@
         // This one uses the token we received for authentication
         fetch (tokenUrl, init2)
           .then (function (response) {
-            //console.log (response);
             return response.json ();
           })
           .then (function (data) {
@@ -80,12 +68,9 @@
             
             fetch (resourceUrl, init3)
               .then (function (response) {
-               // console.log (response);
                 return response.json ();
               })
               .then (function (data) {
-              //  console.log ('quotes', data);
-
                 const card = document.getElementById('quote_card');
                 const h1 = document.createElement('h1');
                 h1.textContent = data.quote_title;
@@ -111,11 +96,9 @@
             console.log ('Something went wrong!2', err);
           });
       })
-      .then (logResult) // 4
       .catch (logError);
   }
 
-  
   //fetchJwtJSON('http://localhost:8000/basicphp/public/request/jwt_bearer');
   fetchJwtJSON('https://afamilysstand.com/request/jwt_bearer');
   

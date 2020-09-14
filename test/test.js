@@ -31,17 +31,18 @@ describe('Convert wind direction', function(){
 
 describe('Test kelvin convertion', function(){
   it('correctly converts to farenheit', () => {
-    assert.equal(weatherFunctions.convert_kelvin('287', "f"), '56.93')
+    assert.equal(weatherFunctions.convert_kelvin('287', "f"), '56.9')
   });
   it('correctly converts to celcius', () => {
-    assert.equal(weatherFunctions.convert_kelvin('287', "c"), '13.85')
+    assert.equal(weatherFunctions.convert_kelvin('287', "c"), '13.9')
   });
 });
+
 describe('Scoring Methods', function(){
   describe('Get differences', function(){
   
     it('correctly calculates the difference of 1 and 3', () => {
-      assert.equal(operations.difference(1, 3, "a"), 2)
+      assert.equal(operations.difference(3, 1, "a"), 2)
     });
     it('correctly calculates the difference of 1 and 3 and multiplys by 3', () => {
       assert.equal(operations.difference(1, 3, "b"), 6)
