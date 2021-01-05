@@ -27,7 +27,7 @@
     "node-fetch": "^2.6.0"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "base64url": "^3.0.1",
     "clean-css": "^4.2.3",
     "crypto": "^1.0.1",
