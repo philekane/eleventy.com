@@ -79,11 +79,13 @@ footer h3 {
   list-style: none;
   padding: 0;
   margin: 0;
+  
 }
 .footer_widget li a {
       color: $footerColor;
       padding: 3px 0;
 }
+
 .footer_widget .media {
   margin-bottom: 14px;
   h5 {
@@ -154,3 +156,6 @@ footer h3 {
     margin-left: auto;
 }
 
+ .links li a {
+   line-height: 2;
+}
