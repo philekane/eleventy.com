@@ -95,4 +95,29 @@ const getRingers = function (count, ringersCount, pitcher, ab) {
     return directions[compassDirVal];    
   }
 
-module.exports = { add, difference, proof, ringerAverage, getRingers, convert_kelvin, convert_wind_degrees }
+  function checkIfIntIsInIntArray(int){
+
+    let possibleNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      if(possibleNumbers.includes(int))
+      {
+       return true;
+      }
+      else {
+        return false;
+      }
+  }
+  const newIntArray = [];
+  function addIntToNewIntArray(int){
+    console.log(newIntArray);
+    if(newIntArray.includes(int)){
+   
+
+    } 
+    else { 
+      newIntArray.push(int);
+      console.log(newIntArray);
+      return true;
+    }
+  }
+
+module.exports = { addIntToNewIntArray, checkIfIntIsInIntArray, add, difference, proof, ringerAverage, getRingers, convert_kelvin, convert_wind_degrees }

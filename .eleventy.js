@@ -1,6 +1,7 @@
 const CleanCSS = require("clean-css");
 const { DateTime } = require("luxon");
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages');
+const { data } = require("autoprefixer");
 
 module.exports = function(eleventyConfig){
 
@@ -49,6 +50,7 @@ module.exports = function(eleventyConfig){
 
   return `
     <picture>
+      <source data-sizes="auto" media="(max-width:500px)"  type="image/avif" srcset="${imageName}.avif">
       <source data-sizes="auto" media="(max-width:500px)"  type="image/webp" srcset="${imageName}.webp">
       <source data-sizes="auto" media="(max-width:500px)"  type="image/${extension}" srcset="${imageName}.${extension}" >
       <img data-sizes="auto"  ${ classname != "" ?  `class="${classname}"` : '' } src="${imageName}.${extension}" srcset="${imageName}.${extension}" alt="${alttext}">

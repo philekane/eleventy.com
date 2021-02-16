@@ -159,4 +159,20 @@ describe('Ringers', function(){
 
 });
 
-
+describe('Test arrays for magic squares', function(){
+  describe('check if integers are in intArray 1-9', function(){
+    it('correctly finds integer 9 is in intArray', () => {
+      assert.ok( newoperations.checkIfIntIsInIntArray(9));
+    });
+    it('correctly finds integer is 10 is not in intArray', () => {
+      assert.equal( newoperations.checkIfIntIsInIntArray(10), false);
+    });
+  })
+  describe('add new integer to newIntArray', function(){
+    it('correctly adds 9 to newIntArray', () => {
+      assert.ok( newoperations.addIntToNewIntArray(9));
+    });
+   
+  })
+  
+});

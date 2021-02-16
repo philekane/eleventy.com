@@ -7,7 +7,7 @@
   }
   
   function validateJsonResponse (response) {
-    return response.json ();
+    return response;
   }
 
   function readResponseJwtAsJSON (response) {
@@ -41,9 +41,12 @@
     headers: headers,
   };
     fetch (url, jwtInit) // 1
-      .then (validateJsonResponse) // 2
-      .then (function (readResponseJwtAsJSON) {
+      .then (function (responsejwt) {
+        //console.log(responsejwt);
+        return responsejwt.json ();
+      }).then (function (readResponseJwtAsJSON) {
         let jwt = readResponseJwtAsJSON.jwt_bearer;
+        console.log(jwt);
         let init2 = {
           method: 'POST',
           headers: headers,
@@ -55,8 +58,7 @@
         fetch (tokenUrl, init2)
           .then (function (response) {
             return response.json ();
-          })
-          .then (function (data) {
+          }).then (function (data) {
             let access_token = data.access_token;
           
             let init3 = {
@@ -69,8 +71,7 @@
             fetch (resourceUrl, init3)
               .then (function (response) {
                 return response.json ();
-              })
-              .then (function (data) {
+              }).then (function (data) {
                 const card = document.getElementById('quote_card');
                 const h1 = document.createElement('h1');
                 h1.textContent = data.quote_title;
@@ -86,17 +87,16 @@
                 card.appendChild(quote);
                 card.appendChild(title);
                 card.appendChild(author);
+                 
                
-              })
-              .catch (function (err) {
+              }).catch (function (err) {
                 console.log ('Something went wrong! 3', err);
               });
-          })
-          .catch (function (err) {
+          }).catch (function (err) {
             console.log ('Something went wrong!2', err);
           });
-      })
-      .catch (logError);
+      }).catch (logError);
+    
   }
 
   //fetchJwtJSON('http://localhost:8000/basicphp/public/request/jwt_bearer');

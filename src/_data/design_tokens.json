@@ -1,4 +1,4 @@
 {
-    "colorLight": "#eee",
-    "colorDark": "#111"
+    "$colorLight": "#eee",
+    "$colorDark": "#111"
 }

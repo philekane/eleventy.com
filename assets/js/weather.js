@@ -68,7 +68,8 @@ function getWeather(){
 
     fetch (url, init)
       .then (function (response) {
-          return response.json ();
+            return response.json ();
+          
       }).then (function (data) {
           data.weather.forEach((weather) => {
             main = weather.main;

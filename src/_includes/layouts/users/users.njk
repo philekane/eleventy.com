@@ -1,0 +1,26 @@
+{% extends "layouts/users/users_page_base.njk" %}
+
+{% block content %}
+
+<section class="users_login">
+<h1>Login</h1>
+    <form name="loginForm" method="post" id="loginForm"  class="pitchers-form flow">
+        <fieldset>
+            <legend>User</legend>
+            <div class='form-group'>
+                <label for='email'>Email Address</label>
+                <input type='email' class='form-control' id='email' name='email' placeholder='Enter email'>
+            </div>
+
+            <div class='form-group'>
+                <label for='password'>Password</label>
+                <input type='password' class='form-control' id='password' name='password' placeholder='Password'>
+            </div>
+
+            <button type='submit' id='submit_login' class='btn btn-primary'>Login</button>
+        </fieldset>
+    </form>
+</section>
+<script src="/assets/js/get_jwt.js"></script>
+<script src="/assets/js/users.js"></script>
+{% endblock content %}
