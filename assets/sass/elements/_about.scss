@@ -5,7 +5,7 @@
 .about-content {
     color: $c1;
     font-weight: 300;
-    margin-top: 25px;
+    padding: 0 1rem;
 
 /*+mq(xmd)
   margin-bottom: 20px*/
@@ -16,4 +16,7 @@
     a.button {
         margin-top: 15px;
     }
+}
+.about-content h1{
+    margin-top:.5rem;
 }
